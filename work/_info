@@ -1,0 +1,69 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/PC/Documents/Chung_training/UVM
+T_opt
+!s110 1713168153
+VcKZ7n;SVM]<eV0];Q@H`Z0
+04 3 4 work top fast 0
+=1-18c04dc4ceb4-661cdf19-1e1-18a4
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.7c;67
+Xpkg
+Z2 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z3 DXx6 mtiUvm 7 uvm_pkg 0 22 3zPkj@YUcM=M^m3zCLh<H1
+Z4 !s110 1713168140
+!i10b 1
+!s100 6^0K2`f]AHGa3n=RbaN7P3
+I:J_M6dDXliK8kYM4EH?6O2
+V:J_M6dDXliK8kYM4EH?6O2
+S1
+R0
+Z5 w1713168038
+Z6 8C:/Users/PC/Documents/Chung_training/UVM/test4_phases/testbench.sv
+Z7 FC:/Users/PC/Documents/Chung_training/UVM/test4_phases/testbench.sv
+L0 3
+Z8 OL;L;10.7c;67
+r1
+!s85 0
+31
+Z9 !s108 1713168140.000000
+Z10 !s107 C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|C:/Users/PC/Documents/Chung_training/UVM/test4_phases/testbench.sv|
+Z11 !s90 -reportprogress|300|-work|work|C:/Users/PC/Documents/Chung_training/UVM/test4_phases/testbench.sv|
+!i113 0
+Z12 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vtop
+R2
+R3
+DXx4 work 3 pkg 0 22 :J_M6dDXliK8kYM4EH?6O2
+R4
+!i10b 1
+!s100 D?h<e:L3mDh6i=gS[8<_63
+IFCG_oY@0jFVLeg_TIL8O?3
+VDg1SIo80bB@j0V0VzS_@n1
+!s105 testbench_sv_unit
+S1
+R0
+R5
+R6
+R7
+L0 123
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R1

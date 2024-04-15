@@ -1,0 +1,5 @@
+rm -rf work;
+vlib work;
+
+vlog -timescale=1ns/1ns ../testbench.sv  +incdir+${UVM_HOME}/src ${UVM_HOME}/src/uvm_pkg.sv;
+vsim -c top -do "run -all; quit;"
