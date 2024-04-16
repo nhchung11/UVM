@@ -12,82 +12,16 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-vlog *.sv
-# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
-# Start time: 15:02:05 on Apr 15,2024
-# vlog -reportprogress 300 *.sv 
-# ** Error: (vlog-7) Failed to open design unit file "*.sv" in read mode.
-# No such file or directory. (errno = ENOENT)
-# End time: 15:02:05 on Apr 15,2024, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# C:/questasim64_10.7c/win64/vlog failed.
-vlog -reportprogress 300 -work work C:/Users/PC/Documents/Chung_training/UVM/test4_phases/testbench.sv
-# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
-# Start time: 15:02:20 on Apr 15,2024
-# vlog -reportprogress 300 -work work C:/Users/PC/Documents/Chung_training/UVM/test4_phases/testbench.sv 
-# ** Note: (vlog-2286) C:/Users/PC/Documents/Chung_training/UVM/test4_phases/testbench.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
-# -- Compiling package pkg
-# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
-# -- Compiling module top
-# -- Importing package pkg
-# 
-# Top level modules:
-# 	top
-# End time: 15:02:20 on Apr 15,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.top
-# vsim work.top 
-# Start time: 15:02:33 on Apr 15,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading sv_std.std
-# Loading mtiUvm.uvm_pkg
-# Loading work.pkg(fast)
-# Loading work.top(fast)
-# Loading mtiUvm.questa_uvm_pkg(fast)
-# Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
-run -all
-# ----------------------------------------------------------------
-# UVM-1.1d
-# (C) 2007-2013 Mentor Graphics Corporation
-# (C) 2007-2013 Cadence Design Systems, Inc.
-# (C) 2006-2013 Synopsys, Inc.
-# (C) 2011-2013 Cypress Semiconductor Corp.
-# ----------------------------------------------------------------
-# 
-#   ***********       IMPORTANT RELEASE NOTES         ************
-# 
-#   You are using a version of the UVM library that has been compiled
-#   with `UVM_NO_DEPRECATED undefined.
-#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
-# 
-#   You are using a version of the UVM library that has been compiled
-#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
-#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
-# 
-#       (Specify +UVM_NO_RELNOTES to turn off this notice)
-# 
-# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
-# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
-# UVM_INFO @ 0: reporter [RNTST] Running test test...
-# UVM_INFO C:/Users/PC/Documents/Chung_training/UVM/test4_phases/testbench.sv(22) @ 0: uvm_test_top.m_env2 [] reset_phase called
-# UVM_INFO C:/Users/PC/Documents/Chung_training/UVM/test4_phases/testbench.sv(26) @ 100: uvm_test_top.m_env2 [] reset_phase returning
-# UVM_FATAL verilog_src/uvm-1.1d/src/base/uvm_phase.svh(1251) @ 9200000000000: reporter [PH_TIMEOUT] Default timeout of 9200000000000 hit, indicating a probable testbench issue
-# 
-# --- UVM Report Summary ---
-# 
-# ** Report counts by severity
-# UVM_INFO :    5
-# UVM_WARNING :    0
-# UVM_ERROR :    0
-# UVM_FATAL :    1
-# ** Report counts by id
-# []     2
-# [PH_TIMEOUT]     1
-# [Questa UVM]     2
-# [RNTST]     1
-# ** Note: $finish    : C:/questasim64_10.7c/win64/../verilog_src/uvm-1.1d/src/base/uvm_report_object.svh(292)
-#    Time: 9200 sec  Iteration: 0  Region: /uvm_pkg::uvm_phase::execute_phase
-# 1
-# Break in Function uvm_pkg/uvm_report_object::die at C:/questasim64_10.7c/win64/../verilog_src/uvm-1.1d/src/base/uvm_report_object.svh line 292
-# End time: 15:03:48 on Apr 15,2024, Elapsed time: 0:01:15
-# Errors: 0, Warnings: 0
+# Loading project uvm_test
+# Compile of agent.sv was successful with warnings.
+# Compile of driver.sv was successful.
+# Compile of environment.sv was successful.
+# Compile of interface.sv was successful.
+# Compile of monitor.sv was successful with warnings.
+# Compile of packet.sv was successful.
+# Compile of rtl.sv was successful.
+# Compile of sequence.sv was successful with warnings.
+# Compile of sequencer.sv was successful.
+# Compile of test.sv failed with 5 errors.
+# Compile of top.sv was successful.
+# 11 compiles, 1 failed with 5 errors.

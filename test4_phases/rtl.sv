@@ -1,7 +1,7 @@
-module Adder #(parameter WIDTH = 8) (
-    input logic [WIDTH-1:0] A,
-    input logic [WIDTH-1:0] B,
-    output logic [WIDTH:0] sum
+module Adder (
+    input logic [7:0] A,
+    input logic [7:0] B,
+    output logic [8:0] sum
 );
 
     always_comb begin
