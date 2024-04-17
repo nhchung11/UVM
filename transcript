@@ -13,15 +13,81 @@
 # //  18 U.S.C. Section 1905.
 # //
 # Loading project uvm_test
-# Compile of agent.sv was successful with warnings.
-# Compile of driver.sv was successful.
-# Compile of environment.sv was successful.
-# Compile of interface.sv was successful.
-# Compile of monitor.sv was successful with warnings.
-# Compile of packet.sv was successful.
-# Compile of rtl.sv was successful.
-# Compile of sequence.sv was successful with warnings.
-# Compile of sequencer.sv was successful.
-# Compile of test.sv failed with 5 errors.
-# Compile of top.sv was successful.
-# 11 compiles, 1 failed with 5 errors.
+vsim work.top -voptargs=+acc
+# vsim work.top -voptargs="+acc" 
+# Start time: 17:57:59 on Apr 17,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.top_sv_unit(fast)
+# Loading work.top(fast)
+# Loading work.test_sv_unit(fast)
+# Loading work.intf(fast)
+# Loading work.Adder(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.intf(fast)
+# Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
+add wave -position insertpoint sim:/top/dut/*
+add wave -position insertpoint sim:/top/my_intf/*
+run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test test...
+# UVM_INFO C:/Users/PC/Documents/Chung_training/UVM/test4_phases/test.sv(21) @ 0: uvm_test_top [uvm_test_top] TEST BUILD PHASE
+# UVM_INFO C:\Users\PC\Documents\Chung_training\UVM\test4_phases\environment.sv(21) @ 0: uvm_test_top.my_env [my_env] ENVIRONMENT BUILD PHASE
+# UVM_INFO C:\Users\PC\Documents\Chung_training\UVM\test4_phases\agent.sv(25) @ 0: uvm_test_top.my_env.my_agent [my_agent] AGENT BUILD PHASE
+# UVM_INFO C:\Users\PC\Documents\Chung_training\UVM\test4_phases\driver.sv(22) @ 0: uvm_test_top.my_env.my_agent.my_driver [my_driver] DRIVER BUILD PHASE
+# UVM_INFO C:\Users\PC\Documents\Chung_training\UVM\test4_phases\scoreboard.sv(15) @ 0: uvm_test_top.my_env.my_scoreboard [my_scoreboard] SCOREBOARD BUILD PHASE
+# UVM_INFO C:\Users\PC\Documents\Chung_training\UVM\test4_phases\agent.sv(34) @ 0: uvm_test_top.my_env.my_agent [my_agent] AGENT CONNECT PHASE
+# UVM_INFO C:\Users\PC\Documents\Chung_training\UVM\test4_phases\environment.sv(29) @ 0: uvm_test_top.my_env [my_env] ENVIRONMENT CONNECT PHASE
+# UVM_INFO C:\Users\PC\Documents\Chung_training\UVM\test4_phases\environment.sv(35) @ 0: uvm_test_top.my_env [my_env] ENVIRONMENT RUN PHASE
+# UVM_INFO C:\Users\PC\Documents\Chung_training\UVM\test4_phases\monitor.sv(33) @ 0: uvm_test_top.my_env.my_agent.my_monitor [my_monitor] MONITOR RUN PHASE
+# UVM_INFO C:\Users\PC\Documents\Chung_training\UVM\test4_phases\driver.sv(37) @ 0: uvm_test_top.my_env.my_agent.my_driver [my_driver] Packet trasnmitted: 0 0
+# UVM_INFO C:\Users\PC\Documents\Chung_training\UVM\test4_phases\driver.sv(37) @ 10: uvm_test_top.my_env.my_agent.my_driver [my_driver] Packet trasnmitted: 237 225
+# UVM_INFO C:\Users\PC\Documents\Chung_training\UVM\test4_phases\driver.sv(37) @ 30: uvm_test_top.my_env.my_agent.my_driver [my_driver] Packet trasnmitted: 39 71
+# UVM_INFO C:\Users\PC\Documents\Chung_training\UVM\test4_phases\driver.sv(37) @ 50: uvm_test_top.my_env.my_agent.my_driver [my_driver] Packet trasnmitted: 47 123
+# UVM_INFO C:\Users\PC\Documents\Chung_training\UVM\test4_phases\driver.sv(37) @ 70: uvm_test_top.my_env.my_agent.my_driver [my_driver] Packet trasnmitted: 84 64
+# UVM_INFO C:\Users\PC\Documents\Chung_training\UVM\test4_phases\driver.sv(37) @ 90: uvm_test_top.my_env.my_agent.my_driver [my_driver] Packet trasnmitted: 232 135
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 290: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   19
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [my_agent]     2
+# [my_driver]     7
+# [my_env]     3
+# [my_monitor]     1
+# [my_scoreboard]     1
+# [uvm_test_top]     1
+# ** Note: $finish    : C:/questasim64_10.7c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 290 ns  Iteration: 54  Instance: /top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at C:/questasim64_10.7c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430

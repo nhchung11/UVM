@@ -1,0 +1,4 @@
+rm -rf work; 
+vlib work; 
+vlog -timescale=1ns/1ns -sv +acc -incr ./../*.sv -assertdebug +define+$seq -l vlog_tb.log;
+vsim -voptargs=+acc -assertdebug -coverage top -c -do "set WildcardFilter None;add wave -r top/*;run -all; quit;"

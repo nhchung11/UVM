@@ -1,0 +1,42 @@
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+Start time: 17:55:02 on Apr 17,2024
+vlog -timescale=1ns/1ns -sv "+acc" -incr ./../agent.sv ./../driver.sv ./../environment.sv ./../interface.sv ./../monitor.sv ./../packet.sv ./../rtl.sv ./../scoreboard.sv ./../sequence.sv ./../test.sv ./../top.sv -assertdebug "+define+" -l vlog_tb.log 
+** Note: (vlog-2286) ./../agent.sv(4): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling package agent_sv_unit
+** Warning: .\..\sequence.sv(17): (vlog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+-- Compiling interface intf
+** Warning: ** while parsing file included at ./../driver.sv(6)
+** at .\..\interface.sv(4): (vlog-2275) 'intf' already exists and will be overwritten.
+-- Compiling package driver_sv_unit
+-- Compiling interface intf
+** Warning: ** while parsing file included at ./../environment.sv(5)
+** while parsing file included at .\..\agent.sv(5)
+** while parsing file included at .\..\driver.sv(6)
+** at .\..\interface.sv(4): (vlog-2275) 'intf' already exists and will be overwritten.
+-- Compiling package environment_sv_unit
+** Warning: .\..\sequence.sv(17): (vlog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+-- Compiling interface intf
+** Warning: ./../interface.sv(4): (vlog-2275) 'intf' already exists and will be overwritten.
+-- Compiling interface intf
+-- Compiling package monitor_sv_unit
+** Warning: .\..\sequence.sv(17): (vlog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+-- Compiling package packet_sv_unit
+-- Compiling module Adder
+-- Compiling package scoreboard_sv_unit
+-- Compiling package sequence_sv_unit
+** Warning: ./../sequence.sv(17): (vlog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+** Warning: ** while parsing file included at ./../test.sv(5)
+** while parsing file included at .\..\environment.sv(5)
+** while parsing file included at .\..\agent.sv(5)
+** while parsing file included at .\..\driver.sv(6)
+** at .\..\interface.sv(4): (vlog-2275) 'intf' already exists and will be overwritten.
+-- Compiling package test_sv_unit
+** Warning: .\..\sequence.sv(17): (vlog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+-- Compiling interface intf
+-- Compiling package top_sv_unit
+-- Compiling module top
+
+Top level modules:
+	top
+End time: 17:55:05 on Apr 17,2024, Elapsed time: 0:00:03
+Errors: 0, Warnings: 9

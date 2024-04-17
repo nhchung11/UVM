@@ -1,6 +1,8 @@
-# vsim -c top -do "run -all; quit;" 
-# Start time: 14:59:39 on Apr 15,2024
+# vsim -c top -do "run -all; quit;
+# " 
+# Start time: 15:45:45 on Apr 17,2024
 # ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: sequence.sv(17): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
 # //  Questa Sim-64
 # //  Version 10.7c win64 Aug 18 2018
 # //
@@ -17,51 +19,10 @@
 # //
 # Loading sv_std.std
 # Loading mtiUvm.uvm_pkg
-# Loading work.pkg(fast)
+# Loading work.test_sv_unit(fast)
+# Loading work.top_sv_unit(fast)
 # Loading work.top(fast)
 # Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.intf(fast)
 # Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
 # run -all
-# ----------------------------------------------------------------
-# UVM-1.1d
-# (C) 2007-2013 Mentor Graphics Corporation
-# (C) 2007-2013 Cadence Design Systems, Inc.
-# (C) 2006-2013 Synopsys, Inc.
-# (C) 2011-2013 Cypress Semiconductor Corp.
-# ----------------------------------------------------------------
-# 
-#   ***********       IMPORTANT RELEASE NOTES         ************
-# 
-#   You are using a version of the UVM library that has been compiled
-#   with `UVM_NO_DEPRECATED undefined.
-#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
-# 
-#   You are using a version of the UVM library that has been compiled
-#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
-#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
-# 
-#       (Specify +UVM_NO_RELNOTES to turn off this notice)
-# 
-# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
-# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
-# UVM_INFO @ 0: reporter [RNTST] Running test test...
-# UVM_INFO testbench.sv(44) @ 0: uvm_test_top.m_env2 [] reset_phase called
-# UVM_INFO testbench.sv(48) @ 100: uvm_test_top.m_env2 [] reset_phase returning
-# UVM_FATAL verilog_src/uvm-1.1d/src/base/uvm_phase.svh(1251) @ 9200000000000: reporter [PH_TIMEOUT] Default timeout of 9200000000000 hit, indicating a probable testbench issue
-# 
-# --- UVM Report Summary ---
-# 
-# ** Report counts by severity
-# UVM_INFO :    5
-# UVM_WARNING :    0
-# UVM_ERROR :    0
-# UVM_FATAL :    1
-# ** Report counts by id
-# []     2
-# [PH_TIMEOUT]     1
-# [Questa UVM]     2
-# [RNTST]     1
-# ** Note: $finish    : C:/questasim64_10.7c/win64/../verilog_src/uvm-1.1d/src/base/uvm_report_object.svh(292)
-#    Time: 9200 sec  Iteration: 0  Region: /uvm_pkg::uvm_phase::execute_phase
-# End time: 14:59:41 on Apr 15,2024, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 0
