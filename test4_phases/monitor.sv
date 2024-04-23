@@ -25,7 +25,7 @@ class monitor extends uvm_monitor;
 
     // // CONNECT PHASE
     // function void connect_phase(uvm_phase phase);
-
+ 
     // endfunction
 
     // RUN PHASE
@@ -37,6 +37,7 @@ class monitor extends uvm_monitor;
             @(posedge my_intf.clk);
             my_packet.input_1 = my_intf.input_1;
             my_packet.input_2 = my_intf.input_2;
+            my_packet.output_3 = my_intf.output_3;
             // `uvm_info(get_name(), $sformatf("MONITOR Receive: %0d %0d", my_packet.input_1, my_packet.input_2), UVM_LOW)
             monitor_analysis_port.write(my_packet);
         end

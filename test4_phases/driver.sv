@@ -33,6 +33,7 @@ class driver extends uvm_driver #(packet);
     // RUN PHASE
     virtual task run_phase(uvm_phase phase);
         super.run_phase(phase);
+        `uvm_info(get_name(), "DRIVER RUN PHASE", UVM_MEDIUM)
         forever begin
             `uvm_info(get_name(), $sformatf("Packet trasnmitted: %0d %0d", my_packet.input_1, my_packet.input_2), UVM_LOW) 
             @(posedge my_intf.clk)

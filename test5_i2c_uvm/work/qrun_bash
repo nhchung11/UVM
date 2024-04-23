@@ -1,0 +1,8 @@
+rm -rf work; 
+vlib work; 
+vlog  -timescale=1ns/1ns -sv +acc -incr -f filelist_tb.f -assertdebug -l vlog_tb.log;
+vlog  -sv +acc -incr -f filelist_rtl.f -l vlog_rtl.log +cover=sbceft -assertdebug;
+vsim  -voptargs=+acc -sva -assertdebug -coverage top -c -do "set WildcardFilter None;add wave -r top/*; coverage save -onexit $seq.ucdb; run -all; quit;"
+
+# vsim -viewcov $seq.ucdb ;
+# vcover merge final_coverage.ucdb  *.ucdb;

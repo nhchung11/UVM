@@ -11,7 +11,7 @@ module top();
         .clk(my_intf.clk),
         .A(my_intf.input_1),
         .B(my_intf.input_2),
-        .sum(my_intf.output_3)
+        .sum(my_intf.DUT_output)
     );
     
 

@@ -38,7 +38,8 @@ class test extends uvm_test;
         my_seq.start(my_env.my_agent.my_sequencer);
         #200;
         phase.drop_objection(this);
-        // $finish;
+        #100;
+        $finish;
     endtask
 endclass
 `endif 

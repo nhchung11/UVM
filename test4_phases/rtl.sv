@@ -5,7 +5,7 @@ module Adder (
     output logic [15:0] sum
 );
 
-    always @(posedge clk) begin
-        sum <= A + B;
+    always @(*) begin
+        sum = A + B;
     end
 endmodule
