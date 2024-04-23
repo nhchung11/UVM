@@ -2,7 +2,7 @@
 `include "interface.sv"
 import uvm_pkg::*;
 
-module top();
+module top_dut();
     bit PCLK = 0;
     bit clk = 0;
     always #5 PCLK = ~PCLK;

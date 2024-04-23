@@ -32,6 +32,7 @@ class test extends uvm_test;
 
     // RUN PHASE
     virtual task run_phase(uvm_phase phase);
+        // `uvm_info(get_name(), "TEST RUN PHASE", UVM_MEDIUM)
         seq my_seq = seq::type_id::create("my_seq");
         phase.raise_objection(this);
         my_seq.randomize();

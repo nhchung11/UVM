@@ -37,9 +37,9 @@ class agent extends uvm_agent;
             `uvm_fatal("NOVIF", "Virtual interface not set")
     endfunction: connect_phase
 
-    // virtual task run_phase(uvm_phase phase);
-    //     super.run_phase(phase);
-    //     `uvm_info(get_name(), "AGENT RUN PHASE", UVM_MEDIUM)
-    // endtask: run_phase
+    virtual task run_phase(uvm_phase phase);
+        super.run_phase(phase);
+        `uvm_info(get_name(), "AGENT RUN PHASE", UVM_MEDIUM)
+    endtask: run_phase
 endclass
 `endif

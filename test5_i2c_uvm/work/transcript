@@ -1,5 +1,5 @@
-# vsim -voptargs="+acc" -sva -assertdebug -coverage top -c -do "set WildcardFilter None;add wave -r top/*; coverage save -onexit .ucdb; run -all; quit;" 
-# Start time: 11:41:35 on Apr 23,2024
+# vsim top_dut -c -do "run -all; quit;" 
+# Start time: 15:05:36 on Apr 23,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vopt-143) Recognized 1 FSM in module "i2c_slave_model(fast)".
 # ** Note: (vopt-143) Recognized 1 FSM in module "i2c_master(fast)".
@@ -25,7 +25,7 @@
 # Loading sv_std.std
 # Loading mtiUvm.uvm_pkg
 # Loading work.top_dut_sv_unit(fast)
-# Loading work.top(fast)
+# Loading work.top_dut(fast)
 # Loading work.intf(fast)
 # Loading work.apb_to_i2c_top(fast)
 # Loading work.apb_slave(fast)
@@ -40,14 +40,10 @@
 # Loading mtiUvm.questa_uvm_pkg(fast)
 # Loading work.intf(fast)
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'my_intf'.  Expected 2, found 1.
-#    Time: 0 ns  Iteration: 0  Instance: /top/my_intf File: ../sim/top_dut.sv Line: 11
+#    Time: 0 ns  Iteration: 0  Instance: /top_dut/my_intf File: ../sim/top_dut.sv Line: 11
 # ** Warning: (vsim-3722) ../sim/top_dut.sv(11): [TFMPC] - Missing connection for port 'clk'.
 # Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
-# set WildcardFilter None
-# None
-# add wave -r top/*
-#  coverage save -onexit .ucdb
-#  run -all
+# run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
 # (C) 2007-2013 Mentor Graphics Corporation
@@ -85,7 +81,6 @@
 # [INVTST]     1
 # [Questa UVM]     2
 # ** Note: $finish    : C:/questasim64_10.7c/win64/../verilog_src/uvm-1.1d/src/base/uvm_report_object.svh(292)
-#    Time: 0 ns  Iteration: 0  Instance: /top
-# Saving coverage database on exit...
-# End time: 11:41:39 on Apr 23,2024, Elapsed time: 0:00:04
+#    Time: 0 ns  Iteration: 0  Instance: /top_dut
+# End time: 15:05:39 on Apr 23,2024, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 7

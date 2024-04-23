@@ -78,7 +78,7 @@ class seq extends uvm_sequence;
         write(my_packet, 8'd2, 8'b11111100);
         read(my_packet, 8'd2);
         read(my_packet, 8'd5);
-        read(my_packet, 8'd3);
+        read(my_packet, 8'd3); 
         read(my_packet, 8'd4);
         read(my_packet, 8'd6);
     endtask
@@ -87,7 +87,7 @@ class seq extends uvm_sequence;
         reset(my_packet);
         write(my_packet, 8'd02, 8'b11110110);
         write(my_packet, 8'd6, 8'b1110_0000);
-        write(my_packet, 8'd4, 8'0);
+        write(my_packet, 8'd4, 8'd0);
         write(my_packet, 8'd2, 8'b11111100);
     endtask
 endclass
