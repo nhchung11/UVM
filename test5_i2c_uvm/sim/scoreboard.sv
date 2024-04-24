@@ -4,6 +4,9 @@
 
 import uvm_pkg::*;
 class scoreboard extends uvm_component;
+    byte data_transmitted [$];
+    byte data_DUT_received [$];
+
     `uvm_component_utils(scoreboard)
     virtual intf my_intf;
 
@@ -21,12 +24,37 @@ class scoreboard extends uvm_component;
     endfunction
 
     virtual function void write(packet my_packet);
-        // if (my_packet.output_3 == my_intf.DUT_output)
-        //     `uvm_info(get_name(), "PASSED \n", UVM_LOW)
-        // else
-        //     `uvm_info(get_name(), "FAILED \n", UVM_LOW)
-        `uvm_info(get_name(), "SCOREBOARD WRITE", UVM_LOW)
+        if (my_packet.PADDR == 4)
+            data_transmitted.push_back(my_packet.PWDATA);
     endfunction
+
+    virtual function void extract_phase(uvm_phase phase);
+        super.build_phase(phase);
+        `uvm_info(get_name(), "SCOREBOARD EXTRACT PHASE", UVM_MEDIUM)
+        `uvm_info(get_name(), $sformatf("Size of DUT saved queue: %0d", data_DUT_received.size()), UVM_MEDIUM)
+        foreach (data_DUT_received[i]) begin
+            `uvm_info(get_name(), $sformatf("DUT received: %0d", data_DUT_received[i]), UVM_MEDIUM)
+        end
+
+        `uvm_info(get_name(), $sformatf("Size of transmitted data queue: %0d", data_transmitted.size()), UVM_MEDIUM)
+        foreach (data_transmitted[i]) begin
+            `uvm_info(get_name(), $sformatf("Transmitted data: %0d", data_transmitted[i]), UVM_MEDIUM)
+        end
+    endfunction
+
+    virtual function void check_phase(uvm_phase phase);
+        super.build_phase(phase);
+        `uvm_info(get_name(), "SCOREBOARD CHECK PHASE", UVM_MEDIUM)
+        if (data_transmitted.size() != data_DUT_received.size())
+            `uvm_error(get_name(), "*  ERROR  *Data queue size mismatch")
+        else begin
+            foreach (data_transmitted[i]) begin
+                if (data_transmitted[i] != data_DUT_received[i])
+                    `uvm_error(get_name(), $sformatf("Data mismatch at index %0d", i))
+            end
+        end
+    endfunction
+    
 endclass: scoreboard
 `endif
 

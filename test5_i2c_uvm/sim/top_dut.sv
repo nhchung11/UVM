@@ -1,5 +1,6 @@
 `include "uvm_macros.svh"
 `include "interface.sv"
+`include "test.sv"
 import uvm_pkg::*;
 
 module top_dut();
@@ -8,7 +9,7 @@ module top_dut();
     always #5 PCLK = ~PCLK;
     always #20 clk = ~clk;
 
-    intf my_intf(pclk);
+    intf my_intf(PCLK, clk);
     apb_to_i2c_top DUT
     (
         .PCLK       (PCLK),
@@ -17,6 +18,8 @@ module top_dut();
         .PSELx      (my_intf.PSELx),
         .PENABLE    (my_intf.PENABLE),
         .PWRITE     (my_intf.PWRITE),
+        .i2c_sda    (my_intf.sda),
+        .i2c_scl    (my_intf.scl),
         .PADDR      (my_intf.PADDR),
         .PWDATA     (my_intf.PWDATA),
         .PREADY     (my_intf.PREADY),
@@ -28,7 +31,8 @@ module top_dut();
         .sda        (my_intf.sda),
         .scl        (my_intf.scl),
         .check_data (my_intf.check_data),
-        .read_data  (my_intf.read_data)
+        .read_data  (my_intf.read_data),
+        .saved_data (my_intf.saved_data)
     ); 
 
 

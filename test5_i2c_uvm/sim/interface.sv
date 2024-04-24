@@ -1,7 +1,7 @@
 `ifndef INTERF
 `define INTERF
 
-interface intf(input logic pclk, clk);
+interface intf(input logic PCLK, clk);
     // Inputs
     logic           PRESETn;
     logic           PSELx;
@@ -19,6 +19,7 @@ interface intf(input logic pclk, clk);
     wire            scl;
     logic           check_data;
     logic           read_data;
+    logic [7:0]     saved_data;
 endinterface
 `endif 
 

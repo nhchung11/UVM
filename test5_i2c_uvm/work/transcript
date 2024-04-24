@@ -1,13 +1,8 @@
-# vsim top_dut -c -do "run -all; quit;" 
-# Start time: 15:05:36 on Apr 23,2024
+# vsim -voptargs="+acc" -assertdebug -coverage top_dut -c -do "set WildcardFilter None;add wave -r top_dut/*;run -all; quit;" 
+# Start time: 17:40:23 on Apr 24,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vopt-143) Recognized 1 FSM in module "i2c_slave_model(fast)".
 # ** Note: (vopt-143) Recognized 1 FSM in module "i2c_master(fast)".
-# ** Warning: ../sim/top_dut.sv(12): (vopt-2685) [TFMPC] - Too few port connections for 'DUT'.  Expected 12, found 10.
-# ** Warning: ../sim/top_dut.sv(12): (vopt-2718) [TFMPC] - Missing connection for port 'i2c_scl'.
-# ** Warning: ../sim/top_dut.sv(12): (vopt-2718) [TFMPC] - Missing connection for port 'i2c_sda'.
-# ** Warning: ../sim/top_dut.sv(26): (vopt-2685) [TFMPC] - Too few port connections for 'SLAVE'.  Expected 5, found 4.
-# ** Warning: ../sim/top_dut.sv(26): (vopt-2718) [TFMPC] - Missing connection for port 'saved_data'.
 # //  Questa Sim-64
 # //  Version 10.7c win64 Aug 18 2018
 # //
@@ -39,10 +34,10 @@
 # Loading work.i2c_slave_model(fast)
 # Loading mtiUvm.questa_uvm_pkg(fast)
 # Loading work.intf(fast)
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'my_intf'.  Expected 2, found 1.
-#    Time: 0 ns  Iteration: 0  Instance: /top_dut/my_intf File: ../sim/top_dut.sv Line: 11
-# ** Warning: (vsim-3722) ../sim/top_dut.sv(11): [TFMPC] - Missing connection for port 'clk'.
 # Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
+# set WildcardFilter None
+# None
+# add wave -r top_dut/*
 # run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -66,21 +61,94 @@
 # 
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
-# UVM_WARNING @ 0: reporter [BDTYP] Cannot create a component of type 'test' because it is not registered with the factory.
-# UVM_FATAL @ 0: reporter [INVTST] Requested test from call to run_test(test) not found.
+# UVM_INFO @ 0: reporter [RNTST] Running test test...
+# UVM_INFO ../sim/test.sv(22) @ 0: uvm_test_top [uvm_test_top] TEST BUILD PHASE
+# UVM_INFO ../sim/environment.sv(22) @ 0: uvm_test_top.my_env [my_env] ENVIRONMENT BUILD PHASE
+# UVM_INFO ../sim/agent.sv(25) @ 0: uvm_test_top.my_env.my_agent [my_agent] AGENT BUILD PHASE
+# UVM_INFO ../sim/driver.sv(22) @ 0: uvm_test_top.my_env.my_agent.my_driver [my_driver] DRIVER BUILD PHASE
+# UVM_INFO ../sim/monitor.sv(20) @ 0: uvm_test_top.my_env.my_agent.my_monitor [my_monitor] MONITOR BUILD PHASE
+# UVM_INFO ../sim/scoreboard.sv(19) @ 0: uvm_test_top.my_env.my_scoreboard [my_scoreboard] SCOREBOARD BUILD PHASE
+# UVM_INFO ../sim/agent.sv(34) @ 0: uvm_test_top.my_env.my_agent [my_agent] AGENT CONNECT PHASE
+# UVM_INFO ../sim/environment.sv(32) @ 0: uvm_test_top.my_env [my_env] ENVIRONMENT CONNECT PHASE
+# UVM_INFO ../sim/environment.sv(38) @ 0: uvm_test_top.my_env [my_env] ENVIRONMENT RUN PHASE
+# UVM_INFO ../sim/monitor.sv(34) @ 0: uvm_test_top.my_env.my_agent.my_monitor [my_monitor] MONITOR RUN PHASE
+# UVM_INFO ../sim/driver.sv(36) @ 0: uvm_test_top.my_env.my_agent.my_driver [my_driver] DRIVER RUN PHASE
+# UVM_INFO ../sim/sequence.sv(72) @ 5: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Reset
+# DEBUG i2c_slave; stop condition detected at                    5
+# UVM_INFO ../sim/sequence.sv(52) @ 25: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 246 to register 2
+# UVM_INFO ../sim/sequence.sv(52) @ 55: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 32 to register 6
+# UVM_INFO ../sim/sequence.sv(52) @ 85: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 0 to register 4
+# UVM_INFO ../sim/sequence.sv(52) @ 115: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 1 to register 4
+# UVM_INFO ../sim/sequence.sv(52) @ 145: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 2 to register 4
+# UVM_INFO ../sim/sequence.sv(52) @ 175: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 3 to register 4
+# UVM_INFO ../sim/sequence.sv(52) @ 205: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 4 to register 4
+# UVM_INFO ../sim/sequence.sv(52) @ 235: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 5 to register 4
+# UVM_INFO ../sim/sequence.sv(52) @ 265: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 6 to register 4
+# UVM_INFO ../sim/sequence.sv(52) @ 295: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 7 to register 4
+# UVM_INFO ../sim/sequence.sv(52) @ 325: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 8 to register 4
+# UVM_INFO ../sim/sequence.sv(52) @ 355: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 9 to register 4
+# UVM_INFO ../sim/sequence.sv(52) @ 385: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 10 to register 4
+# UVM_INFO ../sim/sequence.sv(52) @ 415: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 254 to register 2
+# DEBUG i2c_slave; start condition detected at                  540
+# DEBUG i2c_slave; command byte received (write) at                 1982
+# DEBUG i2c_slave; address received. adr=00, ack=1
+# DEBUG i2c_slave; data block write 01 to address 00
+# DEBUG i2c_slave; data block write 02 to address 01
+# DEBUG i2c_slave; data block write 03 to address 02
+# DEBUG i2c_slave; data block write 04 to address 03
+# DEBUG i2c_slave; data block write 05 to address 04
+# DEBUG i2c_slave; data block write 06 to address 05
+# DEBUG i2c_slave; data block write 07 to address 06
+# DEBUG i2c_slave; stop condition detected at                13660
+# DEBUG i2c_slave; stop condition detected at                13661
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 20435: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_WARNING @ 20435: uvm_test_top.my_env.my_scoreboard [UVM_DEPRECATED] build()/build_phase() has been called explicitly, outside of the phasing system. This usage of build is deprecated and may lead to unexpected behavior.
+# UVM_INFO ../sim/scoreboard.sv(33) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] SCOREBOARD EXTRACT PHASE
+# UVM_INFO ../sim/scoreboard.sv(34) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Size of DUT saved queue: 8
+# UVM_INFO ../sim/scoreboard.sv(36) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 0
+# UVM_INFO ../sim/scoreboard.sv(36) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 1
+# UVM_INFO ../sim/scoreboard.sv(36) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 2
+# UVM_INFO ../sim/scoreboard.sv(36) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 3
+# UVM_INFO ../sim/scoreboard.sv(36) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 4
+# UVM_INFO ../sim/scoreboard.sv(36) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 5
+# UVM_INFO ../sim/scoreboard.sv(36) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 6
+# UVM_INFO ../sim/scoreboard.sv(36) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 7
+# UVM_INFO ../sim/scoreboard.sv(39) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Size of transmitted data queue: 11
+# UVM_INFO ../sim/scoreboard.sv(41) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 0
+# UVM_INFO ../sim/scoreboard.sv(41) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 1
+# UVM_INFO ../sim/scoreboard.sv(41) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 2
+# UVM_INFO ../sim/scoreboard.sv(41) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 3
+# UVM_INFO ../sim/scoreboard.sv(41) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 4
+# UVM_INFO ../sim/scoreboard.sv(41) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 5
+# UVM_INFO ../sim/scoreboard.sv(41) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 6
+# UVM_INFO ../sim/scoreboard.sv(41) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 7
+# UVM_INFO ../sim/scoreboard.sv(41) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 8
+# UVM_INFO ../sim/scoreboard.sv(41) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 9
+# UVM_INFO ../sim/scoreboard.sv(41) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 10
+# UVM_WARNING @ 20435: uvm_test_top.my_env.my_scoreboard [UVM_DEPRECATED] build()/build_phase() has been called explicitly, outside of the phasing system. This usage of build is deprecated and may lead to unexpected behavior.
+# UVM_INFO ../sim/scoreboard.sv(47) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] SCOREBOARD CHECK PHASE
+# UVM_ERROR ../sim/scoreboard.sv(49) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Data size mismatch
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :    2
-# UVM_WARNING :    1
-# UVM_ERROR :    0
-# UVM_FATAL :    1
+# UVM_INFO :   53
+# UVM_WARNING :    2
+# UVM_ERROR :    1
+# UVM_FATAL :    0
 # ** Report counts by id
-# [BDTYP]     1
-# [INVTST]     1
 # [Questa UVM]     2
-# ** Note: $finish    : C:/questasim64_10.7c/win64/../verilog_src/uvm-1.1d/src/base/uvm_report_object.svh(292)
-#    Time: 0 ns  Iteration: 0  Instance: /top_dut
-# End time: 15:05:39 on Apr 23,2024, Elapsed time: 0:00:03
-# Errors: 0, Warnings: 7
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVM_DEPRECATED]     2
+# [my_agent]     2
+# [my_driver]     2
+# [my_env]     3
+# [my_monitor]     2
+# [my_scoreboard]    25
+# [my_seq]    15
+# [uvm_test_top]     1
+# ** Note: $finish    : C:/questasim64_10.7c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 20435 ns  Iteration: 59  Instance: /top_dut
+# End time: 17:40:26 on Apr 24,2024, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0

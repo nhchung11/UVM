@@ -10,85 +10,70 @@ class seq extends uvm_sequence;
         super.new(name);
     endfunction
 
+    // virtual intf my_intf; // Declare the interface
+// 
+//     // BUILD PHASE
+//     virtual function void build_phase(uvm_phase phase);
+//         super.build_phase(phase);
+//         if(!uvm_config_db #(virtual intf)::get(this, "*", "my_intf", my_intf))
+//             `uvm_fatal("NOVIF", "Virtual interface not set")
+//     endfunction
+
     task body();
         packet my_packet = packet::type_id::create("my_packet");
-        start_item(my_packet);
-        test0_1(my_packet);
-        #2000;
-        test0_2(my_packet);
-        #2000;
-        test1(my_packet);
-        #2000;
+        reset(my_packet);
+        write(my_packet, 8'b11110110, 2);
+        write(my_packet, 8'b0010_0000, 6);
+        write(my_packet, 0, 4);
+        write(my_packet, 1, 4);
+        write(my_packet, 2, 4);
+        write(my_packet, 3, 4);
+        write(my_packet, 4, 4);
+        write(my_packet, 5, 4);
+        write(my_packet, 6, 4);
+        write(my_packet, 7, 4);
+        write(my_packet, 8, 4);
+        write(my_packet, 9, 4);
+        write(my_packet, 10, 4);
+        write(my_packet, 8'b11111110, 2);
+        `uvm_delay(20000ns)
+    endtask
 
+    task write(packet my_packet, bit [7:0] PWDATA, int PADDR);
+        start_item(my_packet);
+        my_packet.PWDATA = PWDATA;
+        my_packet.PADDR = PADDR;
+        my_packet.PRESETn = 1;
+        my_packet.PSELx = 1;
+        my_packet.PENABLE = 0;
+        my_packet.PWRITE = 1;   
+        finish_item(my_packet);
+
+        `uvm_info(get_name(), $sformatf("APB Write %0d to register %0d", my_packet.PWDATA, my_packet.PADDR), UVM_LOW)
+        start_item(my_packet);
+        my_packet.PENABLE = 1;
+        finish_item(my_packet);
+
+        start_item(my_packet);
+        my_packet.PSELx = 0;
+        my_packet.PENABLE = 0;  
         finish_item(my_packet);
     endtask
 
-    task reset(packet reset_packet);
-        reset_packet.PRESETn = 0;
-        #100;
-        reset_packet.PRESETn = 1;
-    endtask
+    task reset(packet my_packet);
+        start_item(my_packet);
+        my_packet.PRESETn = 0;
+        my_packet.PSELx = 0;
+        my_packet.PENABLE = 0;
+        my_packet.PWRITE = 0;   
+        my_packet.PWDATA = 0;
+        my_packet.PADDR = 0;
+        finish_item(my_packet);
+        `uvm_info(get_name(), "APB Reset", UVM_LOW)
 
-    task write(packet write_packet, bit [7:0] addr, bit [7:0] data);
-        write_packet.PSELx = 0;
-        write_packet.PENABLE = 0;
-        write_packet.PADDR = addr;
-        write_packet.PWDATA = data;
-
-        @(posedge my_intf.PCLK);
-        write_packet.PSELx = 1;
-        write_packet.PENABLE = 1;     
-        write_packet.PWRITE = 1;
-
-        @(posedge my_intf.PCLK);
-        write_packet.PSELx = 0;
-        write_packet.PENABLE = 0;
-    endtask
-    
-    task read(packet read_packet, bit [7:0] addr);
-        read_packet.PSELx = 0;
-        read_packet.PENABLE = 0;
-        read_packet.PADDR = addr;
-
-        @(posedge my_intf.PCLK);   
-        read_packet.PSELx = 1;
-        read_packet.PENABLE = 1;
-        read_packet.PWRITE = 0;
-
-        @(posedge my_intf.PCLK);
-        read_packet.PSELx = 0;
-        read_packet.PENABLE = 0;
-    endtask
-
-    task test0_1(packet my_packet);
-        reset(my_packet);
-        write(my_packet, 8'd02, 8'b11110110);
-        write(my_packet, 8'd6, 8'b0010_0000);
-        write(my_packet, 8'd5, 8'd0);
-        write(my_packet, 8'd5, 8'd1);
-        write(my_packet, 8'd5, 8'd2);
-        write(my_packet, 8'd2, 8'b11111100);
-    endtask
-
-    task test0_2(packet my_packet);
-        reset(my_packet);
-        write(my_packet, 2, 8'b11110110);
-        write(my_packet, 6, 8'b0010_0000);
-        write(my_packet, 5, 8'd1);
-        write(my_packet, 8'd2, 8'b11111100);
-        read(my_packet, 8'd2);
-        read(my_packet, 8'd5);
-        read(my_packet, 8'd3); 
-        read(my_packet, 8'd4);
-        read(my_packet, 8'd6);
-    endtask
-
-    task test1(packet my_packet);
-        reset(my_packet);
-        write(my_packet, 8'd02, 8'b11110110);
-        write(my_packet, 8'd6, 8'b1110_0000);
-        write(my_packet, 8'd4, 8'd0);
-        write(my_packet, 8'd2, 8'b11111100);
+        start_item(my_packet);
+        my_packet.PRESETn = 1;
+        finish_item(my_packet);
     endtask
 endclass
 `endif 

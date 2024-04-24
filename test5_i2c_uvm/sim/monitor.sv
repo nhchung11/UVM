@@ -34,11 +34,16 @@ class monitor extends uvm_monitor;
         `uvm_info(get_name(), "MONITOR RUN PHASE", UVM_MEDIUM)
         forever begin
             packet my_packet = new;
-            @(posedge my_intf.clk);
-            my_packet.PADDR = my_intf.PADDR;
-            my_packet.PWDATA = my_intf.PWDATA;
-            // `uvm_info(get_name(), $sformatf("MONITOR Receive: %0d %0d", my_packet.input_1, my_packet.input_2), UVM_LOW)
-            monitor_analysis_port.write(my_packet);
+            @(posedge my_intf.PENABLE);
+            if (my_intf.PADDR == 4) begin
+                my_packet.PADDR = my_intf.PADDR;
+                my_packet.PWDATA = my_intf.PWDATA;
+                // `uvm_info(get_name(), $sformatf("MONITOR Receive: %0d %0d", my_packet.input_1, my_packet.input_2), UVM_LOW)
+                
+                monitor_analysis_port.write(my_packet);
+                // `uvm_info(get_name(), "MONITOR Receive", UVM_LOW)
+                // monitor_analysis_port.get_DUT_data(my_intf.saved_data);
+            end
         end
     endtask
 endclass: monitor

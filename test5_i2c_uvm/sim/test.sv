@@ -36,10 +36,7 @@ class test extends uvm_test;
         seq my_seq = seq::type_id::create("my_seq");
         phase.raise_objection(this);
         my_seq.start(my_env.my_agent.my_sequencer);
-        #2000;
         phase.drop_objection(this);
-        #100;
-        $finish;
     endtask
 endclass
 `endif                                  

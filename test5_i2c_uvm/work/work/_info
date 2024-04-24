@@ -9,17 +9,17 @@ z2
 cModel Technology
 Z0 dC:/Users/PC/Documents/Chung_training/UVM/test5_i2c_uvm/work
 T_opt
-!s110 1713859537
-VZMS5`d>VE:H<WQDSk7XOU2
+!s110 1713955223
+VbYlR;NaQzR8E96BQi9:[[2
 04 7 4 work top_dut fast 0
-=1-18c04dc4ceb4-66276bd1-4f-3d30
-o-quiet -auto_acc_if_foreign -work work
+=1-18c04dc4ceb4-6628e197-176-349c
+o-quiet -auto_acc_if_foreign -work work +acc
 Z1 tCvgOpt 0
 n@_opt
 OL;O;10.7c;67
 vapb_slave
 Z2 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
-Z3 !s110 1713859535
+Z3 !s110 1713955222
 !i10b 1
 !s100 ^G?b=EEY0WQgDXU[cE;0T2
 IMBL:`0_MenBA[_LTWe<0E3
@@ -35,7 +35,7 @@ Z5 OL;L;10.7c;67
 r1
 !s85 0
 31
-Z6 !s108 1713859535.000000
+Z6 !s108 1713955222.000000
 Z7 !s107 ../rtl/test_fifo.sv|../rtl/fifo.sv|../rtl/top.v|../rtl/i2c_testbench.v|../rtl/i2c_slave_model.v|../rtl/i2c.v|../rtl/apb_test_top.v|../rtl/apb_testbench.v|../rtl/apb_slave.v|
 Z8 !s90 -sv|+acc|-incr|-f|filelist_rtl.f|-l|vlog_rtl.log|+cover=sbceft|-assertdebug|
 !i113 0
@@ -235,7 +235,7 @@ R4
 !s105 i2c_slave_model_v_unit
 S1
 R0
-w1713859040
+w1712906957
 8../rtl/i2c_slave_model.v
 F../rtl/i2c_slave_model.v
 L0 3
@@ -255,13 +255,13 @@ vi2c_tb
 R2
 R3
 !i10b 1
-!s100 c2H6mJ@YabVoeI1_44kSe2
-ILK`<L;M<[O]IOhia26M;U3
+!s100 gld`C7HNUk@ROIo6>`^[E2
+I:OHQNAPKVhkUE0>NEzCf20
 R4
 !s105 i2c_testbench_v_unit
 S1
 R0
-w1713840885
+R12
 8../rtl/i2c_testbench.v
 F../rtl/i2c_testbench.v
 L0 3
@@ -279,15 +279,15 @@ R11
 R1
 Yintf
 R2
-R3
+!s110 1713955221
 !i10b 1
-!s100 FhZ5kN8Abg^]QanZ0lEMT0
-IzkGSBe_`<5=XX?]:6bTVY2
+!s100 MGl;A4L<fh0?nHGJONmM?3
+IERY@:R2:6fHz5;cNB@jM[0
 R4
 Z16 !s105 top_dut_sv_unit
 S1
 R0
-w1713774768
+w1713934165
 8../sim/interface.sv
 Z17 F../sim/interface.sv
 L0 4
@@ -295,12 +295,12 @@ R5
 r1
 !s85 0
 31
-R6
-Z18 !s107 ../sim/interface.sv|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|../sim/top_dut.sv|
-Z19 !s90 -timescale=1ns/1ns|-sv|+acc|+incdir+.|-incr|-f|filelist_tb.f|-assertdebug|-l|vlog_tb.log|
+Z18 !s108 1713955221.000000
+Z19 !s107 ../sim/scoreboard.sv|../sim/sequence.sv|../sim/monitor.sv|../sim/packet.sv|../sim/driver.sv|../sim/agent.sv|../sim/environment.sv|../sim/test.sv|../sim/interface.sv|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|../sim/top_dut.sv|
+Z20 !s90 -timescale=1ns/1ns|-sv|+acc|+incdir+.|-incr|-f|filelist_tb.f|-assertdebug|-l|vlog_tb.log|
 !i113 0
-Z20 o-timescale=1ns/1ns -sv +acc +libext+.svh+.vh+.v+.sv -assertdebug -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z21 !s92 -timescale=1ns/1ns -sv +acc +incdir+. +libext+.svh+.vh+.v+.sv +incdir+../sim -y ../sim -assertdebug -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z21 o-timescale=1ns/1ns -sv +acc +libext+.svh+.vh+.v+.sv -assertdebug -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z22 !s92 -timescale=1ns/1ns -sv +acc +incdir+. +libext+.svh+.vh+.v+.sv +incdir+../sim -y ../sim -assertdebug -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1
 vrptr_empty
 R2
@@ -382,43 +382,44 @@ R11
 R1
 vtop_dut
 R2
-Z22 DXx6 mtiUvm 7 uvm_pkg 0 22 3zPkj@YUcM=M^m3zCLh<H1
-DXx4 work 15 top_dut_sv_unit 0 22 ?i4ENh<7`CbJG5^EPz7_A0
+Z23 DXx6 mtiUvm 7 uvm_pkg 0 22 3zPkj@YUcM=M^m3zCLh<H1
+DXx4 work 15 top_dut_sv_unit 0 22 ;:I8?o6jUlKn0@2`>Y4UL0
 R4
 r1
 !s85 0
 !i10b 1
-!s100 eAIKNkg]@?m@nU6ABWLVM2
-Im=]1?@J>HN9h<?4ozLBnC2
+!s100 >Y<_1k3IC1K;EA[WMfiXi3
+IKSgoNC>E`X@KRPc^j6iJG3
 R16
 S1
 R0
-Z23 w1713858660
+w1713931477
 Z24 8../sim/top_dut.sv
 Z25 F../sim/top_dut.sv
-L0 5
+L0 6
 R5
 31
-R6
 R18
 R19
-!i113 0
 R20
+!i113 0
 R21
+R22
 R1
 Xtop_dut_sv_unit
+!s115 intf
 R2
-R22
-V?i4ENh<7`CbJG5^EPz7_A0
+R23
+V;:I8?o6jUlKn0@2`>Y4UL0
 r1
 !s85 0
 !i10b 1
-!s100 BL0nzT5Tea3nf9NJX=5mb0
-I?i4ENh<7`CbJG5^EPz7_A0
+!s100 [Uod@4DbP7iPGJVFcRaA20
+I;:I8?o6jUlKn0@2`>Y4UL0
 !i103 1
 S1
 R0
-R23
+w1713955156
 R24
 R25
 FC:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh
@@ -434,15 +435,23 @@ FC:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_d
 FC:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh
 FC:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh
 R17
-L0 3
+F../sim/test.sv
+F../sim/environment.sv
+F../sim/agent.sv
+F../sim/driver.sv
+F../sim/packet.sv
+F../sim/monitor.sv
+F../sim/sequence.sv
+F../sim/scoreboard.sv
+L0 5
 R5
 31
-R6
 R18
 R19
-!i113 0
 R20
+!i113 0
 R21
+R22
 R1
 vwptr_full
 R2

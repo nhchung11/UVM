@@ -35,19 +35,18 @@ class driver extends uvm_driver #(packet);
         super.run_phase(phase);
         `uvm_info(get_name(), "DRIVER RUN PHASE", UVM_MEDIUM)
         forever begin
-            `uvm_info(get_name(), $sformatf("Write %0d to register %0d", my_packet.PWDATA, my_packet.PADDR), UVM_LOW) 
+            // `uvm_info(get_name(), $sformatf("Write %0d to register %0d", my_packet.PWDATA, my_packet.PADDR), UVM_LOW) 
             @(posedge my_intf.PCLK)
             seq_item_port.get_next_item(my_packet);
-            my_intf.PRESETn <= my_packet.PRESETn;
-            my_intf.PSELx <= my_packet.PSELx; 
-            my_intf.PENABLE <= my_packet.PENABLE;
-            my_intf.PWRITE <= my_packet.PWRITE;
-            my_intf.PADDR <= my_packet.PADDR;
-            my_intf.PWDATA <= my_packet.PWDATA;
+            my_intf.PRESETn     <= my_packet.PRESETn;
+            my_intf.PSELx       <= my_packet.PSELx; 
+            my_intf.PENABLE     <= my_packet.PENABLE;
+            my_intf.PWRITE      <= my_packet.PWRITE;
+            my_intf.PADDR       <= my_packet.PADDR;
+            my_intf.PWDATA      <= my_packet.PWDATA;
             seq_item_port.item_done();
         end
     endtask
 endclass
-
 `endif 
 
