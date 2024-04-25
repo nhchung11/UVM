@@ -1,5 +1,5 @@
 # vsim -voptargs="+acc" -assertdebug -coverage top_dut -c -do "set WildcardFilter None;add wave -r top_dut/*;run -all; quit;" 
-# Start time: 17:40:23 on Apr 24,2024
+# Start time: 11:28:33 on Apr 25,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vopt-143) Recognized 1 FSM in module "i2c_slave_model(fast)".
 # ** Note: (vopt-143) Recognized 1 FSM in module "i2c_master(fast)".
@@ -73,68 +73,76 @@
 # UVM_INFO ../sim/environment.sv(38) @ 0: uvm_test_top.my_env [my_env] ENVIRONMENT RUN PHASE
 # UVM_INFO ../sim/monitor.sv(34) @ 0: uvm_test_top.my_env.my_agent.my_monitor [my_monitor] MONITOR RUN PHASE
 # UVM_INFO ../sim/driver.sv(36) @ 0: uvm_test_top.my_env.my_agent.my_driver [my_driver] DRIVER RUN PHASE
-# UVM_INFO ../sim/sequence.sv(72) @ 5: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Reset
+# UVM_INFO ../sim/sequence.sv(74) @ 5: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB RESET
 # DEBUG i2c_slave; stop condition detected at                    5
-# UVM_INFO ../sim/sequence.sv(52) @ 25: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 246 to register 2
-# UVM_INFO ../sim/sequence.sv(52) @ 55: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 32 to register 6
-# UVM_INFO ../sim/sequence.sv(52) @ 85: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 0 to register 4
-# UVM_INFO ../sim/sequence.sv(52) @ 115: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 1 to register 4
-# UVM_INFO ../sim/sequence.sv(52) @ 145: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 2 to register 4
-# UVM_INFO ../sim/sequence.sv(52) @ 175: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 3 to register 4
-# UVM_INFO ../sim/sequence.sv(52) @ 205: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 4 to register 4
-# UVM_INFO ../sim/sequence.sv(52) @ 235: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 5 to register 4
-# UVM_INFO ../sim/sequence.sv(52) @ 265: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 6 to register 4
-# UVM_INFO ../sim/sequence.sv(52) @ 295: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 7 to register 4
-# UVM_INFO ../sim/sequence.sv(52) @ 325: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 8 to register 4
-# UVM_INFO ../sim/sequence.sv(52) @ 355: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 9 to register 4
-# UVM_INFO ../sim/sequence.sv(52) @ 385: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 10 to register 4
-# UVM_INFO ../sim/sequence.sv(52) @ 415: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 254 to register 2
-# DEBUG i2c_slave; start condition detected at                  540
-# DEBUG i2c_slave; command byte received (write) at                 1982
+# UVM_INFO ../sim/sequence.sv(34) @ 25: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 246 to register 2
+# UVM_INFO ../sim/sequence.sv(34) @ 55: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 32 to register 6
+# UVM_INFO ../sim/sequence.sv(34) @ 85: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 0 to register 4
+# UVM_INFO ../sim/sequence.sv(34) @ 115: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 1 to register 4
+# UVM_INFO ../sim/sequence.sv(34) @ 145: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 2 to register 4
+# UVM_INFO ../sim/sequence.sv(34) @ 175: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 3 to register 4
+# UVM_INFO ../sim/sequence.sv(34) @ 205: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 4 to register 4
+# UVM_INFO ../sim/sequence.sv(34) @ 235: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 254 to register 2
+# DEBUG i2c_slave; start condition detected at                  380
+# DEBUG i2c_slave; command byte received (write) at                 1822
 # DEBUG i2c_slave; address received. adr=00, ack=1
 # DEBUG i2c_slave; data block write 01 to address 00
 # DEBUG i2c_slave; data block write 02 to address 01
 # DEBUG i2c_slave; data block write 03 to address 02
 # DEBUG i2c_slave; data block write 04 to address 03
+# DEBUG i2c_slave; stop condition detected at                 9180
+# DEBUG i2c_slave; stop condition detected at                 9181
+# UVM_INFO ../sim/sequence.sv(74) @ 10255: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB RESET
+# UVM_INFO ../sim/sequence.sv(34) @ 10275: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 246 to register 2
+# UVM_INFO ../sim/sequence.sv(34) @ 10305: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 32 to register 6
+# UVM_INFO ../sim/sequence.sv(34) @ 10335: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 4 to register 4
+# UVM_INFO ../sim/sequence.sv(34) @ 10365: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 5 to register 4
+# UVM_INFO ../sim/sequence.sv(34) @ 10395: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 6 to register 4
+# UVM_INFO ../sim/sequence.sv(34) @ 10425: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 7 to register 4
+# UVM_INFO ../sim/sequence.sv(34) @ 10455: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 254 to register 2
+# DEBUG i2c_slave; start condition detected at                10620
+# DEBUG i2c_slave; command byte received (write) at                12062
+# DEBUG i2c_slave; address received. adr=04, ack=1
 # DEBUG i2c_slave; data block write 05 to address 04
 # DEBUG i2c_slave; data block write 06 to address 05
 # DEBUG i2c_slave; data block write 07 to address 06
-# DEBUG i2c_slave; stop condition detected at                13660
-# DEBUG i2c_slave; stop condition detected at                13661
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 20435: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_WARNING @ 20435: uvm_test_top.my_env.my_scoreboard [UVM_DEPRECATED] build()/build_phase() has been called explicitly, outside of the phasing system. This usage of build is deprecated and may lead to unexpected behavior.
-# UVM_INFO ../sim/scoreboard.sv(33) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] SCOREBOARD EXTRACT PHASE
-# UVM_INFO ../sim/scoreboard.sv(34) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Size of DUT saved queue: 8
-# UVM_INFO ../sim/scoreboard.sv(36) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 0
-# UVM_INFO ../sim/scoreboard.sv(36) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 1
-# UVM_INFO ../sim/scoreboard.sv(36) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 2
-# UVM_INFO ../sim/scoreboard.sv(36) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 3
-# UVM_INFO ../sim/scoreboard.sv(36) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 4
-# UVM_INFO ../sim/scoreboard.sv(36) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 5
-# UVM_INFO ../sim/scoreboard.sv(36) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 6
-# UVM_INFO ../sim/scoreboard.sv(36) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 7
-# UVM_INFO ../sim/scoreboard.sv(39) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Size of transmitted data queue: 11
-# UVM_INFO ../sim/scoreboard.sv(41) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 0
-# UVM_INFO ../sim/scoreboard.sv(41) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 1
-# UVM_INFO ../sim/scoreboard.sv(41) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 2
-# UVM_INFO ../sim/scoreboard.sv(41) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 3
-# UVM_INFO ../sim/scoreboard.sv(41) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 4
-# UVM_INFO ../sim/scoreboard.sv(41) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 5
-# UVM_INFO ../sim/scoreboard.sv(41) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 6
-# UVM_INFO ../sim/scoreboard.sv(41) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 7
-# UVM_INFO ../sim/scoreboard.sv(41) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 8
-# UVM_INFO ../sim/scoreboard.sv(41) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 9
-# UVM_INFO ../sim/scoreboard.sv(41) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 10
-# UVM_WARNING @ 20435: uvm_test_top.my_env.my_scoreboard [UVM_DEPRECATED] build()/build_phase() has been called explicitly, outside of the phasing system. This usage of build is deprecated and may lead to unexpected behavior.
-# UVM_INFO ../sim/scoreboard.sv(47) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] SCOREBOARD CHECK PHASE
-# UVM_ERROR ../sim/scoreboard.sv(49) @ 20435: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Data size mismatch
+# DEBUG i2c_slave; stop condition detected at                17980
+# DEBUG i2c_slave; stop condition detected at                17981
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 20475: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_WARNING @ 20475: uvm_test_top.my_env.my_scoreboard [UVM_DEPRECATED] build()/build_phase() has been called explicitly, outside of the phasing system. This usage of build is deprecated and may lead to unexpected behavior.
+# UVM_INFO ../sim/scoreboard.sv(33) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] SCOREBOARD EXTRACT PHASE
+# UVM_INFO ../sim/scoreboard.sv(34) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Size of DUT saved queue: 8
+# UVM_INFO ../sim/scoreboard.sv(36) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 0
+# UVM_INFO ../sim/scoreboard.sv(36) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 1
+# UVM_INFO ../sim/scoreboard.sv(36) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 2
+# UVM_INFO ../sim/scoreboard.sv(36) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 3
+# UVM_INFO ../sim/scoreboard.sv(36) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 4
+# UVM_INFO ../sim/scoreboard.sv(36) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 5
+# UVM_INFO ../sim/scoreboard.sv(36) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 6
+# UVM_INFO ../sim/scoreboard.sv(36) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 7
+# UVM_INFO ../sim/scoreboard.sv(39) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Size of transmitted data queue: 9
+# UVM_INFO ../sim/scoreboard.sv(41) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 0
+# UVM_INFO ../sim/scoreboard.sv(41) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 1
+# UVM_INFO ../sim/scoreboard.sv(41) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 2
+# UVM_INFO ../sim/scoreboard.sv(41) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 3
+# UVM_INFO ../sim/scoreboard.sv(41) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 4
+# UVM_INFO ../sim/scoreboard.sv(41) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 4
+# UVM_INFO ../sim/scoreboard.sv(41) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 5
+# UVM_INFO ../sim/scoreboard.sv(41) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 6
+# UVM_INFO ../sim/scoreboard.sv(41) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 7
+# UVM_WARNING @ 20475: uvm_test_top.my_env.my_scoreboard [UVM_DEPRECATED] build()/build_phase() has been called explicitly, outside of the phasing system. This usage of build is deprecated and may lead to unexpected behavior.
+# UVM_INFO ../sim/scoreboard.sv(47) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] SCOREBOARD CHECK PHASE
+# UVM_ERROR ../sim/scoreboard.sv(49) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] *  ERROR  *Data queue size mismatch
+# UVM_ERROR ../sim/scoreboard.sv(52) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Data mismatch at index 5
+# UVM_ERROR ../sim/scoreboard.sv(52) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Data mismatch at index 6
+# UVM_ERROR ../sim/scoreboard.sv(52) @ 20475: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Data mismatch at index 7
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
 # UVM_INFO :   53
 # UVM_WARNING :    2
-# UVM_ERROR :    1
+# UVM_ERROR :    4
 # UVM_FATAL :    0
 # ** Report counts by id
 # [Questa UVM]     2
@@ -145,10 +153,10 @@
 # [my_driver]     2
 # [my_env]     3
 # [my_monitor]     2
-# [my_scoreboard]    25
-# [my_seq]    15
+# [my_scoreboard]    26
+# [my_seq]    17
 # [uvm_test_top]     1
 # ** Note: $finish    : C:/questasim64_10.7c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 20435 ns  Iteration: 59  Instance: /top_dut
-# End time: 17:40:26 on Apr 24,2024, Elapsed time: 0:00:03
+#    Time: 20475 ns  Iteration: 59  Instance: /top_dut
+# End time: 11:28:36 on Apr 25,2024, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 0

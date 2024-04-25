@@ -1,8 +1,14 @@
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
-Start time: 17:40:21 on Apr 24,2024
+Start time: 11:28:31 on Apr 25,2024
 vlog -timescale=1ns/1ns -sv "+acc" "+incdir+." -incr -f filelist_tb.f -assertdebug -l vlog_tb.log 
 ** Note: (vlog-2286) ../sim/top_dut.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
 -- Compiling interface intf
+** Warning: ** while parsing file included at ../sim/top_dut.sv(3)
+** while parsing file included at ../sim/test.sv(6)
+** while parsing file included at ../sim/environment.sv(5)
+** while parsing file included at ../sim/agent.sv(6)
+** while parsing file included at ../sim/monitor.sv(5)
+** at ../sim/sequence.sv(93): (vlog-2283) Extra semicolon in $unit (global) scope.
 -- Compiling package top_dut_sv_unit
 -- Compiling module top_dut
 -- Scanning library directory '../sim'
@@ -13,5 +19,5 @@ Referenced (but uncompiled) modules or primitives:
 
 Top level modules:
 	top_dut
-End time: 17:40:22 on Apr 24,2024, Elapsed time: 0:00:01
-Errors: 0, Warnings: 0
+End time: 11:28:32 on Apr 25,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 1

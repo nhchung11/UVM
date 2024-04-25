@@ -45,9 +45,15 @@ class scoreboard extends uvm_component;
     virtual function void check_phase(uvm_phase phase);
         super.build_phase(phase);
         `uvm_info(get_name(), "SCOREBOARD CHECK PHASE", UVM_MEDIUM)
-        if (data_transmitted.size() != data_DUT_received.size())
+        if (data_transmitted.size() != data_DUT_received.size()) begin
             `uvm_error(get_name(), "*  ERROR  *Data queue size mismatch")
+            foreach (data_DUT_received[i]) begin
+                if (data_transmitted[i] != data_DUT_received[i])
+                    `uvm_error(get_name(), $sformatf("Data mismatch at index %0d", i))
+            end
+        end
         else begin
+            `uvm_info(get_name(), "*  INFO  *Data queue size match", UVM_MEDIUM)
             foreach (data_transmitted[i]) begin
                 if (data_transmitted[i] != data_DUT_received[i])
                     `uvm_error(get_name(), $sformatf("Data mismatch at index %0d", i))
