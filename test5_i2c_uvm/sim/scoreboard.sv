@@ -6,6 +6,7 @@ import uvm_pkg::*;
 class scoreboard extends uvm_component;
     byte data_transmitted [$];
     byte data_DUT_received [$];
+    byte data_received [$];
 
     `uvm_component_utils(scoreboard)
     virtual intf my_intf;
@@ -59,6 +60,10 @@ class scoreboard extends uvm_component;
                     `uvm_error(get_name(), $sformatf("Data mismatch at index %0d", i))
             end
         end
+    endfunction
+    
+    virtual function void read (byte data);
+        data_received.push_back(data);  
     endfunction
     
 endclass: scoreboard

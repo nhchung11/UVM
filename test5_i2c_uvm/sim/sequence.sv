@@ -18,7 +18,10 @@ class seq extends uvm_sequence;
         // test2(my_packet);   
         // test3(my_packet);
         // test4(my_packet);
-        test5(my_packet);
+        // test5(my_packet);
+        // test6(my_packet);
+        // test7(my_packet);
+        test8(my_packet);   
     endtask
 
     task write(packet my_packet, bit [7:0] PWDATA, int PADDR);
@@ -184,7 +187,63 @@ class seq extends uvm_sequence;
         `uvm_delay(10000ns)        
     endtask
 
+    task test6(packet my_packet);           // Write with repeated start
+        reset(my_packet);
+        write(my_packet, 8'b11110110, 2);
+        write(my_packet, 8'b0010_0000, 6);
+        write(my_packet, 0, 4);
+        write(my_packet, 1, 4);
+        write(my_packet, 2, 4);
+        write(my_packet, 3, 4);
+        write(my_packet, 8'b11111110, 2);
+        `uvm_delay(10000ns)
+    endtask
 
+    task test7(packet my_packet);           // Write many data
+        reset(my_packet);
+        write(my_packet, 8'b11110110, 2);
+        write(my_packet, 8'b0010_0000, 6);
+        write(my_packet, 0, 4);
+        write(my_packet, 1, 4);
+        write(my_packet, 2, 4);
+        write(my_packet, 3, 4);
+        write(my_packet, 4, 4);
+        write(my_packet, 5, 4);
+        write(my_packet, 6, 4);
+        write(my_packet, 7, 4);
+        write(my_packet, 8'b11111110, 2);
+        `uvm_delay(20000ns)
+
+        write(my_packet, 8'b11110110, 2);
+        write(my_packet, 8'b0010_0000, 6);
+        write(my_packet, 0, 4);
+        write(my_packet, 8, 4);
+        write(my_packet, 9, 4);
+        write(my_packet, 10, 4);
+        write(my_packet, 11, 4);
+        write(my_packet, 12, 4);
+        write(my_packet, 13, 4);
+        write(my_packet, 14, 4);
+        write(my_packet, 8'b11111110, 2);
+        `uvm_delay(20000ns)
+    endtask
+
+    task test8(packet my_packet);
+        reset(my_packet);
+        write(my_packet, 8'b11110110, 2);
+        write(my_packet, 8'b0010_0000, 6);
+        write(my_packet, 0, 4);
+        write(my_packet, 1, 4);
+        write(my_packet, 8'b11111110, 2);
+        `uvm_delay(5000ns)
+
+        
+        write(my_packet, 8'b0010_0001, 6);
+        write(my_packet, 8'b11111100, 2);
+        `uvm_delay(5000ns)
+        read(my_packet, 5);
+        `uvm_delay(500ns)
+    endtask
 endclass
 `endif 
   

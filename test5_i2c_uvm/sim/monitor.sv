@@ -44,6 +44,9 @@ class monitor extends uvm_monitor;
                 // `uvm_info(get_name(), "MONITOR Receive", UVM_LOW)
                 // monitor_analysis_port.get_DUT_data(my_intf.saved_data);
             end
+            if (my_intf.PADDR == 5) begin
+                monitor_analysis_port.read(my_intf.PRDATA);
+            end
         end
     endtask
 endclass: monitor
