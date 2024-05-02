@@ -4,7 +4,6 @@
 // `timescale 1ns/1ns
 `include "uvm_macros.svh"
 `include "packet.sv"
-`include "interface.sv"
 import uvm_pkg::*;
 
 class subscriber extends uvm_subscriber #(packet);
@@ -52,10 +51,11 @@ class subscriber extends uvm_subscriber #(packet);
         `uvm_info(get_name(), "SUBSCRIBER BUILD PHASE", UVM_LOW)
     endfunction : build_phase
 
-    virtual function void write(packet my_packet);
-        PADDR = my_packet.PADDR;
-        PWRITE = my_packet.PWRITE;
+    virtual function void write(packet t);
+        PADDR = t.PADDR;
+        PWRITE = t.PWRITE;
         cov.sample();
     endfunction 
 endclass : subscriber
 `endif                                  
+
