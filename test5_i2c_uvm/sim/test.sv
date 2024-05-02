@@ -11,7 +11,7 @@ class test extends uvm_test;
     env my_env;
     virtual intf my_intf;
 
-    // Constructor                                                                   
+    // CONSTRUCTOR                                                               
     function new(string name, uvm_component parent);
         super.new(name, parent);
     endfunction
@@ -19,6 +19,7 @@ class test extends uvm_test;
     // BUILD PHASE
     virtual function void build_phase(uvm_phase phase);
         super.build_phase(phase);
+        `uvm_info(get_name(), "------------------------------------------------------------", UVM_MEDIUM)
         `uvm_info(get_name(), "TEST BUILD PHASE", UVM_MEDIUM)
         my_env = env::type_id::create("my_env", this);
         if (!uvm_config_db #(virtual intf)::get(this, "*", "my_intf", my_intf))

@@ -1,0 +1,7 @@
+var g_data = {'dummy':null,
+'2':'../rtl/apb_slave.v',
+'1':'../rtl/fifo.sv',
+'4':'../rtl/i2c.v',
+'6':'../rtl/i2c_slave_model.v',
+'3':'../rtl/top.v',
+'5':'../sim/top_dut.sv'};

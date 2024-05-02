@@ -18,13 +18,16 @@ class seq extends uvm_sequence;
         // test2(my_packet);   
         // test3(my_packet);
         // test4(my_packet);
-        // test5(my_packet);
+        test5(my_packet);
         // test6(my_packet);
         // test7(my_packet);
-        test8(my_packet);   
+        // test8(my_packet);
+        // test9(my_packet);   
+        // test10(my_packet);
+        // test11(my_packet);
     endtask
 
-    task write(packet my_packet, bit [7:0] PWDATA, int PADDR);
+    task write(packet my_packet, bit [7:0] PWDATA, int PADDR);      // APB WIRTE TO REGISTER
         start_item(my_packet);
         my_packet.PWDATA = PWDATA;
         my_packet.PADDR = PADDR;
@@ -45,7 +48,7 @@ class seq extends uvm_sequence;
         finish_item(my_packet);
     endtask
 
-    task read(packet my_packet, int PADDR); 
+    task read(packet my_packet, int PADDR);                         // APB READ FROM REGISTER     
         start_item(my_packet);
         my_packet.PADDR = PADDR;
         my_packet.PRESETn = 1;
@@ -93,7 +96,7 @@ class seq extends uvm_sequence;
 
     task test0_2(packet my_packet);         // Read default values from all registers
         reset(my_packet);
-        `uvm_delay(500ns);
+        `uvm_delay(500ns)
         read(my_packet, 2);
         read(my_packet, 3);
         read(my_packet, 4);
@@ -228,7 +231,7 @@ class seq extends uvm_sequence;
         `uvm_delay(20000ns)
     endtask
 
-    task test8(packet my_packet);
+    task test8(packet my_packet);           // Read 1 bytes
         reset(my_packet);
         write(my_packet, 8'b11110110, 2);
         write(my_packet, 8'b0010_0000, 6);
@@ -243,6 +246,53 @@ class seq extends uvm_sequence;
         `uvm_delay(5000ns)
         read(my_packet, 5);
         `uvm_delay(500ns)
+    endtask
+
+    task test9(packet my_packet);           // Write 8 bytees and Read to FIFO RX empty then continue reading
+        reset(my_packet);
+        write(my_packet, 8'b11110110, 2);
+        write(my_packet, 8'b0010_0000, 6);
+        write(my_packet, 0, 4);
+        write(my_packet, 1, 4);
+        write(my_packet, 2, 4);
+        write(my_packet, 3, 4);
+        write(my_packet, 4, 4);
+        write(my_packet, 5, 4);
+        write(my_packet, 6, 4);
+        write(my_packet, 7, 4);
+        write(my_packet, 8, 4);
+        write(my_packet, 9, 4);
+        write(my_packet, 8'b11111110, 2);
+        `uvm_delay(20000ns)
+
+        write(my_packet, 8'b0010_0001, 6);
+        write(my_packet, 8'b11111100, 2);
+        `uvm_delay(10000ns)
+        read(my_packet, 5);
+        read(my_packet, 5);
+        read(my_packet, 5);
+        read(my_packet, 5);
+        read(my_packet, 5);
+        read(my_packet, 5);
+        read(my_packet, 5);
+        read(my_packet, 5);
+        `uvm_delay(100ns)
+    endtask
+
+    // task test10 (packet my_packet)          // Write Read combination
+
+    // endtask
+
+    task test11 (packet my_packet);            // Read reset value
+        `uvm_delay(1000ns)
+        reset(my_packet);
+        `uvm_delay(500ns)
+        read(my_packet, 2);
+        read(my_packet, 3);
+        read(my_packet, 4);
+        read(my_packet, 5);
+        read(my_packet, 6);
+        `uvm_delay(100ns)
     endtask
 endclass
 `endif 

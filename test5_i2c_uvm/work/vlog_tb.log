@@ -1,23 +1,15 @@
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
-Start time: 17:29:30 on Apr 26,2024
+Start time: 17:21:34 on May 02,2024
 vlog -timescale=1ns/1ns -sv "+acc" "+incdir+." -incr -f filelist_tb.f -assertdebug -l vlog_tb.log 
 ** Note: (vlog-2286) ../sim/top_dut.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
 -- Compiling interface intf
-** Warning: ** while parsing file included at ../sim/top_dut.sv(3)
-** while parsing file included at ../sim/test.sv(6)
-** while parsing file included at ../sim/environment.sv(5)
-** while parsing file included at ../sim/agent.sv(6)
-** while parsing file included at ../sim/monitor.sv(5)
-** at ../sim/sequence.sv(96): (vlog-2283) Extra semicolon in $unit (global) scope.
 -- Compiling package top_dut_sv_unit
+** Error (suppressible): ../sim/subscriber.sv(55): (vlog-2911) Argument name 'my_packet' for virtual method 'write' in sub class 'subscriber' does not match the argument name 't' in superclass 'uvm_subscriber'.
+** Error: ../sim/subscriber.sv(10): Sub-class 'subscriber' does not override all virtual methods of abstract superclass 'uvm_subscriber'.
+** Error: ../sim/subscriber.sv(10): Sub-class 'subscriber' does not override virtual method 'write' of abstract superclass 'uvm_subscriber'.
 -- Compiling module top_dut
--- Scanning library directory '../sim'
-
-Referenced (but uncompiled) modules or primitives:
-	apb_to_i2c_top
-	i2c_slave_model
-
-Top level modules:
-	top_dut
-End time: 17:29:30 on Apr 26,2024, Elapsed time: 0:00:00
-Errors: 0, Warnings: 1
+** Error (suppressible): ../sim/subscriber.sv(55): (vlog-2911) Argument name 'my_packet' for virtual method 'write' in sub class 'subscriber' does not match the argument name 't' in superclass 'uvm_subscriber'.
+** Error: ../sim/subscriber.sv(10): Sub-class 'subscriber' does not override all virtual methods of abstract superclass 'uvm_subscriber'.
+** Error: ../sim/subscriber.sv(10): Sub-class 'subscriber' does not override virtual method 'write' of abstract superclass 'uvm_subscriber'.
+End time: 17:21:35 on May 02,2024, Elapsed time: 0:00:01
+Errors: 6, Warnings: 0
