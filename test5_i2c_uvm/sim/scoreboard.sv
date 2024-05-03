@@ -12,7 +12,7 @@ class scoreboard extends uvm_component;
     `uvm_component_utils(scoreboard)
     virtual intf my_intf;
 
-    uvm_analysis_imp #(packet, scoreboard) scoreboard_imp;
+    uvm_analysis_imp #(packet, scoreboard) scoreboard_analysis_imp;
 
     // CONSTUCTOR
     function new(string name = "scoreboard", uvm_component parent);
@@ -23,7 +23,7 @@ class scoreboard extends uvm_component;
     virtual function void build_phase(uvm_phase phase);
         `uvm_info(get_name(), "SCOREBOARD BUILD PHASE", UVM_MEDIUM)
         super.build_phase(phase);
-        scoreboard_imp = new("scoreboard_imp", this); 
+        scoreboard_analysis_imp = new("scoreboard_analysis_imp", this); 
 
         if(!uvm_config_db #(virtual intf)::get(this, "*", "my_intf", my_intf))
             `uvm_fatal("NOVIF", "Virtual interface not set")

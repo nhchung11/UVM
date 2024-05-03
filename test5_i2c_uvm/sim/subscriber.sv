@@ -8,7 +8,7 @@ import uvm_pkg::*;
 
 class subscriber extends uvm_subscriber #(packet);
     `uvm_component_utils(subscriber)
-    uvm_analysis_imp #(packet, subscriber) subscriber_imp;
+    uvm_analysis_imp #(packet, subscriber) subscriber_analysis_imp;
     byte PADDR;
     bit PWRITE;
 
@@ -42,7 +42,7 @@ class subscriber extends uvm_subscriber #(packet);
     function new (string name = "subscriber", uvm_component parent);
         super.new(name, parent);
         cov = new();
-        subscriber_imp = new("subscriber_imp", this);
+        subscriber_analysis_imp = new("subscriber_analysis_imp", this);
     endfunction
 
     // BUILD PHASE
@@ -51,7 +51,9 @@ class subscriber extends uvm_subscriber #(packet);
         `uvm_info(get_name(), "SUBSCRIBER BUILD PHASE", UVM_LOW)
     endfunction : build_phase
 
+    // SAMPLE
     virtual function void write(packet t);
+        `uvm_info(get_name(), "sample", UVM_LOW)
         PADDR = t.PADDR;
         PWRITE = t.PWRITE;
         cov.sample();

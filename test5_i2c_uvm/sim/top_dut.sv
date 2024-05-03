@@ -1,6 +1,7 @@
 `include "uvm_macros.svh"
 `include "interface.sv"
 `include "test.sv"
+`include "assertion.sv"
 import uvm_pkg::*;
 
 module top_dut();
@@ -34,6 +35,8 @@ module top_dut();
         .read_data  (my_intf.read_data),
         .saved_data (my_intf.saved_data)
     ); 
+
+    assertion_cov acov(my_intf);
 
 
     initial begin

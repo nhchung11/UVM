@@ -34,8 +34,8 @@ class env extends uvm_env;
     virtual function void connect_phase(uvm_phase phase);
         super.connect_phase(phase);
         `uvm_info(get_name(), "ENVIRONMENT CONNECT PHASE", UVM_MEDIUM)
-        my_agent.my_monitor.monitor_port.connect(my_scoreboard.scoreboard_imp);
-        my_agent.my_monitor.monitor_port.connect(my_subscriber.subscriber_imp);
+        my_agent.my_monitor.monitor_analysis_port.connect(my_scoreboard.scoreboard_analysis_imp);
+        my_agent.my_monitor.monitor_analysis_port.connect(my_subscriber.subscriber_analysis_imp);
     endfunction
 
     // RUN PHASE

@@ -1,0 +1,15 @@
+var g_sourceLines = [
+'`ifndef ASSERT',
+'`define ASSERT',
+'',
+'module assertion_cov(intf my_intf);',
+'    // PREADY CHECK',
+'    PREADY_CHECK: cover property (@(posedge my_intf.PCLK) (my_intf.PSELx &amp; !my_intf.PENABLE) |=&gt; (my_intf.PENABLE));',
+'',
+'    WRITE_REGISTER_CHECK: cover property(@(posedge my_intf.PCLK) ((my_intf.PADDR == 2) || (my_intf.PADDR == 4) || (my_intf.PADDR == 6)) |-&gt; (my_intf.PWRITE));',
+'',
+'    READ_REGISTER_CHECK: cover property (@(posedge my_intf.PCLK) ((my_intf.PADDR == 3) || (my_intf.PADDR == 5)) |-&gt; (!my_intf.PWRITE));',
+'endmodule',
+'`endif '
+];
+countinueBuildStmtTable(g_sourceLines);

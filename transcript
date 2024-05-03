@@ -12,3 +12,5 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
+# coverage read -dataset test test.ucdb
+# ** Error: (vish-7) Failed to open UCDB file "test.ucdb" in read mode.
