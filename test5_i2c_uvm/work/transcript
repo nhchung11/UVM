@@ -1,3 +1,8 @@
+# vsim -voptargs="+acc" -sva -assertdebug -coverage top_dut -c -do "set WildcardFilter None;add wave -r top_dut/*; coverage save -onexit test12.ucdb; run -all; quit;" 
+# Start time: 10:31:00 on May 06,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "i2c_slave_model(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "i2c_master(fast)".
 # //  Questa Sim-64
 # //  Version 10.7c win64 Aug 18 2018
 # //
@@ -12,7 +17,220 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# coverage read -dataset final_coverage .\final_coverage.ucdb
-# .\final_coverage.ucdb opened as coverage dataset "final_coverage"
-coverage report -html -htmldir covhtmlreport -source -details -assert -directive -cvg -code bcefst -threshL 50 -threshH 90
-# Report created in covhtmlreport/index.html
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.top_dut_sv_unit(fast)
+# Loading work.top_dut(fast)
+# Loading work.intf(fast)
+# Loading work.apb_to_i2c_top(fast)
+# Loading work.apb_slave(fast)
+# Loading work.async_fifo(fast)
+# Loading work.sync_r2w(fast)
+# Loading work.sync_w2r(fast)
+# Loading work.fifomem(fast)
+# Loading work.rptr_empty(fast)
+# Loading work.wptr_full(fast)
+# Loading work.i2c_master(fast)
+# Loading work.i2c_slave_model(fast)
+# Loading work.assertion_cov(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.intf(fast)
+# Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
+# set WildcardFilter None
+# None
+# add wave -r top_dut/*
+#  coverage save -onexit test12.ucdb
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test test...
+# UVM_INFO ../sim/test.sv(22) @ 0: uvm_test_top [uvm_test_top] ------------------------------------------------------------
+# UVM_INFO ../sim/test.sv(23) @ 0: uvm_test_top [uvm_test_top] TEST BUILD PHASE
+# UVM_INFO ../sim/environment.sv(25) @ 0: uvm_test_top.my_env [my_env] ENVIRONMENT BUILD PHASE
+# UVM_INFO ../sim/agent.sv(25) @ 0: uvm_test_top.my_env.my_agent [my_agent] AGENT BUILD PHASE
+# UVM_INFO ../sim/driver.sv(22) @ 0: uvm_test_top.my_env.my_agent.my_driver [my_driver] DRIVER BUILD PHASE
+# UVM_INFO ../sim/monitor.sv(20) @ 0: uvm_test_top.my_env.my_agent.my_monitor [my_monitor] MONITOR BUILD PHASE
+# UVM_INFO ../sim/scoreboard.sv(24) @ 0: uvm_test_top.my_env.my_scoreboard [my_scoreboard] SCOREBOARD BUILD PHASE
+# UVM_INFO ../sim/subscriber.sv(51) @ 0: uvm_test_top.my_env.my_subscriber [my_subscriber] SUBSCRIBER BUILD PHASE
+# UVM_INFO ../sim/agent.sv(34) @ 0: uvm_test_top.my_env.my_agent [my_agent] AGENT CONNECT PHASE
+# UVM_INFO ../sim/environment.sv(36) @ 0: uvm_test_top.my_env [my_env] ENVIRONMENT CONNECT PHASE
+# UVM_INFO ../sim/environment.sv(43) @ 0: uvm_test_top.my_env [my_env] ---------------------------------------
+# UVM_INFO ../sim/environment.sv(44) @ 0: uvm_test_top.my_env [my_env] ENVIRONMENT RUN PHASE
+# UVM_INFO ../sim/monitor.sv(35) @ 0: uvm_test_top.my_env.my_agent.my_monitor [my_monitor] MONITOR RUN PHASE
+# UVM_INFO ../sim/driver.sv(36) @ 0: uvm_test_top.my_env.my_agent.my_driver [my_driver] DRIVER RUN PHASE
+# UVM_INFO ../sim/sequence.sv(81) @ 5: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB RESET
+# DEBUG i2c_slave; stop condition detected at                    5
+# UVM_INFO ../sim/sequence.sv(41) @ 25: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 246 to register 2
+# UVM_INFO ../sim/sequence.sv(41) @ 55: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 32 to register 6
+# UVM_INFO ../sim/sequence.sv(41) @ 85: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 0 to register 4
+# UVM_INFO ../sim/subscriber.sv(56) @ 95: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/sequence.sv(41) @ 115: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 1 to register 4
+# UVM_INFO ../sim/subscriber.sv(56) @ 125: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/sequence.sv(41) @ 145: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 252 to register 2
+# UVM_INFO ../sim/sequence.sv(81) @ 365: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB RESET
+# UVM_INFO ../sim/sequence.sv(41) @ 385: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 246 to register 2
+# UVM_INFO ../sim/sequence.sv(41) @ 415: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 32 to register 6
+# UVM_INFO ../sim/sequence.sv(41) @ 445: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 0 to register 4
+# UVM_INFO ../sim/subscriber.sv(56) @ 455: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/sequence.sv(41) @ 475: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 1 to register 4
+# UVM_INFO ../sim/subscriber.sv(56) @ 485: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/sequence.sv(41) @ 505: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 252 to register 2
+# DEBUG i2c_slave; start condition detected at                  700
+# UVM_INFO ../sim/sequence.sv(81) @ 825: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB RESET
+# DEBUG i2c_slave; stop condition detected at                  825
+# UVM_INFO ../sim/sequence.sv(41) @ 845: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 246 to register 2
+# UVM_INFO ../sim/sequence.sv(41) @ 875: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 32 to register 6
+# UVM_INFO ../sim/sequence.sv(41) @ 905: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 0 to register 4
+# UVM_INFO ../sim/subscriber.sv(56) @ 915: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/sequence.sv(41) @ 935: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 1 to register 4
+# UVM_INFO ../sim/subscriber.sv(56) @ 945: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/sequence.sv(41) @ 965: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 252 to register 2
+# DEBUG i2c_slave; start condition detected at                 1180
+# DEBUG i2c_slave; command byte received (write) at                 2622
+# UVM_INFO ../sim/sequence.sv(81) @ 2635: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB RESET
+# DEBUG i2c_slave; stop condition detected at                 2635
+# DEBUG i2c_slave; stop condition detected at                 2637
+# UVM_INFO ../sim/sequence.sv(41) @ 2655: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 246 to register 2
+# UVM_INFO ../sim/sequence.sv(41) @ 2685: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 32 to register 6
+# UVM_INFO ../sim/sequence.sv(41) @ 2715: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 0 to register 4
+# UVM_INFO ../sim/subscriber.sv(56) @ 2725: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/sequence.sv(41) @ 2745: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 1 to register 4
+# UVM_INFO ../sim/subscriber.sv(56) @ 2755: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/sequence.sv(41) @ 2775: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 252 to register 2
+# DEBUG i2c_slave; start condition detected at                 2940
+# DEBUG i2c_slave; command byte received (write) at                 4382
+# UVM_INFO ../sim/sequence.sv(81) @ 4595: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB RESET
+# DEBUG i2c_slave; stop condition detected at                 4595
+# UVM_INFO ../sim/sequence.sv(41) @ 4615: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 246 to register 2
+# UVM_INFO ../sim/sequence.sv(41) @ 4645: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 32 to register 6
+# UVM_INFO ../sim/sequence.sv(41) @ 4675: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 0 to register 4
+# UVM_INFO ../sim/subscriber.sv(56) @ 4685: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/sequence.sv(41) @ 4705: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 1 to register 4
+# UVM_INFO ../sim/subscriber.sv(56) @ 4715: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/sequence.sv(41) @ 4735: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 252 to register 2
+# DEBUG i2c_slave; start condition detected at                 4860
+# DEBUG i2c_slave; command byte received (write) at                 6302
+# DEBUG i2c_slave; address received. adr=00, ack=1
+# UVM_INFO ../sim/sequence.sv(81) @ 7905: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB RESET
+# DEBUG i2c_slave; stop condition detected at                 7905
+# UVM_INFO ../sim/sequence.sv(41) @ 7925: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 246 to register 2
+# UVM_INFO ../sim/sequence.sv(41) @ 7955: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 32 to register 6
+# UVM_INFO ../sim/sequence.sv(41) @ 7985: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 0 to register 4
+# UVM_INFO ../sim/subscriber.sv(56) @ 7995: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/sequence.sv(41) @ 8015: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 1 to register 4
+# UVM_INFO ../sim/subscriber.sv(56) @ 8025: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/sequence.sv(41) @ 8045: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 252 to register 2
+# DEBUG i2c_slave; start condition detected at                 8220
+# DEBUG i2c_slave; command byte received (write) at                 9662
+# DEBUG i2c_slave; address received. adr=00, ack=1
+# DEBUG i2c_slave; data block write 01 to address 00
+# DEBUG i2c_slave; stop condition detected at                12700
+# DEBUG i2c_slave; stop condition detected at                12701
+# UVM_INFO ../sim/sequence.sv(41) @ 13065: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 33 to register 6
+# UVM_INFO ../sim/sequence.sv(41) @ 13095: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 252 to register 2
+# DEBUG i2c_slave; start condition detected at                13340
+# DEBUG i2c_slave; command byte received (read) at                14782
+# DEBUG i2c_slave; data block read 01 from address 00 (1)
+# DEBUG i2c_slave; memcheck [0]=01, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read xx from address 01 (2)
+# UVM_INFO ../sim/sequence.sv(81) @ 16415: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB RESET
+# UVM_INFO ../sim/sequence.sv(41) @ 16435: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 246 to register 2
+# UVM_INFO ../sim/sequence.sv(41) @ 16465: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 33 to register 6
+# UVM_INFO ../sim/sequence.sv(41) @ 16495: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 252 to register 2
+# DEBUG i2c_slave; data block read xx from address 02 (2)
+# DEBUG i2c_slave; start condition detected at                18620
+# DEBUG i2c_slave; command byte received (read) at                20062
+# DEBUG i2c_slave; data block read 01 from address 00 (1)
+# DEBUG i2c_slave; memcheck [0]=01, [1]=xx, [2]=xx
+# UVM_INFO ../sim/sequence.sv(81) @ 21215: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB RESET
+# DEBUG i2c_slave; stop condition detected at                21215
+# DEBUG i2c_slave; stop condition detected at                21217
+# UVM_INFO ../sim/sequence.sv(41) @ 21235: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 246 to register 2
+# UVM_INFO ../sim/sequence.sv(41) @ 21265: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 33 to register 6
+# UVM_INFO ../sim/sequence.sv(41) @ 21295: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Write 252 to register 2
+# DEBUG i2c_slave; start condition detected at                21500
+# DEBUG i2c_slave; command byte received (read) at                22942
+# DEBUG i2c_slave; data block read 01 from address 00 (1)
+# DEBUG i2c_slave; memcheck [0]=01, [1]=xx, [2]=xx
+# DEBUG i2c_slave; data block read xx from address 01 (2)
+# DEBUG i2c_slave; stop condition detected at                24541
+# DEBUG i2c_slave; start condition detected at                24543
+# DEBUG i2c_slave; command byte received (read) at                26142
+# DEBUG i2c_slave; data block read 01 from address 00 (1)
+# DEBUG i2c_slave; memcheck [0]=01, [1]=xx, [2]=xx
+# UVM_INFO ../sim/sequence.sv(61) @ 26315: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] APB Read from register 5
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 27335: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_WARNING @ 27335: uvm_test_top.my_env.my_scoreboard [UVM_DEPRECATED] build()/build_phase() has been called explicitly, outside of the phasing system. This usage of build is deprecated and may lead to unexpected behavior.
+# UVM_INFO ../sim/scoreboard.sv(35) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] ---------------------------------------
+# UVM_INFO ../sim/scoreboard.sv(36) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] SCOREBOARD EXTRACT PHASE
+# UVM_INFO ../sim/scoreboard.sv(37) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Size of data DUT received queue: 3
+# UVM_INFO ../sim/scoreboard.sv(39) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 0
+# UVM_INFO ../sim/scoreboard.sv(39) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 0
+# UVM_INFO ../sim/scoreboard.sv(39) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 1
+# UVM_INFO ../sim/scoreboard.sv(42) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Size of actual data transmitted queue: 12
+# UVM_INFO ../sim/scoreboard.sv(44) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 0
+# UVM_INFO ../sim/scoreboard.sv(44) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 1
+# UVM_INFO ../sim/scoreboard.sv(44) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 0
+# UVM_INFO ../sim/scoreboard.sv(44) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 1
+# UVM_INFO ../sim/scoreboard.sv(44) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 0
+# UVM_INFO ../sim/scoreboard.sv(44) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 1
+# UVM_INFO ../sim/scoreboard.sv(44) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 0
+# UVM_INFO ../sim/scoreboard.sv(44) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 1
+# UVM_INFO ../sim/scoreboard.sv(44) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 0
+# UVM_INFO ../sim/scoreboard.sv(44) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 1
+# UVM_INFO ../sim/scoreboard.sv(44) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 0
+# UVM_INFO ../sim/scoreboard.sv(44) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Transmitted data: 1
+# UVM_INFO ../sim/scoreboard.sv(46) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Size of received data queue: 0
+# UVM_INFO ../sim/scoreboard.sv(47) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] FIFO status: 0 (hex)
+# UVM_WARNING @ 27335: uvm_test_top.my_env.my_scoreboard [UVM_DEPRECATED] build()/build_phase() has been called explicitly, outside of the phasing system. This usage of build is deprecated and may lead to unexpected behavior.
+# UVM_INFO ../sim/scoreboard.sv(54) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] ---------------------------------------
+# UVM_INFO ../sim/scoreboard.sv(55) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] SCOREBOARD CHECK PHASE
+# UVM_ERROR ../sim/scoreboard.sv(57) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] *  ERROR  *Data queue size mismatch
+# UVM_ERROR ../sim/scoreboard.sv(60) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Data mismatch at index 1
+# UVM_ERROR ../sim/scoreboard.sv(60) @ 27335: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Data mismatch at index 2
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  100
+# UVM_WARNING :    2
+# UVM_ERROR :    3
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVM_DEPRECATED]     2
+# [my_agent]     2
+# [my_driver]     2
+# [my_env]     4
+# [my_monitor]     2
+# [my_scoreboard]    27
+# [my_seq]    47
+# [my_subscriber]    13
+# [uvm_test_top]     2
+# ** Note: $finish    : C:/questasim64_10.7c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 27335 ns  Iteration: 59  Instance: /top_dut
+# Saving coverage database on exit...
+# End time: 10:31:05 on May 06,2024, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 0
