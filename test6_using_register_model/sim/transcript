@@ -1,0 +1,9 @@
+# vsim -voptargs="+acc" -assertdebug -coverage top_dut -c -do "run -all; quit;" 
+# Start time: 14:55:18 on Apr 23,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: top_dut.sv(12): Module 'apb_to_i2c_top' is not defined.
+# ** Error: top_dut.sv(26): Module 'i2c_slave_model' is not defined.
+# Optimization failed
+# Error loading design
+# End time: 14:55:18 on Apr 23,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0

@@ -1,5 +1,5 @@
-# vsim -voptargs="+acc" -sva -assertdebug -coverage top_dut -c -do "set WildcardFilter None;add wave -r top_dut/*; coverage save -onexit test12.ucdb; run -all; quit;" 
-# Start time: 10:31:00 on May 06,2024
+# vsim -voptargs="+acc" -sva -assertdebug -coverage top_sim -c -do "set WildcardFilter None;add wave -r top_sim/*; coverage save -onexit test12.ucdb; run -all; quit;" 
+# Start time: 17:49:41 on May 07,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vopt-143) Recognized 1 FSM in module "i2c_slave_model(fast)".
 # ** Note: (vopt-143) Recognized 1 FSM in module "i2c_master(fast)".
@@ -19,8 +19,8 @@
 # //
 # Loading sv_std.std
 # Loading mtiUvm.uvm_pkg
-# Loading work.top_dut_sv_unit(fast)
-# Loading work.top_dut(fast)
+# Loading work.top_sim_sv_unit(fast)
+# Loading work.top_sim(fast)
 # Loading work.intf(fast)
 # Loading work.apb_to_i2c_top(fast)
 # Loading work.apb_slave(fast)
@@ -38,7 +38,7 @@
 # Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
 # set WildcardFilter None
 # None
-# add wave -r top_dut/*
+# add wave -r top_sim/*
 #  coverage save -onexit test12.ucdb
 #  run -all
 # ----------------------------------------------------------------
@@ -230,7 +230,7 @@
 # [my_subscriber]    13
 # [uvm_test_top]     2
 # ** Note: $finish    : C:/questasim64_10.7c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 27335 ns  Iteration: 59  Instance: /top_dut
+#    Time: 27335 ns  Iteration: 59  Instance: /top_sim
 # Saving coverage database on exit...
-# End time: 10:31:05 on May 06,2024, Elapsed time: 0:00:05
+# End time: 17:49:45 on May 07,2024, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 0

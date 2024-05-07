@@ -1,0 +1,10 @@
+# vsim -voptargs="+acc" -sva -assertdebug -coverage top_sim -c -do "set WildcardFilter None;add wave -r top_sim/*; coverage save -onexit test12.ucdb; run -all; quit;" 
+# Start time: 18:00:50 on May 07,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: (vopt-13130) Failed to find design unit top_sim.
+#         Searched libraries:
+#             work
+# Optimization failed
+# Error loading design
+# End time: 18:00:50 on May 07,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
