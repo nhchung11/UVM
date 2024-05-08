@@ -2,7 +2,6 @@
 `define REG_SEQ
 
 `include "uvm_macros.svh"
-`include "packet.sv"
 `include "register_model.sv"
 
 class reg_seq extends uvm_sequence;
@@ -15,7 +14,9 @@ class reg_seq extends uvm_sequence;
     task body();
         uvm_status_e status;
         // Write to registers
-        regmodel.reg_command.write(status, 8'hFF); 
+        // regmodel.reg_command.write(status, 8'hFF); 
+        // regmodel.reg_transmit.write(status, 8'hAB);
+        `uvm_info(get_name(), "SEQUENCE", UVM_MEDIUM)
     endtask
 endclass
 

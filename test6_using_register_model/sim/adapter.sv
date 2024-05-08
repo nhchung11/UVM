@@ -26,6 +26,7 @@ class adapter extends uvm_reg_adapter;
         rw.addr = my_packet.PADDR;
         rw.data = my_packet.PWDATA;
         rw.kind = my_packet.PWRITE ? UVM_WRITE : UVM_READ;
+        rw.status = UVM_IS_OK;
         `uvm_info(get_name(), $sformatf("Read %0d from register %0d", rw.data, rw.addr), UVM_LOW)
     endfunction
 endclass

@@ -3,7 +3,7 @@
 
 `include "uvm_macros.svh"
 `include "packet.sv"
-`include "interface.sv"
+// `include "interface.sv"
 import uvm_pkg::*;
 
 class driver extends uvm_driver #(packet);

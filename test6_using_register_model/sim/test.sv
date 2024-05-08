@@ -34,7 +34,7 @@ class test extends uvm_test;
 
     // RUN PHASE
     virtual task run_phase(uvm_phase phase);
-        seq my_seq = seq::type_id::create("my_seq");
+        reg_seq my_seq = reg_seq::type_id::create("my_seq");
         // reg_seq my_reg_seq = reg_seq::type_id::create("my_reg_seq");
         phase.raise_objection(this);
         my_seq.start(my_env.my_agent.my_sequencer);

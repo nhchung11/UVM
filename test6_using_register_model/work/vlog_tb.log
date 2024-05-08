@@ -1,19 +1,17 @@
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
-Start time: 18:00:48 on May 07,2024
+Start time: 16:00:59 on May 08,2024
 vlog -timescale=1ns/1ns -sv "+acc" "+incdir+." -incr -f filelist_tb.f -assertdebug -l vlog_tb.log 
-** Note: (vlog-2286) ../sim/top_sim.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Note: (vlog-2286) ../sim/top_sim.sv(3): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling package top_sim_sv_unit
 -- Compiling interface intf
-** Error: ** while parsing file included at ../sim/top_sim.sv(3)
-** while parsing file included at ../sim/test.sv(6)
-** while parsing file included at ../sim/environment.sv(5)
-** while parsing file included at ../sim/agent.sv(6)
-** at ../sim/monitor.sv(5): Cannot find `include file "sequence.sv" in directories:
-    ., ../sim, C:/questasim64_10.7c/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src
-** Error: (vlog-13069) ** while parsing file included at ../sim/top_sim.sv(3)
-** at ../sim/test.sv(37): near "=": syntax error, unexpected '=', expecting '('.
-** Error: ** while parsing file included at ../sim/top_sim.sv(3)
-** at ../sim/test.sv(37): (vlog-2164) Class or package 'seq' not found.
-** Error: ../sim/top_sim.sv(4): Cannot find `include file "assertion.sv" in directories:
-    ., ../sim, C:/questasim64_10.7c/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src
-End time: 18:00:48 on May 07,2024, Elapsed time: 0:00:00
-Errors: 4, Warnings: 0
+-- Compiling module top_sim
+-- Scanning library directory '../sim'
+
+Referenced (but uncompiled) modules or primitives:
+	apb_to_i2c_top
+	i2c_slave_model
+
+Top level modules:
+	top_sim
+End time: 16:00:59 on May 08,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

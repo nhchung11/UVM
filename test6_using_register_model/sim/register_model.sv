@@ -1,5 +1,5 @@
-`ifndef REGS
-`define REGS
+`ifndef REG_MODEL
+`define REG_MODEL
 `include "uvm_macros.svh"
 import uvm_pkg::*;
 
@@ -71,7 +71,7 @@ class transmit extends uvm_reg;
     // CONFIGURE
     virtual function void build();
         data_to_fifo = uvm_reg_field::type_id::create("data_to_fifo");
-        tx_data.configure(this, 8, 0, "RW", 0, 8'h0, 1, 1, 0);
+        data_to_fifo.configure(this, 8, 0, "RW", 0, 8'h0, 1, 1, 0);
     endfunction
 endclass
 
@@ -87,7 +87,7 @@ class receive extends uvm_reg;
     // CONFIGURE
     virtual function void build();
         data_i2c_out = uvm_reg_field::type_id::create("data_i2c_out");
-        rx_data.configure(this, 8, 0, "RW", 0, 8'h0, 1, 0, 0);
+        data_i2c_out.configure(this, 8, 0, "RW", 0, 8'h0, 1, 0, 0);
     endfunction
 endclass
 
@@ -109,7 +109,7 @@ endclass
 
 
 class register_model extends uvm_reg_block;
-    `uvm_object_utils(register_map)
+    `uvm_object_utils(register_model)
     command         reg_command;
     status          reg_status;
     rand transmit   reg_transmit;
@@ -124,34 +124,33 @@ class register_model extends uvm_reg_block;
     // BUILD
     virtual function void build();
         // Create and configure registers
-        reg_command = command::type_id::create("reg_command", , get_full_name());
-        reg_command.configure(this);
-        reg_command.build();
+        this.reg_command = command::type_id::create("reg_command", , get_full_name());
+        this.reg_command.configure(this);
+        this.reg_command.build();
 
-        reg_status = status::type_id::create("reg_status", , get_full_name());
-        reg_status.configure(this);
-        reg_status.build();
+        this.reg_status = status::type_id::create("reg_status", , get_full_name());
+        this.reg_status.configure(this);
+        this.reg_status.build();
 
-        reg_transmit = transmit::type_id::create("reg_transmit", , get_full_name());
-        reg_transmit.configure(this);
-        reg_transmit.build();
+        this.reg_transmit = transmit::type_id::create("reg_transmit", , get_full_name());
+        this.reg_transmit.configure(this);
+        this.reg_transmit.build();
 
-        reg_receive = receive::type_id::create("reg_receive", , get_full_name());
-        reg_receive.configure(this);    
-        reg_receive.build();
+        this.reg_receive = receive::type_id::create("reg_receive", , get_full_name());
+        this.reg_receive.configure(this);    
+        this.reg_receive.build();
 
-        reg_address = address::type_id::create("reg_address", , get_full_name());
-        reg_address.configure(this);    
-        reg_address.build();
+        this.reg_address = address::type_id::create("reg_address", , get_full_name());
+        this.reg_address.configure(this);    
+        this.reg_address.build();
         
         // Define addres mapping
-        default_map = create_map("default_map", 2, 1, UVM_LITTLE_ENDIAN);       // Create uvm_reg_map
-        default_map.add_reg(reg_command, 2, "RW");
-        default_map.add_reg(reg_status, 3, "RO");
-        default_map.add_reg(reg_transmit, 4, "RW");
-        default_map.add_reg(reg_receive, 5, "RO");
-        default_map.add_reg(reg_address, 6, "RW");
-        lock_model();
+        this.default_map = create_map("default_map", 2, 1, UVM_LITTLE_ENDIAN);       // Create uvm_reg_map
+        this.default_map.add_reg(reg_command, 2, "RW");
+        this.default_map.add_reg(reg_status, 3, "RO");
+        this.default_map.add_reg(reg_transmit, 4, "RW");
+        this.default_map.add_reg(reg_receive, 5, "RO");
+        this.default_map.add_reg(reg_address, 6, "RW");
     endfunction
 endclass
 `endif

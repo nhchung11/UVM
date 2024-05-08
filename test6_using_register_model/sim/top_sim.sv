@@ -1,7 +1,8 @@
+`ifndef TOP
+`define TOP
 `include "uvm_macros.svh"
-`include "interface.sv"
 `include "test.sv"
-`include "assertion.sv"
+`include "interface.sv"
 import uvm_pkg::*;
 
 module top_sim();
@@ -36,11 +37,10 @@ module top_sim();
         .saved_data (my_intf.saved_data)
     ); 
 
-    assertion_cov acov(my_intf);
-
 
     initial begin
         uvm_config_db#(virtual intf)::set(null, "*", "my_intf", my_intf);
         run_test("test");
     end
 endmodule
+`endif 

@@ -2,9 +2,12 @@
 `define ENV
 
 `include "uvm_macros.svh"
+`include "packet.sv"
 `include "agent.sv"
 `include "scoreboard.sv"
 `include "subscriber.sv"
+`include "adapter.sv"
+`include "register_model.sv"
 
 import uvm_pkg::*;
 class env extends uvm_env;
@@ -12,6 +15,9 @@ class env extends uvm_env;
     agent my_agent;
     scoreboard my_scoreboard;
     subscriber my_subscriber;
+    adapter my_adapter;
+    uvm_reg_predictor #(packet) my_predictor;
+    register_model my_regmodel;
     virtual intf my_intf;
 
 
@@ -26,8 +32,14 @@ class env extends uvm_env;
         my_agent = agent::type_id::create("my_agent", this);
         if (!uvm_config_db #(virtual intf)::get(this, "*", "my_intf", my_intf))
             `uvm_fatal("NOVIF", "Virtual interface not set")
-        my_scoreboard = scoreboard::type_id::create("my_scoreboard", this);
-        my_subscriber = subscriber::type_id::create("my_subscriber", this);
+        my_scoreboard   = scoreboard::type_id::create("my_scoreboard", this);
+        my_subscriber   = subscriber::type_id::create("my_subscriber", this);
+        my_adapter      = adapter::type_id::create("my_adapter", this);
+        my_predictor    = uvm_reg_predictor #(packet)::type_id::create("my_predictor", this);
+        my_regmodel     = register_model::type_id::create("my_regmodel", this); 
+        my_regmodel.build();
+        my_regmodel.lock_model();
+        // `uvm_config_db #(uvm_reg_block)::set(null, "my_agent.my_regmodel", "my_reg_model", my_regmodel);
     endfunction
 
     // CONNECT PHASE
@@ -36,6 +48,8 @@ class env extends uvm_env;
         `uvm_info(get_name(), "ENVIRONMENT CONNECT PHASE", UVM_MEDIUM)
         my_agent.my_monitor.monitor_analysis_port.connect(my_scoreboard.scoreboard_analysis_imp);
         my_agent.my_monitor.monitor_analysis_port.connect(my_subscriber.subscriber_analysis_imp);
+        my_predictor.map = my_regmodel.default_map;
+        my_predictor.adapter = my_adapter;
     endfunction
 
     // RUN PHASE
