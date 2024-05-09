@@ -59,13 +59,9 @@ class transmit extends uvm_reg;
     `uvm_object_utils(transmit)
     uvm_reg_field data_to_fifo;
 
-    covergroup transmit_cg;
-        data_to_fifo_cg: coverpoint data_to_fifo.value[7:0];
-    endgroup
-
     // CONSTRUCTOR
     function new(string name = "transmit");
-        super.new(name, 8, build_coverage(UVM_CVR_FIELD_VALS));
+        super.new(name, 8, UVM_NO_COVERAGE);
     endfunction
 
     // CONFIGURE

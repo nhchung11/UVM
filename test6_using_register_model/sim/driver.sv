@@ -76,7 +76,7 @@ class driver extends uvm_driver #(packet);
     virtual task read(input bit [7:0] paddr, output bit [7:0] prdata);
         my_intf.PSELx <= 1;
         my_intf.PENABLE <= 0;
-        my_intf.PWRITE <= 1;
+        my_intf.PWRITE <= 0;
         my_intf.PADDR <= paddr;
         @(posedge my_intf.PCLK);
         my_intf.PENABLE <= 1;
