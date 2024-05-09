@@ -29,27 +29,34 @@ class env extends uvm_env;
     virtual function void build_phase(uvm_phase phase);
         super.build_phase(phase);
         `uvm_info(get_name(), "ENVIRONMENT BUILD PHASE", UVM_MEDIUM)
-        my_agent = agent::type_id::create("my_agent", this);
         if (!uvm_config_db #(virtual intf)::get(this, "*", "my_intf", my_intf))
             `uvm_fatal("NOVIF", "Virtual interface not set")
+
+        // Create instance
+        my_agent        = agent::type_id::create("my_agent", this);
         my_scoreboard   = scoreboard::type_id::create("my_scoreboard", this);
         my_subscriber   = subscriber::type_id::create("my_subscriber", this);
         my_adapter      = adapter::type_id::create("my_adapter", this);
         my_predictor    = uvm_reg_predictor #(packet)::type_id::create("my_predictor", this);
         my_regmodel     = register_model::type_id::create("my_regmodel", this); 
+
+        // Set up register model
         my_regmodel.build();
         my_regmodel.lock_model();
-        // `uvm_config_db #(uvm_reg_block)::set(null, "my_agent.my_regmodel", "my_reg_model", my_regmodel);
+        uvm_config_db #(register_model)::set(null, "", "my_reg_model", my_regmodel);
     endfunction
 
     // CONNECT PHASE
     virtual function void connect_phase(uvm_phase phase);
         super.connect_phase(phase);
         `uvm_info(get_name(), "ENVIRONMENT CONNECT PHASE", UVM_MEDIUM)
+        // Connect monitor to scoreboard and subscriber
         my_agent.my_monitor.monitor_analysis_port.connect(my_scoreboard.scoreboard_analysis_imp);
         my_agent.my_monitor.monitor_analysis_port.connect(my_subscriber.subscriber_analysis_imp);
-        my_predictor.map = my_regmodel.default_map;
-        my_predictor.adapter = my_adapter;
+
+        // Map predicter to register map and adapter
+        my_predictor.map        = my_regmodel.default_map;
+        my_predictor.adapter    = my_adapter;
     endfunction
 
     // RUN PHASE

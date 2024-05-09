@@ -1,5 +1,5 @@
 # vsim -voptargs="+acc" -sva -assertdebug -coverage top_sim -c -do "set WildcardFilter None;add wave -r top_sim/*; coverage save -onexit test12.ucdb; run -all; quit;" 
-# Start time: 16:01:01 on May 08,2024
+# Start time: 09:40:12 on May 09,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vopt-143) Recognized 1 FSM in module "i2c_slave_model(fast)".
 # ** Note: (vopt-143) Recognized 1 FSM in module "i2c_master(fast)".
@@ -76,9 +76,9 @@
 # UVM_INFO ../sim/scoreboard.sv(24) @ 0: uvm_test_top.my_env.my_scoreboard [my_scoreboard] SCOREBOARD BUILD PHASE
 # UVM_INFO ../sim/subscriber.sv(51) @ 0: uvm_test_top.my_env.my_subscriber [my_subscriber] SUBSCRIBER BUILD PHASE
 # UVM_INFO ../sim/agent.sv(34) @ 0: uvm_test_top.my_env.my_agent [my_agent] AGENT CONNECT PHASE
-# UVM_INFO ../sim/environment.sv(48) @ 0: uvm_test_top.my_env [my_env] ENVIRONMENT CONNECT PHASE
-# UVM_INFO ../sim/environment.sv(57) @ 0: uvm_test_top.my_env [my_env] ---------------------------------------
-# UVM_INFO ../sim/environment.sv(58) @ 0: uvm_test_top.my_env [my_env] ENVIRONMENT RUN PHASE
+# UVM_INFO ../sim/environment.sv(52) @ 0: uvm_test_top.my_env [my_env] ENVIRONMENT CONNECT PHASE
+# UVM_INFO ../sim/environment.sv(64) @ 0: uvm_test_top.my_env [my_env] ---------------------------------------
+# UVM_INFO ../sim/environment.sv(65) @ 0: uvm_test_top.my_env [my_env] ENVIRONMENT RUN PHASE
 # UVM_INFO ../sim/monitor.sv(36) @ 0: uvm_test_top.my_env.my_agent.my_monitor [my_monitor] MONITOR RUN PHASE
 # UVM_INFO ../sim/driver.sv(36) @ 0: uvm_test_top.my_env.my_agent.my_driver [my_driver] DRIVER RUN PHASE
 # UVM_INFO ../sim/reg_sequence.sv(19) @ 0: uvm_test_top.my_env.my_agent.my_sequencer@@my_seq [my_seq] SEQUENCE
@@ -118,5 +118,5 @@
 # ** Note: $finish    : C:/questasim64_10.7c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 0 ns  Iteration: 218  Instance: /top_sim
 # Saving coverage database on exit...
-# End time: 16:01:04 on May 08,2024, Elapsed time: 0:00:03
+# End time: 09:40:17 on May 09,2024, Elapsed time: 0:00:05
 # Errors: 0, Warnings: 0
