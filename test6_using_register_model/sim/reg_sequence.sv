@@ -6,7 +6,8 @@
 
 class reg_seq extends uvm_sequence;
     `uvm_object_utils(reg_seq)
-    register_model regmodel;
+    register_model my_regmodel;
+    
     function new(string name = "reg_seq");
         super.new(name);
     endfunction
@@ -15,9 +16,13 @@ class reg_seq extends uvm_sequence;
         uvm_status_e status;
         // Write to registers
         // regmodel.reg_command.write(status, 8'hFF); 
-        // regmodel.reg_transmit.write(status, 8'hAB);
-        `uvm_info(get_name(), "SEQUENCE", UVM_MEDIUM)
+        `uvm_delay(500ns)
+        my_regmodel.reg_command.write(status, 8'b11110110);
+        my_regmodel.reg_address.write(status, 8'b0010_0000);
+        my_regmodel.reg_transmit.write(status, 0);
+        my_regmodel.reg_transmit.write(status, 1);
+        my_regmodel.reg_command.write(status, 8'b11111110);
+        `uvm_delay(10000ns)
     endtask
 endclass
-
 `endif

@@ -32,10 +32,12 @@ class env extends uvm_env;
         if (!uvm_config_db #(virtual intf)::get(this, "*", "my_intf", my_intf))
             `uvm_fatal("NOVIF", "Virtual interface not set")
 
-        // Create instance
+        // Basic components
         my_agent        = agent::type_id::create("my_agent", this);
         my_scoreboard   = scoreboard::type_id::create("my_scoreboard", this);
         my_subscriber   = subscriber::type_id::create("my_subscriber", this);
+
+        // Register model components
         my_adapter      = adapter::type_id::create("my_adapter", this);
         my_predictor    = uvm_reg_predictor #(packet)::type_id::create("my_predictor", this);
         my_regmodel     = register_model::type_id::create("my_regmodel", this); 
@@ -43,7 +45,7 @@ class env extends uvm_env;
         // Set up register model
         my_regmodel.build();
         my_regmodel.lock_model();
-        uvm_config_db #(register_model)::set(null, "", "my_reg_model", my_regmodel);
+        uvm_config_db #(register_model)::set(null, "*", "my_regmodel", my_regmodel);
     endfunction
 
     // CONNECT PHASE
@@ -54,9 +56,17 @@ class env extends uvm_env;
         my_agent.my_monitor.monitor_analysis_port.connect(my_scoreboard.scoreboard_analysis_imp);
         my_agent.my_monitor.monitor_analysis_port.connect(my_subscriber.subscriber_analysis_imp);
 
+        // Set base address
+        my_regmodel.default_map.set_base_addr(0);
+        my_regmodel.default_map.set_sequencer(
+            .sequencer(my_agent.my_sequencer),
+            .adapter(my_adapter)
+        );
+
         // Map predicter to register map and adapter
         my_predictor.map        = my_regmodel.default_map;
         my_predictor.adapter    = my_adapter;
+        my_agent.my_monitor.monitor_analysis_port.connect(my_predictor.bus_in);
     endfunction
 
     // RUN PHASE

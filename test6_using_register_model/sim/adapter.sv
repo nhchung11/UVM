@@ -10,7 +10,7 @@ class adapter extends uvm_reg_adapter;
         super.new(name);
     endfunction
 
-    function uvm_sequence_item reg2bus(const ref uvm_reg_bus_op rw);
+    virtual function uvm_sequence_item reg2bus(const ref uvm_reg_bus_op rw);
         packet my_packet;
         my_packet = packet::type_id::create("my_packet");
         my_packet.PADDR = rw.addr;
@@ -20,15 +20,13 @@ class adapter extends uvm_reg_adapter;
         return my_packet;
     endfunction
 
-    function void bus2reg(uvm_sequence_item bus_item, ref uvm_reg_bus_op rw);
+    virtual function void bus2reg(uvm_sequence_item bus_item, ref uvm_reg_bus_op rw);
         packet my_packet;
         my_packet = packet::type_id::create("my_packet");
         rw.addr = my_packet.PADDR;
         rw.data = my_packet.PWDATA;
         rw.kind = my_packet.PWRITE ? UVM_WRITE : UVM_READ;
         rw.status = UVM_IS_OK;
-        `uvm_info(get_name(), $sformatf("Read %0d from register %0d", rw.data, rw.addr), UVM_LOW)
     endfunction
 endclass
-
 `endif 

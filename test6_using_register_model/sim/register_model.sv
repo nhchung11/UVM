@@ -57,7 +57,7 @@ endclass
 
 class transmit extends uvm_reg;
     `uvm_object_utils(transmit)
-    rand uvm_reg_field data_to_fifo;
+    uvm_reg_field data_to_fifo;
 
     covergroup transmit_cg;
         data_to_fifo_cg: coverpoint data_to_fifo.value[7:0];
@@ -112,7 +112,7 @@ class register_model extends uvm_reg_block;
     `uvm_object_utils(register_model)
     command         reg_command;
     status          reg_status;
-    rand transmit   reg_transmit;
+    transmit        reg_transmit;
     receive         reg_receive;
     address         reg_address;
 
@@ -145,7 +145,7 @@ class register_model extends uvm_reg_block;
         this.reg_address.build();
         
         // Define addres mapping
-        this.default_map = create_map("default_map", 2, 1, UVM_LITTLE_ENDIAN);       // Create uvm_reg_map
+        this.default_map = create_map("default_map", 0, 1, UVM_LITTLE_ENDIAN);      
         this.default_map.add_reg(reg_command, 2, "RW");
         this.default_map.add_reg(reg_status, 3, "RO");
         this.default_map.add_reg(reg_transmit, 4, "RW");
