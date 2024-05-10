@@ -7,6 +7,37 @@
 `include "reg_sequence.sv"
 `include "register_model.sv"
 
+`ifdef TEST0_1
+    `include "../testcases/test0_1.sv"
+`elsif TEST0_2
+    `include "../testcases/test0_2.sv"
+`elsif TEST1
+    `include "../testcases/test1.sv"
+`elsif TEST2
+    `include "../testcases/test2.sv"
+`elsif TEST3
+    `include "../testcases/test3.sv"
+`elsif TEST4
+    `include "../testcases/test4.sv"
+`elsif TEST5
+    `include "../testcases/test5.sv"
+`elsif TEST6
+    `include "../testcases/test6.sv"
+`elsif TEST7
+    `include "../testcases/test7.sv"
+`elsif TEST8
+    `include "../testcases/test8.sv"
+`elsif TEST9
+    `include "../testcases/test9.sv"
+`elsif TEST10
+    `include "../testcases/test10.sv"
+`elsif TEST11
+    `include "../testcases/test11.sv"
+`elsif TEST12
+    `include "../testcases/test12.sv"
+`endif
+    
+
 import uvm_pkg::*;
 
 class test extends uvm_test;
