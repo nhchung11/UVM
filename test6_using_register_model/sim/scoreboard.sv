@@ -32,7 +32,7 @@ class scoreboard extends uvm_component;
     // EXTRACT PHASE
     virtual function void extract_phase(uvm_phase phase);
         super.build_phase(phase);
-        `uvm_info(get_name(), "---------------------------------------", UVM_MEDIUM)
+        `uvm_info(get_name(), "\n--------------------------------------------------------------------------------------------------------", UVM_MEDIUM)
         `uvm_info(get_name(), "SCOREBOARD EXTRACT PHASE", UVM_MEDIUM)
         `uvm_info(get_name(), $sformatf("Size of data DUT received queue: %0d", data_DUT_received.size()), UVM_MEDIUM)
         foreach (data_DUT_received[i]) begin
@@ -51,7 +51,7 @@ class scoreboard extends uvm_component;
     // CHECK PHASE
     virtual function void check_phase(uvm_phase phase);
         super.build_phase(phase);
-        `uvm_info(get_name(), "---------------------------------------", UVM_MEDIUM)
+        `uvm_info(get_name(), "\n--------------------------------------------------------------------------------------------------------", UVM_MEDIUM)
         `uvm_info(get_name(), "SCOREBOARD CHECK PHASE", UVM_MEDIUM)
         if (data_transmitted.size() != data_DUT_received.size()) begin
             `uvm_error(get_name(), "*  ERROR  *Data queue size mismatch")

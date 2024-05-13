@@ -1,0 +1,16 @@
+var g_data = {
+g23:[{dummy:0},
+{name:'cov',f:1,type:1,id:24,tb:'17',h:'3',m:'14',hp:'17.64%',cov:['26.66%','R'],g:'100.00%',gp:['26.66%','R'],opts:[[],['merge_instance','auto(true)']],lnk:'__HDL_srcfile_1.htm#15',parent:'23'}],
+c24:{name:'cov',type:1,pHash:'23',pPath:'work.top_sim_sv_unit::subscriber',totals:[7,2,'28.57%','R',10,1,'10.00%','R'],cvp:[{dummy:0},
+{name:'reg_addr',f:1,type:4,id:25,tb:'5',h:'1',m:'4',hp:'20.00%',cov:['20.00%','R'],g:'100.00%',gp:['20.00%','R'],hasb:1,lnk:'__HDL_srcfile_1.htm#16',parent:'24'},
+{name:'rw',f:1,type:4,id:26,tb:'2',h:'1',m:'1',hp:'50.00%',cov:['50.00%','Y'],g:'100.00%',gp:['50.00%','Y'],hasb:1,lnk:'__HDL_srcfile_1.htm#25',parent:'24'}],crx:[{dummy:0},
+{name:'rw_reg',f:1,type:5,id:27,tb:'10',h:'1',m:'9',hp:'10.00%',cov:['10.00%','R'],g:'100.00%',gp:['10.00%','R'],hasb:1,lnk:'__HDL_srcfile_1.htm#31',parent:'24',cross:['reg_addr','rw']}]},
+g1913:[{dummy:0},
+{name:'cov',f:1,type:1,id:1914,tb:'17',h:'3',m:'14',hp:'17.64%',cov:['26.66%','R'],g:'100.00%',gp:['26.66%','R'],opts:[[],['merge_instance','auto(true)']],lnk:'__HDL_srcfile_1.htm#15',parent:'1913'}],
+c1914:{name:'cov',type:1,pHash:'1913',pPath:'/top_sim_sv_unit/subscriber',totals:[7,2,'28.57%','R',10,1,'10.00%','R'],cvp:[{dummy:0},
+{name:'reg_addr',f:1,type:4,id:1915,tb:'5',h:'1',m:'4',hp:'20.00%',cov:['20.00%','R'],g:'100.00%',gp:['20.00%','R'],hasb:1,lnk:'__HDL_srcfile_1.htm#16',parent:'1914'},
+{name:'rw',f:1,type:4,id:1916,tb:'2',h:'1',m:'1',hp:'50.00%',cov:['50.00%','Y'],g:'100.00%',gp:['50.00%','Y'],hasb:1,lnk:'__HDL_srcfile_1.htm#25',parent:'1914'}],crx:[{dummy:0},
+{name:'rw_reg',f:1,type:5,id:1917,tb:'10',h:'1',m:'9',hp:'10.00%',cov:['10.00%','R'],g:'100.00%',gp:['10.00%','R'],hasb:1,lnk:'__HDL_srcfile_1.htm#31',parent:'1914',cross:['reg_addr','rw']}]},
+dummyEnd:0
+};
+processCovergroupsData(g_data);

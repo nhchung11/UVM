@@ -71,7 +71,7 @@ class env extends uvm_env;
 
     // RUN PHASE
     virtual task run_phase(uvm_phase phase);
-        `uvm_info(get_name(), "---------------------------------------", UVM_MEDIUM)
+        `uvm_info(get_name(), "\n--------------------------------------------------------------------------------------------------------", UVM_MEDIUM)
         `uvm_info(get_name(), "ENVIRONMENT RUN PHASE", UVM_MEDIUM)
         super.run_phase(phase);
         fork
