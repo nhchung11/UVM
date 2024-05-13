@@ -1,6 +1,8 @@
 echo "Enter your message"
 read message
-git add .
+
+find . -type f ! -name "*.ucdb" ! -name "*.qbd" ! -name "*.qpg" ! -name "*.qtl" -exec git add {} \;
+
 git commit -m"${message}"
 if [ -n "$(git status - porcelain)" ];
 then
