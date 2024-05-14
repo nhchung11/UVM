@@ -25,7 +25,6 @@ module apb_slave
 	output reg read_enable_rx,
 	input delete_reg_command
 	);
-
 	//	reg_command(2)		reg_trasmit(4)	reg_status(3)	reg_address(6)		reg_receive(5)
 	//7	write_reset_n_tx	data_to_fifo	tx_full		address i2c_slave	data_i2c_out
 	//6	read_reset_n_tx				tx_empty
@@ -35,7 +34,6 @@ module apb_slave
 	//2	i2c_enable
 	//1	i2c_repeat_start
 	//0
-	
 	always @(posedge PCLK or negedge PRESETn) begin
  		if(!PRESETn) begin
 			PRDATA <= 0;
@@ -85,4 +83,3 @@ module apb_slave
 		end
 	end
 endmodule
-

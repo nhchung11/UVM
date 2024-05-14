@@ -34,18 +34,16 @@ class driver extends uvm_driver #(packet);
     virtual task run_phase(uvm_phase phase);
         super.run_phase(phase);
         `uvm_info(get_name(), "DRIVER RUN PHASE", UVM_MEDIUM)
-        `uvm_delay(100ns)
         my_intf.PSELx <= 0;
         my_intf.PENABLE <= 0;
         my_intf.PWRITE <= 0;
         my_intf.PADDR <= 0;
         my_intf.PWDATA <= 0;
+        my_intf.PRESETn <= 0;
         reset();
+        `uvm_delay(100)
         forever begin
             bit [7:0] prdata;
-            my_intf.PSELx <= 0;
-            my_intf.PENABLE <= 0;
-            my_intf.PWRITE <= 0;
             // `uvm_info(get_name(), $sformatf("Write %0d to register %0d", my_packet.PWDATA, my_packet.PADDR), UVM_LOW) 
             @(posedge my_intf.PCLK)
             seq_item_port.get_next_item(my_packet);
@@ -94,4 +92,3 @@ class driver extends uvm_driver #(packet);
     endtask
 endclass
 `endif 
-

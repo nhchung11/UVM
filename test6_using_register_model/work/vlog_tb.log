@@ -1,12 +1,13 @@
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
-Start time: 16:15:05 on May 13,2024
+Start time: 17:30:13 on May 14,2024
 vlog -timescale=1ns/1ns -sv "+acc" -incr -f filelist_tb.f -assertdebug "+define+SEQ_TEST=RESET_STATE" -l vlog_tb.log 
 ** Note: (vlog-2286) ../sim/top_sim.sv(3): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
 -- Compiling package top_sim_sv_unit
-** Warning: ../testcases/base_sequence.sv(201): (vlog-2961) Argument #1 for std::randomize() function is non-LRM compliant.
-** Warning: ../testcases/base_sequence.sv(227): (vlog-2961) Argument #1 for std::randomize() function is non-LRM compliant.
-** Warning: ../testcases/base_sequence.sv(239): (vlog-2961) Argument #1 for std::randomize() function is non-LRM compliant.
-** Warning: ../testcases/base_sequence.sv(295): (vlog-2961) Argument #1 for std::randomize() function is non-LRM compliant.
+** Warning: ../testcases/base_sequence.sv(221): (vlog-2961) Argument #1 for std::randomize() function is non-LRM compliant.
+** Warning: ../testcases/base_sequence.sv(247): (vlog-2961) Argument #1 for std::randomize() function is non-LRM compliant.
+** Warning: ../testcases/base_sequence.sv(259): (vlog-2961) Argument #1 for std::randomize() function is non-LRM compliant.
+** Warning: ../testcases/base_sequence.sv(271): (vlog-2961) Argument #1 for std::randomize() function is non-LRM compliant.
+** Warning: ../testcases/base_sequence.sv(328): (vlog-2961) Argument #1 for std::randomize() function is non-LRM compliant.
 -- Compiling interface intf
 -- Compiling module top_sim
 -- Scanning library directory '../sim'
@@ -18,5 +19,5 @@ Referenced (but uncompiled) modules or primitives:
 
 Top level modules:
 	top_sim
-End time: 16:15:05 on May 13,2024, Elapsed time: 0:00:00
-Errors: 0, Warnings: 4
+End time: 17:30:13 on May 14,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 5

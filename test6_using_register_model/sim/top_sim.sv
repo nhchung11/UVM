@@ -6,8 +6,8 @@
 import uvm_pkg::*;
 
 module top_sim();
-    bit PCLK = 0;
-    bit clk = 0;
+    bit PCLK = 1;
+    bit clk = 1;
     always #5 PCLK = ~PCLK;
     always #20 clk = ~clk;
 

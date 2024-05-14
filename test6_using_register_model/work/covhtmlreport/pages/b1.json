@@ -1,706 +1,706 @@
 var g_data = {
-b111:[{dummy:0},
-{anchor:'cvg112',items:[{z:'    if (!write_reset_n) {wq2_rptr,wq1_rptr} &lt;= 0;',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'80',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if (!write_reset_n) {wq2_rptr,wq1_rptr} &lt;= 0;',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'80',h:'81',c:'g'}
-,{cr:'c',t:'E',z:'    else {wq2_rptr,wq1_rptr} &lt;= {wq1_rptr,rptr};',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'81',h:'291',c:'g'}
+b107:[{dummy:0},
+{anchor:'cvg108',items:[{z:'    if (!write_reset_n) {wq2_rptr,wq1_rptr} &lt;= 0;',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'80',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    if (!write_reset_n) {wq2_rptr,wq1_rptr} &lt;= 0;',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'80',h:'66',c:'g'}
+,{cr:'c',t:'E',z:'    else {wq2_rptr,wq1_rptr} &lt;= {wq1_rptr,rptr};',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'81',h:'202',c:'g'}
 ]}],
-b130:[{dummy:0},
-{anchor:'cvg131',items:[{z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'98',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'98',h:'81',c:'g'}
-,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'100',h:'397',c:'g'}
+b126:[{dummy:0},
+{anchor:'cvg127',items:[{z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'98',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'98',h:'66',c:'g'}
+,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'100',h:'204',c:'g'}
 ]}],
-b149:[{dummy:0},
-{anchor:'cvg150',items:[{z:'    if (write_enable && !write_full) ',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'20',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if (write_enable && !write_full) ',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'20',h:'219',c:'g'}
-,{cr:'c',t:'A',z:'    if (write_enable && !write_full) ',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'20',h:'255',c:'g'}
+b145:[{dummy:0},
+{anchor:'cvg146',items:[{z:'    if (write_enable && !write_full) ',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'20',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    if (write_enable && !write_full) ',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'20',h:'90',c:'g'}
+,{cr:'c',t:'A',z:'    if (write_enable && !write_full) ',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'20',h:'168',c:'g'}
 ]}],
-b182:[{dummy:0},
-{anchor:'cvg183',items:[{z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'44',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'44',h:'81',c:'g'}
-,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'46',h:'217',c:'g'}
+b178:[{dummy:0},
+{anchor:'cvg179',items:[{z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'44',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'44',h:'66',c:'g'}
+,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'46',h:'162',c:'g'}
 ]},
-{anchor:'cvg184',items:[{z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'60',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'60',h:'81',c:'g'}
-,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'62',h:'104',c:'g'}
+{anchor:'cvg180',items:[{z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'60',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'60',h:'66',c:'g'}
+,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'62',h:'117',c:'g'}
 ]}],
-b221:[{dummy:0},
-{anchor:'cvg222',items:[{z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'122',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'122',h:'81',c:'g'}
-,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'124',h:'401',c:'g'}
+b217:[{dummy:0},
+{anchor:'cvg218',items:[{z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'122',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'122',h:'66',c:'g'}
+,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'124',h:'204',c:'g'}
 ]},
-{anchor:'cvg223',items:[{z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'141',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'141',h:'81',c:'g'}
-,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'143',h:'331',c:'g'}
+{anchor:'cvg219',items:[{z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'141',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'141',h:'66',c:'g'}
+,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'143',h:'83',c:'g'}
 ]}],
-b55:[{dummy:0},
-{anchor:'cvg418',items:[{z:' 		if(!PRESETn) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'40',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:' 		if(!PRESETn) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'40',h:'28',c:'g'}
-,{cr:'c',t:'E',z:'		else begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'48',h:'722',c:'g'}
+b51:[{dummy:0},
+{anchor:'cvg414',items:[{z:' 		if(!PRESETn) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'38',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:' 		if(!PRESETn) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'38',h:'16',c:'g'}
+,{cr:'c',t:'E',z:'		else begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'46',h:'522',c:'g'}
 ]},
-{anchor:'cvg419',items:[{z:'			if (PENABLE & PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'49',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'			if (PENABLE & PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'49',h:'152',c:'g'}
-,{cr:'c',t:'A',z:'			if (PENABLE & PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'49',h:'570',c:'g'}
+{anchor:'cvg415',items:[{z:'			if (PENABLE & PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'47',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'			if (PENABLE & PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'47',h:'128',c:'g'}
+,{cr:'c',t:'A',z:'			if (PENABLE & PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'47',h:'394',c:'g'}
 ]},
-{anchor:'cvg420',items:[{z:'				case (PADDR)',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'50',c:'G',p:'100.00'}
-,{cr:'c',t:'T',z:'					2: reg_command &lt;= PWDATA;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'51',h:'48',c:'g'}
-,{cr:'c',t:'T',z:'					4: begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'52',h:'78',c:'g'}
-,{cr:'c',t:'T',z:'					6: reg_address &lt;= PWDATA;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'58',h:'24',c:'g'}
-,{cr:'c',t:'A',z:'				case (PADDR)',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'50',h:'2',c:'g'}
+{anchor:'cvg416',items:[{z:'				case (PADDR)',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'48',c:'Y',p:'75.00'}
+,{cr:'c',t:'T',z:'					2: reg_command &lt;= PWDATA;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'49',h:'45',c:'g'}
+,{cr:'c',t:'T',z:'					4: begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'50',h:'63',c:'g'}
+,{cr:'c',t:'T',z:'					6: reg_address &lt;= PWDATA;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'56',h:'20',c:'g'}
+,{cr:'m',t:'A',z:'				case (PADDR)',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'48',h:'0',c:'r'}
 ]},
-{anchor:'cvg421',items:[{z:'						if(!reg_status[7]) begin	',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'53',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'						if(!reg_status[7]) begin	',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'53',h:'42',c:'g'}
-,{cr:'c',t:'A',z:'						if(!reg_status[7]) begin	',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'53',h:'36',c:'g'}
+{anchor:'cvg417',items:[{z:'						if(!reg_status[7]) begin	',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'51',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'						if(!reg_status[7]) begin	',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'51',h:'57',c:'g'}
+,{cr:'c',t:'A',z:'						if(!reg_status[7]) begin	',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'51',h:'6',c:'g'}
 ]},
-{anchor:'cvg422',items:[{z:'			if (PWRITE & PADDR == 4) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'62',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'			if (PWRITE & PADDR == 4) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'62',h:'156',c:'g'}
-,{cr:'c',t:'A',z:'			if (PWRITE & PADDR == 4) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'62',h:'566',c:'g'}
+{anchor:'cvg418',items:[{z:'			if (PWRITE & PADDR == 4) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'60',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'			if (PWRITE & PADDR == 4) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'60',h:'189',c:'g'}
+,{cr:'c',t:'A',z:'			if (PWRITE & PADDR == 4) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'60',h:'333',c:'g'}
 ]},
-{anchor:'cvg423',items:[{z:'			if(PENABLE & !PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'66',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'			if(PENABLE & !PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'66',h:'15',c:'g'}
-,{cr:'c',t:'A',z:'			if(PENABLE & !PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'66',h:'707',c:'g'}
+{anchor:'cvg419',items:[{z:'			if(PENABLE & !PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'64',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'			if(PENABLE & !PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'64',h:'14',c:'g'}
+,{cr:'c',t:'A',z:'			if(PENABLE & !PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'64',h:'508',c:'g'}
 ]},
-{anchor:'cvg424',items:[{z:'				case (PADDR)',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'67',c:'G',p:'100.00'}
-,{cr:'c',t:'T',z:'					3: PRDATA &lt;= reg_status;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'68',h:'1',c:'g'}
-,{cr:'c',t:'T',z:'					5: begin ',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'69',h:'11',c:'g'}
-,{cr:'c',t:'A',z:'				case (PADDR)',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'67',h:'3',c:'g'}
+{anchor:'cvg420',items:[{z:'				case (PADDR)',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'65',c:'G',p:'100.00'}
+,{cr:'c',t:'T',z:'					3: PRDATA &lt;= reg_status;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'66',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'					5: begin ',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'67',h:'10',c:'g'}
+,{cr:'c',t:'A',z:'				case (PADDR)',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'65',h:'3',c:'g'}
 ]},
-{anchor:'cvg425',items:[{z:'						if(!reg_status[4]) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'70',c:'Y',p:'50.00'}
-,{cr:'m',t:'I',z:'						if(!reg_status[4]) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'70',h:'0',c:'r'}
-,{cr:'c',t:'A',z:'						if(!reg_status[4]) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'70',h:'11',c:'g'}
+{anchor:'cvg421',items:[{z:'						if(!reg_status[4]) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'68',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'						if(!reg_status[4]) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'68',h:'9',c:'g'}
+,{cr:'c',t:'A',z:'						if(!reg_status[4]) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'68',h:'1',c:'g'}
 ]},
-{anchor:'cvg426',items:[{z:'			if (!PWRITE & PADDR == 5) read_enable_rx &lt;= PENABLE;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'76',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'			if (!PWRITE & PADDR == 5) read_enable_rx &lt;= PENABLE;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'76',h:'37',c:'g'}
-,{cr:'c',t:'A',z:'			if (!PWRITE & PADDR == 5) read_enable_rx &lt;= PENABLE;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'76',h:'685',c:'g'}
+{anchor:'cvg422',items:[{z:'			if (!PWRITE & PADDR == 5) read_enable_rx &lt;= PENABLE;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'74',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'			if (!PWRITE & PADDR == 5) read_enable_rx &lt;= PENABLE;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'74',h:'34',c:'g'}
+,{cr:'c',t:'A',z:'			if (!PWRITE & PADDR == 5) read_enable_rx &lt;= PENABLE;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'74',h:'488',c:'g'}
 ]},
-{anchor:'cvg427',items:[{z:'		if(!PRESETn) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'80',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if(!PRESETn) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'80',h:'28',c:'g'}
-,{cr:'c',t:'A',z:'		if(!PRESETn) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'80',h:'240',c:'g'}
+{anchor:'cvg423',items:[{z:'		if(!PRESETn) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'78',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if(!PRESETn) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'78',h:'16',c:'g'}
+,{cr:'c',t:'A',z:'		if(!PRESETn) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'78',h:'178',c:'g'}
 ]},
-{anchor:'cvg428',items:[{z:' 		if(delete_reg_command) begin		',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'83',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:' 		if(delete_reg_command) begin		',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'83',h:'88',c:'g'}
-,{cr:'c',t:'A',z:' 		if(delete_reg_command) begin		',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'83',h:'180',c:'g'}
+{anchor:'cvg424',items:[{z:' 		if(delete_reg_command) begin		',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'81',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:' 		if(delete_reg_command) begin		',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'81',h:'68',c:'g'}
+,{cr:'c',t:'A',z:' 		if(delete_reg_command) begin		',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'81',h:'126',c:'g'}
 ]}],
-b417:[{dummy:0},
-{anchor:'cvg418',items:[{z:' 		if(!PRESETn) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'40',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:' 		if(!PRESETn) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'40',h:'28',c:'g'}
-,{cr:'c',t:'E',z:'		else begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'48',h:'722',c:'g'}
+b413:[{dummy:0},
+{anchor:'cvg414',items:[{z:' 		if(!PRESETn) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'38',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:' 		if(!PRESETn) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'38',h:'16',c:'g'}
+,{cr:'c',t:'E',z:'		else begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'46',h:'522',c:'g'}
 ]},
-{anchor:'cvg419',items:[{z:'			if (PENABLE & PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'49',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'			if (PENABLE & PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'49',h:'152',c:'g'}
-,{cr:'c',t:'A',z:'			if (PENABLE & PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'49',h:'570',c:'g'}
+{anchor:'cvg415',items:[{z:'			if (PENABLE & PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'47',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'			if (PENABLE & PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'47',h:'128',c:'g'}
+,{cr:'c',t:'A',z:'			if (PENABLE & PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'47',h:'394',c:'g'}
 ]},
-{anchor:'cvg420',items:[{z:'				case (PADDR)',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'50',c:'G',p:'100.00'}
-,{cr:'c',t:'T',z:'					2: reg_command &lt;= PWDATA;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'51',h:'48',c:'g'}
-,{cr:'c',t:'T',z:'					4: begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'52',h:'78',c:'g'}
-,{cr:'c',t:'T',z:'					6: reg_address &lt;= PWDATA;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'58',h:'24',c:'g'}
-,{cr:'c',t:'A',z:'				case (PADDR)',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'50',h:'2',c:'g'}
+{anchor:'cvg416',items:[{z:'				case (PADDR)',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'48',c:'Y',p:'75.00'}
+,{cr:'c',t:'T',z:'					2: reg_command &lt;= PWDATA;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'49',h:'45',c:'g'}
+,{cr:'c',t:'T',z:'					4: begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'50',h:'63',c:'g'}
+,{cr:'c',t:'T',z:'					6: reg_address &lt;= PWDATA;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'56',h:'20',c:'g'}
+,{cr:'m',t:'A',z:'				case (PADDR)',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'48',h:'0',c:'r'}
 ]},
-{anchor:'cvg421',items:[{z:'						if(!reg_status[7]) begin	',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'53',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'						if(!reg_status[7]) begin	',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'53',h:'42',c:'g'}
-,{cr:'c',t:'A',z:'						if(!reg_status[7]) begin	',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'53',h:'36',c:'g'}
+{anchor:'cvg417',items:[{z:'						if(!reg_status[7]) begin	',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'51',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'						if(!reg_status[7]) begin	',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'51',h:'57',c:'g'}
+,{cr:'c',t:'A',z:'						if(!reg_status[7]) begin	',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'51',h:'6',c:'g'}
 ]},
-{anchor:'cvg422',items:[{z:'			if (PWRITE & PADDR == 4) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'62',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'			if (PWRITE & PADDR == 4) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'62',h:'156',c:'g'}
-,{cr:'c',t:'A',z:'			if (PWRITE & PADDR == 4) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'62',h:'566',c:'g'}
+{anchor:'cvg418',items:[{z:'			if (PWRITE & PADDR == 4) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'60',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'			if (PWRITE & PADDR == 4) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'60',h:'189',c:'g'}
+,{cr:'c',t:'A',z:'			if (PWRITE & PADDR == 4) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'60',h:'333',c:'g'}
 ]},
-{anchor:'cvg423',items:[{z:'			if(PENABLE & !PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'66',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'			if(PENABLE & !PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'66',h:'15',c:'g'}
-,{cr:'c',t:'A',z:'			if(PENABLE & !PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'66',h:'707',c:'g'}
+{anchor:'cvg419',items:[{z:'			if(PENABLE & !PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'64',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'			if(PENABLE & !PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'64',h:'14',c:'g'}
+,{cr:'c',t:'A',z:'			if(PENABLE & !PWRITE & PSELx) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'64',h:'508',c:'g'}
 ]},
-{anchor:'cvg424',items:[{z:'				case (PADDR)',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'67',c:'G',p:'100.00'}
-,{cr:'c',t:'T',z:'					3: PRDATA &lt;= reg_status;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'68',h:'1',c:'g'}
-,{cr:'c',t:'T',z:'					5: begin ',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'69',h:'11',c:'g'}
-,{cr:'c',t:'A',z:'				case (PADDR)',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'67',h:'3',c:'g'}
+{anchor:'cvg420',items:[{z:'				case (PADDR)',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'65',c:'G',p:'100.00'}
+,{cr:'c',t:'T',z:'					3: PRDATA &lt;= reg_status;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'66',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'					5: begin ',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'67',h:'10',c:'g'}
+,{cr:'c',t:'A',z:'				case (PADDR)',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'65',h:'3',c:'g'}
 ]},
-{anchor:'cvg425',items:[{z:'						if(!reg_status[4]) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'70',c:'Y',p:'50.00'}
-,{cr:'m',t:'I',z:'						if(!reg_status[4]) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'70',h:'0',c:'r'}
-,{cr:'c',t:'A',z:'						if(!reg_status[4]) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'70',h:'11',c:'g'}
+{anchor:'cvg421',items:[{z:'						if(!reg_status[4]) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'68',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'						if(!reg_status[4]) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'68',h:'9',c:'g'}
+,{cr:'c',t:'A',z:'						if(!reg_status[4]) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'68',h:'1',c:'g'}
 ]},
-{anchor:'cvg426',items:[{z:'			if (!PWRITE & PADDR == 5) read_enable_rx &lt;= PENABLE;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'76',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'			if (!PWRITE & PADDR == 5) read_enable_rx &lt;= PENABLE;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'76',h:'37',c:'g'}
-,{cr:'c',t:'A',z:'			if (!PWRITE & PADDR == 5) read_enable_rx &lt;= PENABLE;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'76',h:'685',c:'g'}
+{anchor:'cvg422',items:[{z:'			if (!PWRITE & PADDR == 5) read_enable_rx &lt;= PENABLE;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'74',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'			if (!PWRITE & PADDR == 5) read_enable_rx &lt;= PENABLE;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'74',h:'34',c:'g'}
+,{cr:'c',t:'A',z:'			if (!PWRITE & PADDR == 5) read_enable_rx &lt;= PENABLE;',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'74',h:'488',c:'g'}
 ]},
-{anchor:'cvg427',items:[{z:'		if(!PRESETn) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'80',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if(!PRESETn) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'80',h:'28',c:'g'}
-,{cr:'c',t:'A',z:'		if(!PRESETn) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'80',h:'240',c:'g'}
+{anchor:'cvg423',items:[{z:'		if(!PRESETn) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'78',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if(!PRESETn) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'78',h:'16',c:'g'}
+,{cr:'c',t:'A',z:'		if(!PRESETn) begin',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'78',h:'178',c:'g'}
 ]},
-{anchor:'cvg428',items:[{z:' 		if(delete_reg_command) begin		',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'83',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:' 		if(delete_reg_command) begin		',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'83',h:'88',c:'g'}
-,{cr:'c',t:'A',z:' 		if(delete_reg_command) begin		',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'83',h:'180',c:'g'}
+{anchor:'cvg424',items:[{z:' 		if(delete_reg_command) begin		',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'81',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:' 		if(delete_reg_command) begin		',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'81',h:'68',c:'g'}
+,{cr:'c',t:'A',z:' 		if(delete_reg_command) begin		',hf:'__HDL_srcfile_3.htm',f:'../rtl/apb_slave.v',l:'81',h:'126',c:'g'}
 ]}],
-b573:[{dummy:0},
-{anchor:'cvg574',items:[{z:'    if (!write_reset_n) {wq2_rptr,wq1_rptr} &lt;= 0;',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'80',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if (!write_reset_n) {wq2_rptr,wq1_rptr} &lt;= 0;',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'80',h:'42',c:'g'}
-,{cr:'c',t:'E',z:'    else {wq2_rptr,wq1_rptr} &lt;= {wq1_rptr,rptr};',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'81',h:'257',c:'g'}
+b569:[{dummy:0},
+{anchor:'cvg570',items:[{z:'    if (!write_reset_n) {wq2_rptr,wq1_rptr} &lt;= 0;',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'80',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    if (!write_reset_n) {wq2_rptr,wq1_rptr} &lt;= 0;',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'80',h:'34',c:'g'}
+,{cr:'c',t:'E',z:'    else {wq2_rptr,wq1_rptr} &lt;= {wq1_rptr,rptr};',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'81',h:'166',c:'g'}
 ]}],
-b592:[{dummy:0},
-{anchor:'cvg593',items:[{z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'98',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'98',h:'39',c:'g'}
-,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'100',h:'339',c:'g'}
+b588:[{dummy:0},
+{anchor:'cvg589',items:[{z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'98',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'98',h:'32',c:'g'}
+,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'100',h:'107',c:'g'}
 ]}],
-b611:[{dummy:0},
-{anchor:'cvg612',items:[{z:'    if (write_enable && !write_full) ',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'20',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if (write_enable && !write_full) ',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'20',h:'211',c:'g'}
-,{cr:'c',t:'A',z:'    if (write_enable && !write_full) ',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'20',h:'216',c:'g'}
+b607:[{dummy:0},
+{anchor:'cvg608',items:[{z:'    if (write_enable && !write_full) ',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'20',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    if (write_enable && !write_full) ',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'20',h:'65',c:'g'}
+,{cr:'c',t:'A',z:'    if (write_enable && !write_full) ',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'20',h:'100',c:'g'}
 ]}],
-b644:[{dummy:0},
-{anchor:'cvg645',items:[{z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'44',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'44',h:'39',c:'g'}
-,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'46',h:'183',c:'g'}
+b640:[{dummy:0},
+{anchor:'cvg641',items:[{z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'44',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'44',h:'32',c:'g'}
+,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'46',h:'119',c:'g'}
 ]},
-{anchor:'cvg646',items:[{z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'60',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'60',h:'39',c:'g'}
-,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'62',h:'68',c:'g'}
+{anchor:'cvg642',items:[{z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'60',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'60',h:'32',c:'g'}
+,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'62',h:'81',c:'g'}
 ]}],
-b683:[{dummy:0},
-{anchor:'cvg684',items:[{z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'122',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'122',h:'42',c:'g'}
-,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'124',h:'357',c:'g'}
+b679:[{dummy:0},
+{anchor:'cvg680',items:[{z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'122',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'122',h:'34',c:'g'}
+,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'124',h:'148',c:'g'}
 ]},
-{anchor:'cvg685',items:[{z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'141',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'141',h:'42',c:'g'}
-,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'143',h:'295',c:'g'}
+{anchor:'cvg681',items:[{z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'141',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'141',h:'34',c:'g'}
+,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'143',h:'48',c:'g'}
 ]}],
-b777:[{dummy:0},
-{anchor:'cvg778',items:[{z:'    if (!write_reset_n) {wq2_rptr,wq1_rptr} &lt;= 0;',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'80',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if (!write_reset_n) {wq2_rptr,wq1_rptr} &lt;= 0;',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'80',h:'39',c:'g'}
-,{cr:'c',t:'E',z:'    else {wq2_rptr,wq1_rptr} &lt;= {wq1_rptr,rptr};',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'81',h:'34',c:'g'}
+b773:[{dummy:0},
+{anchor:'cvg774',items:[{z:'    if (!write_reset_n) {wq2_rptr,wq1_rptr} &lt;= 0;',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'80',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    if (!write_reset_n) {wq2_rptr,wq1_rptr} &lt;= 0;',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'80',h:'32',c:'g'}
+,{cr:'c',t:'E',z:'    else {wq2_rptr,wq1_rptr} &lt;= {wq1_rptr,rptr};',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'81',h:'36',c:'g'}
 ]}],
-b796:[{dummy:0},
-{anchor:'cvg797',items:[{z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'98',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'98',h:'42',c:'g'}
-,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'100',h:'58',c:'g'}
+b792:[{dummy:0},
+{anchor:'cvg793',items:[{z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'98',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'98',h:'34',c:'g'}
+,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'100',h:'97',c:'g'}
 ]}],
-b815:[{dummy:0},
-{anchor:'cvg816',items:[{z:'    if (write_enable && !write_full) ',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'20',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if (write_enable && !write_full) ',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'20',h:'8',c:'g'}
-,{cr:'c',t:'A',z:'    if (write_enable && !write_full) ',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'20',h:'39',c:'g'}
+b811:[{dummy:0},
+{anchor:'cvg812',items:[{z:'    if (write_enable && !write_full) ',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'20',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    if (write_enable && !write_full) ',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'20',h:'25',c:'g'}
+,{cr:'c',t:'A',z:'    if (write_enable && !write_full) ',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'20',h:'68',c:'g'}
 ]}],
-b848:[{dummy:0},
-{anchor:'cvg849',items:[{z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'44',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'44',h:'42',c:'g'}
-,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'46',h:'34',c:'g'}
+b844:[{dummy:0},
+{anchor:'cvg845',items:[{z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'44',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'44',h:'34',c:'g'}
+,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'46',h:'43',c:'g'}
 ]},
-{anchor:'cvg850',items:[{z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'60',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'60',h:'42',c:'g'}
+{anchor:'cvg846',items:[{z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'60',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    if (!read_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'60',h:'34',c:'g'}
 ,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'62',h:'36',c:'g'}
 ]}],
-b887:[{dummy:0},
-{anchor:'cvg888',items:[{z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'122',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'122',h:'39',c:'g'}
-,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'124',h:'44',c:'g'}
+b883:[{dummy:0},
+{anchor:'cvg884',items:[{z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'122',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'122',h:'32',c:'g'}
+,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'124',h:'56',c:'g'}
 ]},
-{anchor:'cvg889',items:[{z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'141',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'141',h:'39',c:'g'}
-,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'143',h:'36',c:'g'}
+{anchor:'cvg885',items:[{z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'141',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    if (!write_reset_n)',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'141',h:'32',c:'g'}
+,{cr:'c',t:'E',z:'    else',hf:'__HDL_srcfile_2.htm',f:'../rtl/fifo.sv',l:'143',h:'35',c:'g'}
 ]}],
-b260:[{dummy:0},
-{anchor:'cvg927',items:[{z:'	assign i2c_ready = ((i2c_reset_n == 1) && (state == IDLE)) ? 1 : 0;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'44',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'	assign i2c_ready = ((i2c_reset_n == 1) && (state == IDLE)) ? 1 : 0;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'44',h:'23',c:'g'}
-,{cr:'c',t:'E',z:'	assign i2c_ready = ((i2c_reset_n == 1) && (state == IDLE)) ? 1 : 0;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'44',h:'254',c:'g'}
+b256:[{dummy:0},
+{anchor:'cvg923',items:[{z:'	assign i2c_ready = ((i2c_reset_n == 1) && (state == IDLE)) ? 1 : 0;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'44',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'	assign i2c_ready = ((i2c_reset_n == 1) && (state == IDLE)) ? 1 : 0;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'44',h:'31',c:'g'}
+,{cr:'c',t:'E',z:'	assign i2c_ready = ((i2c_reset_n == 1) && (state == IDLE)) ? 1 : 0;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'44',h:'234',c:'g'}
 ]},
-{anchor:'cvg928',items:[{z:'	assign i2c_scl = (i2c_scl_enable == 0 ) ? 1 : i2c_clk;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'45',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'	assign i2c_scl = (i2c_scl_enable == 0 ) ? 1 : i2c_clk;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'45',h:'722',c:'g'}
-,{cr:'c',t:'E',z:'	assign i2c_scl = (i2c_scl_enable == 0 ) ? 1 : i2c_clk;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'45',h:'1609',c:'g'}
+{anchor:'cvg924',items:[{z:'	assign i2c_scl = (i2c_scl_enable == 0 ) ? 1 : i2c_clk;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'45',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'	assign i2c_scl = (i2c_scl_enable == 0 ) ? 1 : i2c_clk;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'45',h:'739',c:'g'}
+,{cr:'c',t:'E',z:'	assign i2c_scl = (i2c_scl_enable == 0 ) ? 1 : i2c_clk;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'45',h:'1390',c:'g'}
 ]},
-{anchor:'cvg929',items:[{z:'	assign i2c_sda = (write_enable == 1) ? sda_out : \'bz;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'46',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'	assign i2c_sda = (write_enable == 1) ? sda_out : \'bz;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'46',h:'263',c:'g'}
-,{cr:'c',t:'E',z:'	assign i2c_sda = (write_enable == 1) ? sda_out : \'bz;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'46',h:'83',c:'g'}
+{anchor:'cvg925',items:[{z:'	assign i2c_sda = (write_enable == 1) ? sda_out : \'bz;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'46',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'	assign i2c_sda = (write_enable == 1) ? sda_out : \'bz;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'46',h:'270',c:'g'}
+,{cr:'c',t:'E',z:'	assign i2c_sda = (write_enable == 1) ? sda_out : \'bz;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'46',h:'71',c:'g'}
 ]},
-{anchor:'cvg930',items:[{z:'		if (counter2 == (DIVIDE_BY/2) - 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'50',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if (counter2 == (DIVIDE_BY/2) - 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'50',h:'2256',c:'g'}
-,{cr:'c',t:'E',z:'		else counter2 &lt;= counter2 + 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'54',h:'2263',c:'g'}
+{anchor:'cvg926',items:[{z:'		if (counter2 == (DIVIDE_BY/2) - 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'50',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if (counter2 == (DIVIDE_BY/2) - 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'50',h:'2070',c:'g'}
+,{cr:'c',t:'E',z:'		else counter2 &lt;= counter2 + 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'54',h:'2076',c:'g'}
 ]},
-{anchor:'cvg931',items:[{z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'58',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'58',h:'49',c:'g'}
-,{cr:'c',t:'E',z:'		end else begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'60',h:'247',c:'g'}
+{anchor:'cvg927',items:[{z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'58',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'58',h:'40',c:'g'}
+,{cr:'c',t:'E',z:'		end else begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'60',h:'239',c:'g'}
 ]},
-{anchor:'cvg932',items:[{z:'			if ((state == IDLE) || (state == START) || (state == STOP)) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'61',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'			if ((state == IDLE) || (state == START) || (state == STOP)) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'61',h:'38',c:'g'}
-,{cr:'c',t:'E',z:'			end else begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'63',h:'209',c:'g'}
+{anchor:'cvg928',items:[{z:'			if ((state == IDLE) || (state == START) || (state == STOP)) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'61',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'			if ((state == IDLE) || (state == START) || (state == STOP)) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'61',h:'59',c:'g'}
+,{cr:'c',t:'E',z:'			end else begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'63',h:'180',c:'g'}
 ]},
-{anchor:'cvg933',items:[{z:'		case(state)',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'71',c:'G',p:'100.00'}
-,{cr:'c',t:'T',z:'			READ_ACK: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'72',h:'57',c:'g'}
-,{cr:'c',t:'T',z:'			WRITE_DATA: status &lt;= 0;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'81',h:'261',c:'g'}
-,{cr:'c',t:'T',z:'			READ_ACK2: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'82',h:'214',c:'g'}
-,{cr:'c',t:'A',z:'		case(state)',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'71',h:'170',c:'g'}
+{anchor:'cvg929',items:[{z:'		case(state)',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'71',c:'G',p:'100.00'}
+,{cr:'c',t:'T',z:'			READ_ACK: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'72',h:'64',c:'g'}
+,{cr:'c',t:'T',z:'			WRITE_DATA: status &lt;= 0;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'81',h:'217',c:'g'}
+,{cr:'c',t:'T',z:'			READ_ACK2: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'82',h:'149',c:'g'}
+,{cr:'c',t:'A',z:'		case(state)',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'71',h:'230',c:'g'}
 ]},
-{anchor:'cvg934',items:[{z:'					if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'73',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'					if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'73',h:'52',c:'g'}
-,{cr:'c',t:'A',z:'					if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'73',h:'5',c:'g'}
+{anchor:'cvg930',items:[{z:'					if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'73',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'					if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'73',h:'56',c:'g'}
+,{cr:'c',t:'A',z:'					if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'73',h:'8',c:'g'}
 ]},
-{anchor:'cvg935',items:[{z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'77',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'77',h:'44',c:'g'}
-,{cr:'c',t:'A',z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'77',h:'13',c:'g'}
+{anchor:'cvg931',items:[{z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'77',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'77',h:'48',c:'g'}
+,{cr:'c',t:'A',z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'77',h:'16',c:'g'}
 ]},
-{anchor:'cvg936',items:[{z:'				if (i2c_sda == 0 && !fifo_tx_empty) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'83',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'				if (i2c_sda == 0 && !fifo_tx_empty) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'83',h:'172',c:'g'}
-,{cr:'c',t:'A',z:'				if (i2c_sda == 0 && !fifo_tx_empty) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'83',h:'42',c:'g'}
+{anchor:'cvg932',items:[{z:'				if (i2c_sda == 0 && !fifo_tx_empty) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'83',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'				if (i2c_sda == 0 && !fifo_tx_empty) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'83',h:'111',c:'g'}
+,{cr:'c',t:'A',z:'				if (i2c_sda == 0 && !fifo_tx_empty) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'83',h:'38',c:'g'}
 ]},
-{anchor:'cvg937',items:[{z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'87',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'87',h:'109',c:'g'}
-,{cr:'c',t:'A',z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'87',h:'105',c:'g'}
+{anchor:'cvg933',items:[{z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'87',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'87',h:'78',c:'g'}
+,{cr:'c',t:'A',z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'87',h:'71',c:'g'}
 ]},
-{anchor:'cvg938',items:[{z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'95',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'95',h:'61',c:'g'}
-,{cr:'c',t:'E',z:'		else begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'101',h:'837',c:'g'}
+{anchor:'cvg934',items:[{z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'95',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'95',h:'54',c:'g'}
+,{cr:'c',t:'E',z:'		else begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'101',h:'751',c:'g'}
 ]},
-{anchor:'cvg939',items:[{z:'			case(state)',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'102',c:'G',p:'90.00'}
-,{cr:'c',t:'T',z:'				IDLE: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'103',h:'22',c:'g'}
-,{cr:'c',t:'T',z:'				START: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'111',h:'19',c:'g'}
-,{cr:'c',t:'T',z:'				ADDRESS: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'116',h:'136',c:'g'}
-,{cr:'c',t:'T',z:'				READ_ACK: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'123',h:'17',c:'g'}
-,{cr:'c',t:'T',z:'				WRITE_DATA: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'131',h:'555',c:'g'}
-,{cr:'c',t:'T',z:'				READ_ACK2: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'137',h:'64',c:'g'}
-,{cr:'c',t:'T',z:'				READ_DATA: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'155',h:'17',c:'g'}
-,{cr:'c',t:'T',z:'				WRITE_ACK: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'164',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'				STOP: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'183',h:'5',c:'g'}
+{anchor:'cvg935',items:[{z:'			case(state)',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'102',c:'G',p:'90.00'}
+,{cr:'c',t:'T',z:'				IDLE: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'103',h:'34',c:'g'}
+,{cr:'c',t:'T',z:'				START: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'111',h:'23',c:'g'}
+,{cr:'c',t:'T',z:'				ADDRESS: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'116',h:'168',c:'g'}
+,{cr:'c',t:'T',z:'				READ_ACK: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'123',h:'19',c:'g'}
+,{cr:'c',t:'T',z:'				WRITE_DATA: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'131',h:'377',c:'g'}
+,{cr:'c',t:'T',z:'				READ_ACK2: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'137',h:'46',c:'g'}
+,{cr:'c',t:'T',z:'				READ_DATA: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'155',h:'65',c:'g'}
+,{cr:'c',t:'T',z:'				WRITE_ACK: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'164',h:'7',c:'g'}
+,{cr:'c',t:'T',z:'				STOP: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'183',h:'12',c:'g'}
 ,{cr:'m',t:'A',z:'			case(state)',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'102',h:'0',c:'r'}
 ]},
-{anchor:'cvg940',items:[{z:'					if (i2c_enable || i2c_repeat_start) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'104',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'					if (i2c_enable || i2c_repeat_start) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'104',h:'20',c:'g'}
-,{cr:'c',t:'E',z:'					else state &lt;= IDLE;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'108',h:'2',c:'g'}
+{anchor:'cvg936',items:[{z:'					if (i2c_enable || i2c_repeat_start) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'104',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'					if (i2c_enable || i2c_repeat_start) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'104',h:'24',c:'g'}
+,{cr:'c',t:'E',z:'					else state &lt;= IDLE;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'108',h:'10',c:'g'}
 ]},
-{anchor:'cvg941',items:[{z:'					if (counter == 0) begin ',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'117',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'					if (counter == 0) begin ',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'117',h:'17',c:'g'}
-,{cr:'c',t:'E',z:'					end else counter &lt;= counter - 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'119',h:'119',c:'g'}
+{anchor:'cvg937',items:[{z:'					if (counter == 0) begin ',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'117',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'					if (counter == 0) begin ',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'117',h:'20',c:'g'}
+,{cr:'c',t:'E',z:'					end else counter &lt;= counter - 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'119',h:'148',c:'g'}
 ]},
-{anchor:'cvg942',items:[{z:'					if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'124',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'					if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'124',h:'13',c:'g'}
-,{cr:'c',t:'E',z:'					end else state &lt;= STOP;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'128',h:'4',c:'g'}
+{anchor:'cvg938',items:[{z:'					if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'124',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'					if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'124',h:'16',c:'g'}
+,{cr:'c',t:'E',z:'					end else state &lt;= STOP;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'128',h:'3',c:'g'}
 ]},
-{anchor:'cvg943',items:[{z:'						if(saved_addr[0] == 0) state &lt;= WRITE_DATA;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'126',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'						if(saved_addr[0] == 0) state &lt;= WRITE_DATA;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'126',h:'12',c:'g'}
-,{cr:'c',t:'E',z:'						else state &lt;= READ_DATA;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'127',h:'1',c:'g'}
+{anchor:'cvg939',items:[{z:'						if(saved_addr[0] == 0) state &lt;= WRITE_DATA;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'126',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'						if(saved_addr[0] == 0) state &lt;= WRITE_DATA;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'126',h:'11',c:'g'}
+,{cr:'c',t:'E',z:'						else state &lt;= READ_DATA;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'127',h:'5',c:'g'}
 ]},
-{anchor:'cvg944',items:[{z:'					if(counter == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'132',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'					if(counter == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'132',h:'64',c:'g'}
-,{cr:'c',t:'E',z:'					end else counter &lt;= counter - 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'134',h:'491',c:'g'}
+{anchor:'cvg940',items:[{z:'					if(counter == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'132',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'					if(counter == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'132',h:'47',c:'g'}
+,{cr:'c',t:'E',z:'					end else counter &lt;= counter - 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'134',h:'330',c:'g'}
 ]},
-{anchor:'cvg945',items:[{z:'					if (i2c_sda == 0 && i2c_repeat_start) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'138',c:'Y',p:'66.66'}
+{anchor:'cvg941',items:[{z:'					if (i2c_sda == 0 && i2c_repeat_start) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'138',c:'R',p:'33.33'}
 ,{cr:'m',t:'I',z:'					if (i2c_sda == 0 && i2c_repeat_start) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'138',h:'0',c:'r'}
-,{cr:'c',t:'T',z:'					else if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'141',h:'63',c:'g'}
-,{cr:'c',t:'E',z:'					else begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'150',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'					else if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'141',h:'46',c:'g'}
+,{cr:'m',t:'E',z:'					else begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'150',h:'0',c:'r'}
 ]},
-{anchor:'cvg946',items:[{z:'							if(fifo_tx_empty) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'144',c:'Y',p:'50.00'}
-,{cr:'m',t:'I',z:'							if(fifo_tx_empty) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'144',h:'0',c:'r'}
-,{cr:'c',t:'A',z:'							if(fifo_tx_empty) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'144',h:'63',c:'g'}
+{anchor:'cvg942',items:[{z:'							if(fifo_tx_empty) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'144',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'							if(fifo_tx_empty) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'144',h:'16',c:'g'}
+,{cr:'c',t:'A',z:'							if(fifo_tx_empty) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'144',h:'30',c:'g'}
 ]},
-{anchor:'cvg947',items:[{z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'145',c:'Y',p:'50.00'}
-,{cr:'m',t:'I',z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'145',h:'0',c:'r'}
-,{cr:'c',t:'A',z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'145',h:'63',c:'g'}
+{anchor:'cvg943',items:[{z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'145',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'145',h:'8',c:'g'}
+,{cr:'c',t:'A',z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'145',h:'38',c:'g'}
 ]},
-{anchor:'cvg948',items:[{z:'					if (counter == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'157',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'					if (counter == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'157',h:'2',c:'g'}
-,{cr:'c',t:'E',z:'					else counter &lt;= counter - 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'161',h:'15',c:'g'}
+{anchor:'cvg944',items:[{z:'					if (counter == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'157',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'					if (counter == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'157',h:'8',c:'g'}
+,{cr:'c',t:'E',z:'					else counter &lt;= counter - 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'161',h:'57',c:'g'}
 ]},
-{anchor:'cvg949',items:[{z:'					if (i2c_sda == 0 && i2c_repeat_start) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'166',c:'R',p:'33.33'}
-,{cr:'m',t:'I',z:'					if (i2c_sda == 0 && i2c_repeat_start) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'166',h:'0',c:'r'}
-,{cr:'c',t:'T',z:'					else if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'169',h:'2',c:'g'}
+{anchor:'cvg945',items:[{z:'					if (i2c_sda == 0 && i2c_repeat_start) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'166',c:'Y',p:'66.66'}
+,{cr:'c',t:'I',z:'					if (i2c_sda == 0 && i2c_repeat_start) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'166',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'					else if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'169',h:'6',c:'g'}
 ,{cr:'m',t:'E',z:'					else begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'178',h:'0',c:'r'}
 ]},
-{anchor:'cvg950',items:[{z:'							if(fifo_rx_full) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'172',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'							if(fifo_rx_full) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'172',h:'1',c:'g'}
-,{cr:'c',t:'A',z:'							if(fifo_rx_full) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'172',h:'1',c:'g'}
+{anchor:'cvg946',items:[{z:'							if(fifo_rx_full) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'172',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'							if(fifo_rx_full) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'172',h:'4',c:'g'}
+,{cr:'c',t:'A',z:'							if(fifo_rx_full) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'172',h:'2',c:'g'}
 ]},
-{anchor:'cvg951',items:[{z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'173',c:'Y',p:'50.00'}
-,{cr:'m',t:'I',z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'173',h:'0',c:'r'}
-,{cr:'c',t:'A',z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'173',h:'2',c:'g'}
+{anchor:'cvg947',items:[{z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'173',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'173',h:'2',c:'g'}
+,{cr:'c',t:'A',z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'173',h:'4',c:'g'}
 ]},
-{anchor:'cvg952',items:[{z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'191',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'191',h:'49',c:'g'}
-,{cr:'c',t:'E',z:'		end else begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'194',h:'851',c:'g'}
+{anchor:'cvg948',items:[{z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'191',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'191',h:'40',c:'g'}
+,{cr:'c',t:'E',z:'		end else begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'194',h:'751',c:'g'}
 ]},
-{anchor:'cvg953',items:[{z:'			case(state)',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'195',c:'G',p:'100.00'}
-,{cr:'c',t:'T',z:'				START: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'197',h:'20',c:'g'}
-,{cr:'c',t:'T',z:'				ADDRESS: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'202',h:'138',c:'g'}
-,{cr:'c',t:'T',z:'				READ_ACK: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'206',h:'17',c:'g'}
-,{cr:'c',t:'T',z:'				WRITE_DATA: begin ',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'210',h:'560',c:'g'}
-,{cr:'c',t:'T',z:'				READ_ACK2: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'214',h:'64',c:'g'}
-,{cr:'c',t:'T',z:'				WRITE_ACK: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'218',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'				READ_DATA: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'223',h:'18',c:'g'}
-,{cr:'c',t:'T',z:'				STOP: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'227',h:'5',c:'g'}
-,{cr:'c',t:'A',z:'			case(state)',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'195',h:'27',c:'g'}
+{anchor:'cvg949',items:[{z:'			case(state)',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'195',c:'G',p:'100.00'}
+,{cr:'c',t:'T',z:'				START: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'197',h:'24',c:'g'}
+,{cr:'c',t:'T',z:'				ADDRESS: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'202',h:'171',c:'g'}
+,{cr:'c',t:'T',z:'				READ_ACK: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'206',h:'20',c:'g'}
+,{cr:'c',t:'T',z:'				WRITE_DATA: begin ',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'210',h:'379',c:'g'}
+,{cr:'c',t:'T',z:'				READ_ACK2: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'214',h:'47',c:'g'}
+,{cr:'c',t:'T',z:'				WRITE_ACK: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'218',h:'8',c:'g'}
+,{cr:'c',t:'T',z:'				READ_DATA: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'223',h:'65',c:'g'}
+,{cr:'c',t:'T',z:'				STOP: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'227',h:'13',c:'g'}
+,{cr:'c',t:'A',z:'			case(state)',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'195',h:'24',c:'g'}
 ]}],
-b926:[{dummy:0},
-{anchor:'cvg927',items:[{z:'	assign i2c_ready = ((i2c_reset_n == 1) && (state == IDLE)) ? 1 : 0;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'44',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'	assign i2c_ready = ((i2c_reset_n == 1) && (state == IDLE)) ? 1 : 0;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'44',h:'23',c:'g'}
-,{cr:'c',t:'E',z:'	assign i2c_ready = ((i2c_reset_n == 1) && (state == IDLE)) ? 1 : 0;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'44',h:'254',c:'g'}
+b922:[{dummy:0},
+{anchor:'cvg923',items:[{z:'	assign i2c_ready = ((i2c_reset_n == 1) && (state == IDLE)) ? 1 : 0;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'44',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'	assign i2c_ready = ((i2c_reset_n == 1) && (state == IDLE)) ? 1 : 0;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'44',h:'31',c:'g'}
+,{cr:'c',t:'E',z:'	assign i2c_ready = ((i2c_reset_n == 1) && (state == IDLE)) ? 1 : 0;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'44',h:'234',c:'g'}
 ]},
-{anchor:'cvg928',items:[{z:'	assign i2c_scl = (i2c_scl_enable == 0 ) ? 1 : i2c_clk;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'45',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'	assign i2c_scl = (i2c_scl_enable == 0 ) ? 1 : i2c_clk;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'45',h:'722',c:'g'}
-,{cr:'c',t:'E',z:'	assign i2c_scl = (i2c_scl_enable == 0 ) ? 1 : i2c_clk;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'45',h:'1609',c:'g'}
+{anchor:'cvg924',items:[{z:'	assign i2c_scl = (i2c_scl_enable == 0 ) ? 1 : i2c_clk;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'45',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'	assign i2c_scl = (i2c_scl_enable == 0 ) ? 1 : i2c_clk;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'45',h:'739',c:'g'}
+,{cr:'c',t:'E',z:'	assign i2c_scl = (i2c_scl_enable == 0 ) ? 1 : i2c_clk;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'45',h:'1390',c:'g'}
 ]},
-{anchor:'cvg929',items:[{z:'	assign i2c_sda = (write_enable == 1) ? sda_out : \'bz;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'46',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'	assign i2c_sda = (write_enable == 1) ? sda_out : \'bz;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'46',h:'263',c:'g'}
-,{cr:'c',t:'E',z:'	assign i2c_sda = (write_enable == 1) ? sda_out : \'bz;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'46',h:'83',c:'g'}
+{anchor:'cvg925',items:[{z:'	assign i2c_sda = (write_enable == 1) ? sda_out : \'bz;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'46',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'	assign i2c_sda = (write_enable == 1) ? sda_out : \'bz;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'46',h:'270',c:'g'}
+,{cr:'c',t:'E',z:'	assign i2c_sda = (write_enable == 1) ? sda_out : \'bz;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'46',h:'71',c:'g'}
 ]},
-{anchor:'cvg930',items:[{z:'		if (counter2 == (DIVIDE_BY/2) - 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'50',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if (counter2 == (DIVIDE_BY/2) - 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'50',h:'2256',c:'g'}
-,{cr:'c',t:'E',z:'		else counter2 &lt;= counter2 + 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'54',h:'2263',c:'g'}
+{anchor:'cvg926',items:[{z:'		if (counter2 == (DIVIDE_BY/2) - 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'50',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if (counter2 == (DIVIDE_BY/2) - 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'50',h:'2070',c:'g'}
+,{cr:'c',t:'E',z:'		else counter2 &lt;= counter2 + 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'54',h:'2076',c:'g'}
 ]},
-{anchor:'cvg931',items:[{z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'58',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'58',h:'49',c:'g'}
-,{cr:'c',t:'E',z:'		end else begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'60',h:'247',c:'g'}
+{anchor:'cvg927',items:[{z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'58',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'58',h:'40',c:'g'}
+,{cr:'c',t:'E',z:'		end else begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'60',h:'239',c:'g'}
 ]},
-{anchor:'cvg932',items:[{z:'			if ((state == IDLE) || (state == START) || (state == STOP)) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'61',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'			if ((state == IDLE) || (state == START) || (state == STOP)) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'61',h:'38',c:'g'}
-,{cr:'c',t:'E',z:'			end else begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'63',h:'209',c:'g'}
+{anchor:'cvg928',items:[{z:'			if ((state == IDLE) || (state == START) || (state == STOP)) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'61',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'			if ((state == IDLE) || (state == START) || (state == STOP)) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'61',h:'59',c:'g'}
+,{cr:'c',t:'E',z:'			end else begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'63',h:'180',c:'g'}
 ]},
-{anchor:'cvg933',items:[{z:'		case(state)',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'71',c:'G',p:'100.00'}
-,{cr:'c',t:'T',z:'			READ_ACK: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'72',h:'57',c:'g'}
-,{cr:'c',t:'T',z:'			WRITE_DATA: status &lt;= 0;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'81',h:'261',c:'g'}
-,{cr:'c',t:'T',z:'			READ_ACK2: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'82',h:'214',c:'g'}
-,{cr:'c',t:'A',z:'		case(state)',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'71',h:'170',c:'g'}
+{anchor:'cvg929',items:[{z:'		case(state)',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'71',c:'G',p:'100.00'}
+,{cr:'c',t:'T',z:'			READ_ACK: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'72',h:'64',c:'g'}
+,{cr:'c',t:'T',z:'			WRITE_DATA: status &lt;= 0;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'81',h:'217',c:'g'}
+,{cr:'c',t:'T',z:'			READ_ACK2: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'82',h:'149',c:'g'}
+,{cr:'c',t:'A',z:'		case(state)',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'71',h:'230',c:'g'}
 ]},
-{anchor:'cvg934',items:[{z:'					if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'73',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'					if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'73',h:'52',c:'g'}
-,{cr:'c',t:'A',z:'					if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'73',h:'5',c:'g'}
+{anchor:'cvg930',items:[{z:'					if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'73',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'					if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'73',h:'56',c:'g'}
+,{cr:'c',t:'A',z:'					if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'73',h:'8',c:'g'}
 ]},
-{anchor:'cvg935',items:[{z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'77',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'77',h:'44',c:'g'}
-,{cr:'c',t:'A',z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'77',h:'13',c:'g'}
+{anchor:'cvg931',items:[{z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'77',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'77',h:'48',c:'g'}
+,{cr:'c',t:'A',z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'77',h:'16',c:'g'}
 ]},
-{anchor:'cvg936',items:[{z:'				if (i2c_sda == 0 && !fifo_tx_empty) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'83',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'				if (i2c_sda == 0 && !fifo_tx_empty) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'83',h:'172',c:'g'}
-,{cr:'c',t:'A',z:'				if (i2c_sda == 0 && !fifo_tx_empty) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'83',h:'42',c:'g'}
+{anchor:'cvg932',items:[{z:'				if (i2c_sda == 0 && !fifo_tx_empty) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'83',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'				if (i2c_sda == 0 && !fifo_tx_empty) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'83',h:'111',c:'g'}
+,{cr:'c',t:'A',z:'				if (i2c_sda == 0 && !fifo_tx_empty) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'83',h:'38',c:'g'}
 ]},
-{anchor:'cvg937',items:[{z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'87',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'87',h:'109',c:'g'}
-,{cr:'c',t:'A',z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'87',h:'105',c:'g'}
+{anchor:'cvg933',items:[{z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'87',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'87',h:'78',c:'g'}
+,{cr:'c',t:'A',z:'					if (status == 1) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'87',h:'71',c:'g'}
 ]},
-{anchor:'cvg938',items:[{z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'95',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'95',h:'61',c:'g'}
-,{cr:'c',t:'E',z:'		else begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'101',h:'837',c:'g'}
+{anchor:'cvg934',items:[{z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'95',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'95',h:'54',c:'g'}
+,{cr:'c',t:'E',z:'		else begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'101',h:'751',c:'g'}
 ]},
-{anchor:'cvg939',items:[{z:'			case(state)',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'102',c:'G',p:'90.00'}
-,{cr:'c',t:'T',z:'				IDLE: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'103',h:'22',c:'g'}
-,{cr:'c',t:'T',z:'				START: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'111',h:'19',c:'g'}
-,{cr:'c',t:'T',z:'				ADDRESS: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'116',h:'136',c:'g'}
-,{cr:'c',t:'T',z:'				READ_ACK: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'123',h:'17',c:'g'}
-,{cr:'c',t:'T',z:'				WRITE_DATA: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'131',h:'555',c:'g'}
-,{cr:'c',t:'T',z:'				READ_ACK2: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'137',h:'64',c:'g'}
-,{cr:'c',t:'T',z:'				READ_DATA: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'155',h:'17',c:'g'}
-,{cr:'c',t:'T',z:'				WRITE_ACK: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'164',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'				STOP: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'183',h:'5',c:'g'}
+{anchor:'cvg935',items:[{z:'			case(state)',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'102',c:'G',p:'90.00'}
+,{cr:'c',t:'T',z:'				IDLE: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'103',h:'34',c:'g'}
+,{cr:'c',t:'T',z:'				START: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'111',h:'23',c:'g'}
+,{cr:'c',t:'T',z:'				ADDRESS: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'116',h:'168',c:'g'}
+,{cr:'c',t:'T',z:'				READ_ACK: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'123',h:'19',c:'g'}
+,{cr:'c',t:'T',z:'				WRITE_DATA: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'131',h:'377',c:'g'}
+,{cr:'c',t:'T',z:'				READ_ACK2: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'137',h:'46',c:'g'}
+,{cr:'c',t:'T',z:'				READ_DATA: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'155',h:'65',c:'g'}
+,{cr:'c',t:'T',z:'				WRITE_ACK: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'164',h:'7',c:'g'}
+,{cr:'c',t:'T',z:'				STOP: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'183',h:'12',c:'g'}
 ,{cr:'m',t:'A',z:'			case(state)',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'102',h:'0',c:'r'}
 ]},
-{anchor:'cvg940',items:[{z:'					if (i2c_enable || i2c_repeat_start) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'104',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'					if (i2c_enable || i2c_repeat_start) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'104',h:'20',c:'g'}
-,{cr:'c',t:'E',z:'					else state &lt;= IDLE;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'108',h:'2',c:'g'}
+{anchor:'cvg936',items:[{z:'					if (i2c_enable || i2c_repeat_start) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'104',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'					if (i2c_enable || i2c_repeat_start) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'104',h:'24',c:'g'}
+,{cr:'c',t:'E',z:'					else state &lt;= IDLE;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'108',h:'10',c:'g'}
 ]},
-{anchor:'cvg941',items:[{z:'					if (counter == 0) begin ',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'117',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'					if (counter == 0) begin ',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'117',h:'17',c:'g'}
-,{cr:'c',t:'E',z:'					end else counter &lt;= counter - 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'119',h:'119',c:'g'}
+{anchor:'cvg937',items:[{z:'					if (counter == 0) begin ',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'117',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'					if (counter == 0) begin ',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'117',h:'20',c:'g'}
+,{cr:'c',t:'E',z:'					end else counter &lt;= counter - 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'119',h:'148',c:'g'}
 ]},
-{anchor:'cvg942',items:[{z:'					if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'124',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'					if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'124',h:'13',c:'g'}
-,{cr:'c',t:'E',z:'					end else state &lt;= STOP;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'128',h:'4',c:'g'}
+{anchor:'cvg938',items:[{z:'					if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'124',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'					if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'124',h:'16',c:'g'}
+,{cr:'c',t:'E',z:'					end else state &lt;= STOP;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'128',h:'3',c:'g'}
 ]},
-{anchor:'cvg943',items:[{z:'						if(saved_addr[0] == 0) state &lt;= WRITE_DATA;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'126',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'						if(saved_addr[0] == 0) state &lt;= WRITE_DATA;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'126',h:'12',c:'g'}
-,{cr:'c',t:'E',z:'						else state &lt;= READ_DATA;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'127',h:'1',c:'g'}
+{anchor:'cvg939',items:[{z:'						if(saved_addr[0] == 0) state &lt;= WRITE_DATA;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'126',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'						if(saved_addr[0] == 0) state &lt;= WRITE_DATA;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'126',h:'11',c:'g'}
+,{cr:'c',t:'E',z:'						else state &lt;= READ_DATA;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'127',h:'5',c:'g'}
 ]},
-{anchor:'cvg944',items:[{z:'					if(counter == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'132',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'					if(counter == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'132',h:'64',c:'g'}
-,{cr:'c',t:'E',z:'					end else counter &lt;= counter - 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'134',h:'491',c:'g'}
+{anchor:'cvg940',items:[{z:'					if(counter == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'132',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'					if(counter == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'132',h:'47',c:'g'}
+,{cr:'c',t:'E',z:'					end else counter &lt;= counter - 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'134',h:'330',c:'g'}
 ]},
-{anchor:'cvg945',items:[{z:'					if (i2c_sda == 0 && i2c_repeat_start) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'138',c:'Y',p:'66.66'}
+{anchor:'cvg941',items:[{z:'					if (i2c_sda == 0 && i2c_repeat_start) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'138',c:'R',p:'33.33'}
 ,{cr:'m',t:'I',z:'					if (i2c_sda == 0 && i2c_repeat_start) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'138',h:'0',c:'r'}
-,{cr:'c',t:'T',z:'					else if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'141',h:'63',c:'g'}
-,{cr:'c',t:'E',z:'					else begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'150',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'					else if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'141',h:'46',c:'g'}
+,{cr:'m',t:'E',z:'					else begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'150',h:'0',c:'r'}
 ]},
-{anchor:'cvg946',items:[{z:'							if(fifo_tx_empty) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'144',c:'Y',p:'50.00'}
-,{cr:'m',t:'I',z:'							if(fifo_tx_empty) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'144',h:'0',c:'r'}
-,{cr:'c',t:'A',z:'							if(fifo_tx_empty) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'144',h:'63',c:'g'}
+{anchor:'cvg942',items:[{z:'							if(fifo_tx_empty) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'144',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'							if(fifo_tx_empty) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'144',h:'16',c:'g'}
+,{cr:'c',t:'A',z:'							if(fifo_tx_empty) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'144',h:'30',c:'g'}
 ]},
-{anchor:'cvg947',items:[{z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'145',c:'Y',p:'50.00'}
-,{cr:'m',t:'I',z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'145',h:'0',c:'r'}
-,{cr:'c',t:'A',z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'145',h:'63',c:'g'}
+{anchor:'cvg943',items:[{z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'145',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'145',h:'8',c:'g'}
+,{cr:'c',t:'A',z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'145',h:'38',c:'g'}
 ]},
-{anchor:'cvg948',items:[{z:'					if (counter == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'157',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'					if (counter == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'157',h:'2',c:'g'}
-,{cr:'c',t:'E',z:'					else counter &lt;= counter - 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'161',h:'15',c:'g'}
+{anchor:'cvg944',items:[{z:'					if (counter == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'157',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'					if (counter == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'157',h:'8',c:'g'}
+,{cr:'c',t:'E',z:'					else counter &lt;= counter - 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'161',h:'57',c:'g'}
 ]},
-{anchor:'cvg949',items:[{z:'					if (i2c_sda == 0 && i2c_repeat_start) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'166',c:'R',p:'33.33'}
-,{cr:'m',t:'I',z:'					if (i2c_sda == 0 && i2c_repeat_start) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'166',h:'0',c:'r'}
-,{cr:'c',t:'T',z:'					else if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'169',h:'2',c:'g'}
+{anchor:'cvg945',items:[{z:'					if (i2c_sda == 0 && i2c_repeat_start) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'166',c:'Y',p:'66.66'}
+,{cr:'c',t:'I',z:'					if (i2c_sda == 0 && i2c_repeat_start) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'166',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'					else if (i2c_sda == 0) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'169',h:'6',c:'g'}
 ,{cr:'m',t:'E',z:'					else begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'178',h:'0',c:'r'}
 ]},
-{anchor:'cvg950',items:[{z:'							if(fifo_rx_full) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'172',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'							if(fifo_rx_full) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'172',h:'1',c:'g'}
-,{cr:'c',t:'A',z:'							if(fifo_rx_full) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'172',h:'1',c:'g'}
+{anchor:'cvg946',items:[{z:'							if(fifo_rx_full) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'172',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'							if(fifo_rx_full) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'172',h:'4',c:'g'}
+,{cr:'c',t:'A',z:'							if(fifo_rx_full) count_done &lt;= 1;',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'172',h:'2',c:'g'}
 ]},
-{anchor:'cvg951',items:[{z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'173',c:'Y',p:'50.00'}
-,{cr:'m',t:'I',z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'173',h:'0',c:'r'}
-,{cr:'c',t:'A',z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'173',h:'2',c:'g'}
+{anchor:'cvg947',items:[{z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'173',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'173',h:'2',c:'g'}
+,{cr:'c',t:'A',z:'							if(count_done) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'173',h:'4',c:'g'}
 ]},
-{anchor:'cvg952',items:[{z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'191',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'191',h:'49',c:'g'}
-,{cr:'c',t:'E',z:'		end else begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'194',h:'851',c:'g'}
+{anchor:'cvg948',items:[{z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'191',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if(!i2c_reset_n) begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'191',h:'40',c:'g'}
+,{cr:'c',t:'E',z:'		end else begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'194',h:'751',c:'g'}
 ]},
-{anchor:'cvg953',items:[{z:'			case(state)',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'195',c:'G',p:'100.00'}
-,{cr:'c',t:'T',z:'				START: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'197',h:'20',c:'g'}
-,{cr:'c',t:'T',z:'				ADDRESS: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'202',h:'138',c:'g'}
-,{cr:'c',t:'T',z:'				READ_ACK: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'206',h:'17',c:'g'}
-,{cr:'c',t:'T',z:'				WRITE_DATA: begin ',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'210',h:'560',c:'g'}
-,{cr:'c',t:'T',z:'				READ_ACK2: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'214',h:'64',c:'g'}
-,{cr:'c',t:'T',z:'				WRITE_ACK: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'218',h:'2',c:'g'}
-,{cr:'c',t:'T',z:'				READ_DATA: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'223',h:'18',c:'g'}
-,{cr:'c',t:'T',z:'				STOP: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'227',h:'5',c:'g'}
-,{cr:'c',t:'A',z:'			case(state)',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'195',h:'27',c:'g'}
+{anchor:'cvg949',items:[{z:'			case(state)',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'195',c:'G',p:'100.00'}
+,{cr:'c',t:'T',z:'				START: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'197',h:'24',c:'g'}
+,{cr:'c',t:'T',z:'				ADDRESS: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'202',h:'171',c:'g'}
+,{cr:'c',t:'T',z:'				READ_ACK: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'206',h:'20',c:'g'}
+,{cr:'c',t:'T',z:'				WRITE_DATA: begin ',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'210',h:'379',c:'g'}
+,{cr:'c',t:'T',z:'				READ_ACK2: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'214',h:'47',c:'g'}
+,{cr:'c',t:'T',z:'				WRITE_ACK: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'218',h:'8',c:'g'}
+,{cr:'c',t:'T',z:'				READ_DATA: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'223',h:'65',c:'g'}
+,{cr:'c',t:'T',z:'				STOP: begin',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'227',h:'13',c:'g'}
+,{cr:'c',t:'A',z:'			case(state)',hf:'__HDL_srcfile_5.htm',f:'../rtl/i2c.v',l:'195',h:'24',c:'g'}
 ]}],
-b54:[{dummy:0},
-{anchor:'cvg266',items:[{z:'		if (fifo_tx_rd_en)',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'141',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if (fifo_tx_rd_en)',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'141',h:'75',c:'g'}
-,{cr:'c',t:'A',z:'		if (fifo_tx_rd_en)',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'141',h:'114',c:'g'}
+b50:[{dummy:0},
+{anchor:'cvg262',items:[{z:'		if (fifo_tx_rd_en)',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'141',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if (fifo_tx_rd_en)',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'141',h:'52',c:'g'}
+,{cr:'c',t:'A',z:'		if (fifo_tx_rd_en)',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'141',h:'81',c:'g'}
 ]},
-{anchor:'cvg267',items:[{z:'		if(reg_command[2] == 1) begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'148',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if(reg_command[2] == 1) begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'148',h:'104',c:'g'}
-,{cr:'c',t:'A',z:'		if(reg_command[2] == 1) begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'148',h:'43',c:'g'}
+{anchor:'cvg263',items:[{z:'		if(reg_command[2] == 1) begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'148',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if(reg_command[2] == 1) begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'148',h:'114',c:'g'}
+,{cr:'c',t:'A',z:'		if(reg_command[2] == 1) begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'148',h:'42',c:'g'}
 ]},
-{anchor:'cvg268',items:[{z:'			if (reg_status[3]) begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'149',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'			if (reg_status[3]) begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'149',h:'35',c:'g'}
-,{cr:'c',t:'E',z:'			else begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'152',h:'69',c:'g'}
-]}],
-b265:[{dummy:0},
-{anchor:'cvg266',items:[{z:'		if (fifo_tx_rd_en)',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'141',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if (fifo_tx_rd_en)',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'141',h:'75',c:'g'}
-,{cr:'c',t:'A',z:'		if (fifo_tx_rd_en)',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'141',h:'114',c:'g'}
-]},
-{anchor:'cvg267',items:[{z:'		if(reg_command[2] == 1) begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'148',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if(reg_command[2] == 1) begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'148',h:'104',c:'g'}
-,{cr:'c',t:'A',z:'		if(reg_command[2] == 1) begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'148',h:'43',c:'g'}
-]},
-{anchor:'cvg268',items:[{z:'			if (reg_status[3]) begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'149',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'			if (reg_status[3]) begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'149',h:'35',c:'g'}
-,{cr:'c',t:'E',z:'			else begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'152',h:'69',c:'g'}
+{anchor:'cvg264',items:[{z:'			if (reg_status[3]) begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'149',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'			if (reg_status[3]) begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'149',h:'44',c:'g'}
+,{cr:'c',t:'E',z:'			else begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'152',h:'70',c:'g'}
 ]}],
 b261:[{dummy:0},
-{anchor:'cvg1076',items:[{z:'	  if(ld)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'78',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'	  if(ld)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'78',h:'93',c:'g'}
-,{cr:'c',t:'E',z:'	  else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'80',h:'735',c:'g'}
+{anchor:'cvg262',items:[{z:'		if (fifo_tx_rd_en)',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'141',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if (fifo_tx_rd_en)',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'141',h:'52',c:'g'}
+,{cr:'c',t:'A',z:'		if (fifo_tx_rd_en)',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'141',h:'81',c:'g'}
 ]},
-{anchor:'cvg1077',items:[{z:'		if(scl)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'97',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if(scl)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'97',h:'16',c:'g'}
-,{cr:'c',t:'E',z:'		else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'106',h:'135',c:'g'}
+{anchor:'cvg263',items:[{z:'		if(reg_command[2] == 1) begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'148',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if(reg_command[2] == 1) begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'148',h:'114',c:'g'}
+,{cr:'c',t:'A',z:'		if(reg_command[2] == 1) begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'148',h:'42',c:'g'}
 ]},
-{anchor:'cvg1078',items:[{z:'				if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'103',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'				if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'103',h:'16',c:'g'}
-,{cr:'m',t:'A',z:'				if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'103',h:'0',c:'r'}
-]},
-{anchor:'cvg1079',items:[{z:'		if(scl)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'114',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if(scl)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'114',h:'25',c:'g'}
-,{cr:'c',t:'E',z:'		else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'122',h:'137',c:'g'}
-]},
-{anchor:'cvg1080',items:[{z:'			if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'119',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'			if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'119',h:'25',c:'g'}
-,{cr:'m',t:'A',z:'			if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'119',h:'0',c:'r'}
-]},
-{anchor:'cvg1081',items:[{z:'		if (sto || (sta && !d_sta) )',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'130',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if (sto || (sta && !d_sta) )',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'130',h:'38',c:'g'}
-,{cr:'c',t:'E',z:'		else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'136',h:'708',c:'g'}
-]},
-{anchor:'cvg1082',items:[{z:'				case(state) // synopsys full_case parallel_case',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'142',c:'G',p:'100.00'}
-,{cr:'c',t:'T',z:'					idle: // idle state',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'143',h:'127',c:'g'}
-,{cr:'c',t:'T',z:'					slave_ack:',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'172',h:'12',c:'g'}
-,{cr:'c',t:'T',z:'					get_mem_adr: // wait for memory address',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'185',h:'35',c:'g'}
-,{cr:'c',t:'T',z:'					gma_ack:',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'200',h:'9',c:'g'}
-,{cr:'c',t:'T',z:'					data: // receive or drive data',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'206',h:'466',c:'g'}
-,{cr:'c',t:'T',z:'					data_ack:',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'240',h:'59',c:'g'}
-]},
-{anchor:'cvg1083',items:[{z:'					if (acc_done && my_adr)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'144',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'					if (acc_done && my_adr)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'144',h:'13',c:'g'}
-,{cr:'c',t:'A',z:'					if (acc_done && my_adr)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'144',h:'114',c:'g'}
-]},
-{anchor:'cvg1084',items:[{z:'							if(debug && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'152',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'							if(debug && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'152',h:'1',c:'g'}
-,{cr:'c',t:'A',z:'							if(debug && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'152',h:'12',c:'g'}
-]},
-{anchor:'cvg1085',items:[{z:'							if(debug && !rw) begin',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'154',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'							if(debug && !rw) begin',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'154',h:'12',c:'g'}
-,{cr:'c',t:'A',z:'							if(debug && !rw) begin',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'154',h:'1',c:'g'}
-]},
-{anchor:'cvg1086',items:[{z:'							if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'158',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'							if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'158',h:'1',c:'g'}
-,{cr:'c',t:'A',z:'							if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'158',h:'12',c:'g'}
-]},
-{anchor:'cvg1087',items:[{z:'								if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'163',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'								if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'163',h:'1',c:'g'}
-,{cr:'m',t:'A',z:'								if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'163',h:'0',c:'r'}
-]},
-{anchor:'cvg1088',items:[{z:'						if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'174',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'						if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'174',h:'1',c:'g'}
-,{cr:'c',t:'E',z:'						else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'179',h:'11',c:'g'}
-]},
-{anchor:'cvg1089',items:[{z:'					if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'186',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'					if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'186',h:'10',c:'g'}
-,{cr:'c',t:'A',z:'					if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'186',h:'25',c:'g'}
-]},
-{anchor:'cvg1090',items:[{z:'							if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'196',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'							if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'196',h:'10',c:'g'}
-,{cr:'m',t:'A',z:'							if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'196',h:'0',c:'r'}
-]},
-{anchor:'cvg1091',items:[{z:'						if (acc_done) ',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'208',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'						if (acc_done) ',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'208',h:'59',c:'g'}
-,{cr:'c',t:'A',z:'						if (acc_done) ',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'208',h:'407',c:'g'}
-]},
-{anchor:'cvg1092',items:[{z:'						if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'213',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'						if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'213',h:'45',c:'g'}
-,{cr:'c',t:'A',z:'						if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'213',h:'421',c:'g'}
-]},
-{anchor:'cvg1093',items:[{z:'						if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'216',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'						if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'216',h:'59',c:'g'}
-,{cr:'c',t:'A',z:'						if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'216',h:'407',c:'g'}
-]},
-{anchor:'cvg1094',items:[{z:'								if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'222',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'								if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'222',h:'5',c:'g'}
-,{cr:'c',t:'A',z:'								if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'222',h:'54',c:'g'}
-]},
-{anchor:'cvg1095',items:[{z:'									if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'226',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'									if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'226',h:'5',c:'g'}
-,{cr:'m',t:'A',z:'									if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'226',h:'0',c:'r'}
-]},
-{anchor:'cvg1096',items:[{z:'								if(!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'230',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'								if(!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'230',h:'54',c:'g'}
-,{cr:'c',t:'A',z:'								if(!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'230',h:'5',c:'g'}
-]},
-{anchor:'cvg1097',items:[{z:'									if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'234',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'									if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'234',h:'54',c:'g'}
-,{cr:'m',t:'A',z:'									if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'234',h:'0',c:'r'}
-]},
-{anchor:'cvg1098',items:[{z:'						if (!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'243',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'						if (!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'243',h:'54',c:'g'}
-,{cr:'c',t:'A',z:'						if (!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'243',h:'5',c:'g'}
-]},
-{anchor:'cvg1099',items:[{z:'						if(rw) begin',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'245',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'						if(rw) begin',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'245',h:'5',c:'g'}
-,{cr:'c',t:'E',z:'						else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'258',h:'54',c:'g'}
-]},
-{anchor:'cvg1100',items:[{z:'							if(sr[0]) // read operation && master send NACK',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'247',c:'Y',p:'50.00'}
-,{cr:'m',t:'I',z:'							if(sr[0]) // read operation && master send NACK',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'247',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'							else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'252',h:'5',c:'g'}
-]},
-{anchor:'cvg1101',items:[{z:'	  if(!acc_done && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'270',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'	  if(!acc_done && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'270',h:'45',c:'g'}
-,{cr:'c',t:'A',z:'	  if(!acc_done && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'270',h:'183',c:'g'}
-]},
-{anchor:'cvg1102',items:[{z:'	assign sda = sda_o ? 1\'bz : 1\'b0;',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'274',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'	assign sda = sda_o ? 1\'bz : 1\'b0;',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'274',h:'94',c:'g'}
-,{cr:'c',t:'E',z:'	assign sda = sda_o ? 1\'bz : 1\'b0;',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'274',h:'83',c:'g'}
+{anchor:'cvg264',items:[{z:'			if (reg_status[3]) begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'149',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'			if (reg_status[3]) begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'149',h:'44',c:'g'}
+,{cr:'c',t:'E',z:'			else begin',hf:'__HDL_srcfile_4.htm',f:'../rtl/top.v',l:'152',h:'70',c:'g'}
 ]}],
-b1075:[{dummy:0},
-{anchor:'cvg1076',items:[{z:'	  if(ld)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'78',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'	  if(ld)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'78',h:'93',c:'g'}
-,{cr:'c',t:'E',z:'	  else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'80',h:'735',c:'g'}
+b257:[{dummy:0},
+{anchor:'cvg1072',items:[{z:'	  if(ld)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'78',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'	  if(ld)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'78',h:'36',c:'g'}
+,{cr:'c',t:'E',z:'	  else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'80',h:'297',c:'g'}
 ]},
-{anchor:'cvg1077',items:[{z:'		if(scl)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'97',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if(scl)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'97',h:'16',c:'g'}
-,{cr:'c',t:'E',z:'		else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'106',h:'135',c:'g'}
+{anchor:'cvg1073',items:[{z:'		if(scl)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'97',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if(scl)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'97',h:'14',c:'g'}
+,{cr:'c',t:'E',z:'		else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'106',h:'62',c:'g'}
 ]},
-{anchor:'cvg1078',items:[{z:'				if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'103',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'				if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'103',h:'16',c:'g'}
+{anchor:'cvg1074',items:[{z:'				if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'103',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'				if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'103',h:'14',c:'g'}
 ,{cr:'m',t:'A',z:'				if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'103',h:'0',c:'r'}
 ]},
-{anchor:'cvg1079',items:[{z:'		if(scl)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'114',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if(scl)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'114',h:'25',c:'g'}
-,{cr:'c',t:'E',z:'		else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'122',h:'137',c:'g'}
+{anchor:'cvg1075',items:[{z:'		if(scl)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'114',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if(scl)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'114',h:'23',c:'g'}
+,{cr:'c',t:'E',z:'		else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'122',h:'60',c:'g'}
 ]},
-{anchor:'cvg1080',items:[{z:'			if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'119',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'			if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'119',h:'25',c:'g'}
+{anchor:'cvg1076',items:[{z:'			if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'119',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'			if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'119',h:'23',c:'g'}
 ,{cr:'m',t:'A',z:'			if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'119',h:'0',c:'r'}
 ]},
-{anchor:'cvg1081',items:[{z:'		if (sto || (sta && !d_sta) )',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'130',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'		if (sto || (sta && !d_sta) )',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'130',h:'38',c:'g'}
-,{cr:'c',t:'E',z:'		else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'136',h:'708',c:'g'}
+{anchor:'cvg1077',items:[{z:'		if (sto || (sta && !d_sta) )',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'130',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if (sto || (sta && !d_sta) )',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'130',h:'29',c:'g'}
+,{cr:'c',t:'E',z:'		else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'136',h:'285',c:'g'}
 ]},
-{anchor:'cvg1082',items:[{z:'				case(state) // synopsys full_case parallel_case',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'142',c:'G',p:'100.00'}
-,{cr:'c',t:'T',z:'					idle: // idle state',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'143',h:'127',c:'g'}
-,{cr:'c',t:'T',z:'					slave_ack:',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'172',h:'12',c:'g'}
-,{cr:'c',t:'T',z:'					get_mem_adr: // wait for memory address',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'185',h:'35',c:'g'}
-,{cr:'c',t:'T',z:'					gma_ack:',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'200',h:'9',c:'g'}
-,{cr:'c',t:'T',z:'					data: // receive or drive data',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'206',h:'466',c:'g'}
-,{cr:'c',t:'T',z:'					data_ack:',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'240',h:'59',c:'g'}
+{anchor:'cvg1078',items:[{z:'				case(state) // synopsys full_case parallel_case',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'142',c:'G',p:'100.00'}
+,{cr:'c',t:'T',z:'					idle: // idle state',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'143',h:'88',c:'g'}
+,{cr:'c',t:'T',z:'					slave_ack:',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'172',h:'10',c:'g'}
+,{cr:'c',t:'T',z:'					get_mem_adr: // wait for memory address',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'185',h:'12',c:'g'}
+,{cr:'c',t:'T',z:'					gma_ack:',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'200',h:'3',c:'g'}
+,{cr:'c',t:'T',z:'					data: // receive or drive data',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'206',h:'152',c:'g'}
+,{cr:'c',t:'T',z:'					data_ack:',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'240',h:'20',c:'g'}
 ]},
-{anchor:'cvg1083',items:[{z:'					if (acc_done && my_adr)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'144',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'					if (acc_done && my_adr)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'144',h:'13',c:'g'}
-,{cr:'c',t:'A',z:'					if (acc_done && my_adr)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'144',h:'114',c:'g'}
+{anchor:'cvg1079',items:[{z:'					if (acc_done && my_adr)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'144',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'					if (acc_done && my_adr)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'144',h:'11',c:'g'}
+,{cr:'c',t:'A',z:'					if (acc_done && my_adr)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'144',h:'77',c:'g'}
 ]},
-{anchor:'cvg1084',items:[{z:'							if(debug && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'152',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'							if(debug && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'152',h:'1',c:'g'}
-,{cr:'c',t:'A',z:'							if(debug && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'152',h:'12',c:'g'}
+{anchor:'cvg1080',items:[{z:'							if(debug && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'152',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'							if(debug && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'152',h:'5',c:'g'}
+,{cr:'c',t:'A',z:'							if(debug && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'152',h:'6',c:'g'}
 ]},
-{anchor:'cvg1085',items:[{z:'							if(debug && !rw) begin',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'154',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'							if(debug && !rw) begin',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'154',h:'12',c:'g'}
-,{cr:'c',t:'A',z:'							if(debug && !rw) begin',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'154',h:'1',c:'g'}
+{anchor:'cvg1081',items:[{z:'							if(debug && !rw) begin',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'154',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'							if(debug && !rw) begin',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'154',h:'6',c:'g'}
+,{cr:'c',t:'A',z:'							if(debug && !rw) begin',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'154',h:'5',c:'g'}
 ]},
-{anchor:'cvg1086',items:[{z:'							if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'158',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'							if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'158',h:'1',c:'g'}
-,{cr:'c',t:'A',z:'							if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'158',h:'12',c:'g'}
+{anchor:'cvg1082',items:[{z:'							if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'158',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'							if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'158',h:'5',c:'g'}
+,{cr:'c',t:'A',z:'							if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'158',h:'6',c:'g'}
 ]},
-{anchor:'cvg1087',items:[{z:'								if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'163',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'								if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'163',h:'1',c:'g'}
+{anchor:'cvg1083',items:[{z:'								if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'163',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'								if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'163',h:'5',c:'g'}
 ,{cr:'m',t:'A',z:'								if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'163',h:'0',c:'r'}
 ]},
-{anchor:'cvg1088',items:[{z:'						if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'174',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'						if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'174',h:'1',c:'g'}
-,{cr:'c',t:'E',z:'						else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'179',h:'11',c:'g'}
+{anchor:'cvg1084',items:[{z:'						if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'174',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'						if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'174',h:'5',c:'g'}
+,{cr:'c',t:'E',z:'						else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'179',h:'5',c:'g'}
 ]},
-{anchor:'cvg1089',items:[{z:'					if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'186',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'					if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'186',h:'10',c:'g'}
-,{cr:'c',t:'A',z:'					if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'186',h:'25',c:'g'}
+{anchor:'cvg1085',items:[{z:'					if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'186',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'					if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'186',h:'4',c:'g'}
+,{cr:'c',t:'A',z:'					if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'186',h:'8',c:'g'}
 ]},
-{anchor:'cvg1090',items:[{z:'							if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'196',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'							if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'196',h:'10',c:'g'}
+{anchor:'cvg1086',items:[{z:'							if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'196',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'							if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'196',h:'4',c:'g'}
 ,{cr:'m',t:'A',z:'							if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'196',h:'0',c:'r'}
 ]},
-{anchor:'cvg1091',items:[{z:'						if (acc_done) ',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'208',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'						if (acc_done) ',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'208',h:'59',c:'g'}
-,{cr:'c',t:'A',z:'						if (acc_done) ',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'208',h:'407',c:'g'}
+{anchor:'cvg1087',items:[{z:'						if (acc_done) ',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'208',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'						if (acc_done) ',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'208',h:'21',c:'g'}
+,{cr:'c',t:'A',z:'						if (acc_done) ',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'208',h:'131',c:'g'}
 ]},
-{anchor:'cvg1092',items:[{z:'						if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'213',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'						if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'213',h:'45',c:'g'}
-,{cr:'c',t:'A',z:'						if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'213',h:'421',c:'g'}
+{anchor:'cvg1088',items:[{z:'						if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'213',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'						if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'213',h:'95',c:'g'}
+,{cr:'c',t:'A',z:'						if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'213',h:'57',c:'g'}
 ]},
-{anchor:'cvg1093',items:[{z:'						if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'216',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'						if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'216',h:'59',c:'g'}
-,{cr:'c',t:'A',z:'						if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'216',h:'407',c:'g'}
+{anchor:'cvg1089',items:[{z:'						if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'216',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'						if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'216',h:'21',c:'g'}
+,{cr:'c',t:'A',z:'						if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'216',h:'131',c:'g'}
 ]},
-{anchor:'cvg1094',items:[{z:'								if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'222',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'								if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'222',h:'5',c:'g'}
-,{cr:'c',t:'A',z:'								if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'222',h:'54',c:'g'}
+{anchor:'cvg1090',items:[{z:'								if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'222',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'								if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'222',h:'12',c:'g'}
+,{cr:'c',t:'A',z:'								if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'222',h:'9',c:'g'}
 ]},
-{anchor:'cvg1095',items:[{z:'									if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'226',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'									if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'226',h:'5',c:'g'}
+{anchor:'cvg1091',items:[{z:'									if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'226',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'									if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'226',h:'12',c:'g'}
 ,{cr:'m',t:'A',z:'									if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'226',h:'0',c:'r'}
 ]},
-{anchor:'cvg1096',items:[{z:'								if(!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'230',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'								if(!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'230',h:'54',c:'g'}
-,{cr:'c',t:'A',z:'								if(!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'230',h:'5',c:'g'}
+{anchor:'cvg1092',items:[{z:'								if(!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'230',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'								if(!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'230',h:'9',c:'g'}
+,{cr:'c',t:'A',z:'								if(!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'230',h:'12',c:'g'}
 ]},
-{anchor:'cvg1097',items:[{z:'									if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'234',c:'Y',p:'50.00'}
-,{cr:'c',t:'I',z:'									if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'234',h:'54',c:'g'}
+{anchor:'cvg1093',items:[{z:'									if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'234',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'									if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'234',h:'9',c:'g'}
 ,{cr:'m',t:'A',z:'									if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'234',h:'0',c:'r'}
 ]},
-{anchor:'cvg1098',items:[{z:'						if (!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'243',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'						if (!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'243',h:'54',c:'g'}
-,{cr:'c',t:'A',z:'						if (!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'243',h:'5',c:'g'}
+{anchor:'cvg1094',items:[{z:'						if (!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'243',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'						if (!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'243',h:'9',c:'g'}
+,{cr:'c',t:'A',z:'						if (!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'243',h:'11',c:'g'}
 ]},
-{anchor:'cvg1099',items:[{z:'						if(rw) begin',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'245',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'						if(rw) begin',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'245',h:'5',c:'g'}
-,{cr:'c',t:'E',z:'						else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'258',h:'54',c:'g'}
+{anchor:'cvg1095',items:[{z:'						if(rw) begin',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'245',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'						if(rw) begin',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'245',h:'11',c:'g'}
+,{cr:'c',t:'E',z:'						else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'258',h:'9',c:'g'}
 ]},
-{anchor:'cvg1100',items:[{z:'							if(sr[0]) // read operation && master send NACK',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'247',c:'Y',p:'50.00'}
+{anchor:'cvg1096',items:[{z:'							if(sr[0]) // read operation && master send NACK',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'247',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'							if(sr[0]) // read operation && master send NACK',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'247',h:'0',c:'r'}
-,{cr:'c',t:'E',z:'							else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'252',h:'5',c:'g'}
+,{cr:'c',t:'E',z:'							else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'252',h:'11',c:'g'}
 ]},
-{anchor:'cvg1101',items:[{z:'	  if(!acc_done && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'270',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'	  if(!acc_done && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'270',h:'45',c:'g'}
-,{cr:'c',t:'A',z:'	  if(!acc_done && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'270',h:'183',c:'g'}
+{anchor:'cvg1097',items:[{z:'	  if(!acc_done && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'270',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'	  if(!acc_done && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'270',h:'114',c:'g'}
+,{cr:'c',t:'A',z:'	  if(!acc_done && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'270',h:'62',c:'g'}
 ]},
-{anchor:'cvg1102',items:[{z:'	assign sda = sda_o ? 1\'bz : 1\'b0;',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'274',c:'G',p:'100.00'}
-,{cr:'c',t:'I',z:'	assign sda = sda_o ? 1\'bz : 1\'b0;',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'274',h:'94',c:'g'}
-,{cr:'c',t:'E',z:'	assign sda = sda_o ? 1\'bz : 1\'b0;',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'274',h:'83',c:'g'}
+{anchor:'cvg1098',items:[{z:'	assign sda = sda_o ? 1\'bz : 1\'b0;',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'274',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'	assign sda = sda_o ? 1\'bz : 1\'b0;',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'274',h:'40',c:'g'}
+,{cr:'c',t:'E',z:'	assign sda = sda_o ? 1\'bz : 1\'b0;',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'274',h:'69',c:'g'}
+]}],
+b1071:[{dummy:0},
+{anchor:'cvg1072',items:[{z:'	  if(ld)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'78',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'	  if(ld)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'78',h:'36',c:'g'}
+,{cr:'c',t:'E',z:'	  else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'80',h:'297',c:'g'}
+]},
+{anchor:'cvg1073',items:[{z:'		if(scl)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'97',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if(scl)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'97',h:'14',c:'g'}
+,{cr:'c',t:'E',z:'		else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'106',h:'62',c:'g'}
+]},
+{anchor:'cvg1074',items:[{z:'				if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'103',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'				if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'103',h:'14',c:'g'}
+,{cr:'m',t:'A',z:'				if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'103',h:'0',c:'r'}
+]},
+{anchor:'cvg1075',items:[{z:'		if(scl)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'114',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if(scl)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'114',h:'23',c:'g'}
+,{cr:'c',t:'E',z:'		else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'122',h:'60',c:'g'}
+]},
+{anchor:'cvg1076',items:[{z:'			if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'119',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'			if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'119',h:'23',c:'g'}
+,{cr:'m',t:'A',z:'			if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'119',h:'0',c:'r'}
+]},
+{anchor:'cvg1077',items:[{z:'		if (sto || (sta && !d_sta) )',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'130',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'		if (sto || (sta && !d_sta) )',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'130',h:'29',c:'g'}
+,{cr:'c',t:'E',z:'		else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'136',h:'285',c:'g'}
+]},
+{anchor:'cvg1078',items:[{z:'				case(state) // synopsys full_case parallel_case',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'142',c:'G',p:'100.00'}
+,{cr:'c',t:'T',z:'					idle: // idle state',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'143',h:'88',c:'g'}
+,{cr:'c',t:'T',z:'					slave_ack:',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'172',h:'10',c:'g'}
+,{cr:'c',t:'T',z:'					get_mem_adr: // wait for memory address',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'185',h:'12',c:'g'}
+,{cr:'c',t:'T',z:'					gma_ack:',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'200',h:'3',c:'g'}
+,{cr:'c',t:'T',z:'					data: // receive or drive data',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'206',h:'152',c:'g'}
+,{cr:'c',t:'T',z:'					data_ack:',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'240',h:'20',c:'g'}
+]},
+{anchor:'cvg1079',items:[{z:'					if (acc_done && my_adr)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'144',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'					if (acc_done && my_adr)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'144',h:'11',c:'g'}
+,{cr:'c',t:'A',z:'					if (acc_done && my_adr)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'144',h:'77',c:'g'}
+]},
+{anchor:'cvg1080',items:[{z:'							if(debug && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'152',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'							if(debug && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'152',h:'5',c:'g'}
+,{cr:'c',t:'A',z:'							if(debug && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'152',h:'6',c:'g'}
+]},
+{anchor:'cvg1081',items:[{z:'							if(debug && !rw) begin',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'154',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'							if(debug && !rw) begin',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'154',h:'6',c:'g'}
+,{cr:'c',t:'A',z:'							if(debug && !rw) begin',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'154',h:'5',c:'g'}
+]},
+{anchor:'cvg1082',items:[{z:'							if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'158',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'							if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'158',h:'5',c:'g'}
+,{cr:'c',t:'A',z:'							if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'158',h:'6',c:'g'}
+]},
+{anchor:'cvg1083',items:[{z:'								if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'163',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'								if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'163',h:'5',c:'g'}
+,{cr:'m',t:'A',z:'								if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'163',h:'0',c:'r'}
+]},
+{anchor:'cvg1084',items:[{z:'						if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'174',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'						if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'174',h:'5',c:'g'}
+,{cr:'c',t:'E',z:'						else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'179',h:'5',c:'g'}
+]},
+{anchor:'cvg1085',items:[{z:'					if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'186',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'					if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'186',h:'4',c:'g'}
+,{cr:'c',t:'A',z:'					if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'186',h:'8',c:'g'}
+]},
+{anchor:'cvg1086',items:[{z:'							if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'196',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'							if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'196',h:'4',c:'g'}
+,{cr:'m',t:'A',z:'							if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'196',h:'0',c:'r'}
+]},
+{anchor:'cvg1087',items:[{z:'						if (acc_done) ',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'208',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'						if (acc_done) ',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'208',h:'21',c:'g'}
+,{cr:'c',t:'A',z:'						if (acc_done) ',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'208',h:'131',c:'g'}
+]},
+{anchor:'cvg1088',items:[{z:'						if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'213',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'						if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'213',h:'95',c:'g'}
+,{cr:'c',t:'A',z:'						if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'213',h:'57',c:'g'}
+]},
+{anchor:'cvg1089',items:[{z:'						if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'216',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'						if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'216',h:'21',c:'g'}
+,{cr:'c',t:'A',z:'						if(acc_done)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'216',h:'131',c:'g'}
+]},
+{anchor:'cvg1090',items:[{z:'								if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'222',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'								if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'222',h:'12',c:'g'}
+,{cr:'c',t:'A',z:'								if(rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'222',h:'9',c:'g'}
+]},
+{anchor:'cvg1091',items:[{z:'									if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'226',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'									if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'226',h:'12',c:'g'}
+,{cr:'m',t:'A',z:'									if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'226',h:'0',c:'r'}
+]},
+{anchor:'cvg1092',items:[{z:'								if(!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'230',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'								if(!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'230',h:'9',c:'g'}
+,{cr:'c',t:'A',z:'								if(!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'230',h:'12',c:'g'}
+]},
+{anchor:'cvg1093',items:[{z:'									if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'234',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'									if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'234',h:'9',c:'g'}
+,{cr:'m',t:'A',z:'									if(debug)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'234',h:'0',c:'r'}
+]},
+{anchor:'cvg1094',items:[{z:'						if (!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'243',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'						if (!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'243',h:'9',c:'g'}
+,{cr:'c',t:'A',z:'						if (!rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'243',h:'11',c:'g'}
+]},
+{anchor:'cvg1095',items:[{z:'						if(rw) begin',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'245',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'						if(rw) begin',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'245',h:'11',c:'g'}
+,{cr:'c',t:'E',z:'						else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'258',h:'9',c:'g'}
+]},
+{anchor:'cvg1096',items:[{z:'							if(sr[0]) // read operation && master send NACK',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'247',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'							if(sr[0]) // read operation && master send NACK',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'247',h:'0',c:'r'}
+,{cr:'c',t:'E',z:'							else',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'252',h:'11',c:'g'}
+]},
+{anchor:'cvg1097',items:[{z:'	  if(!acc_done && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'270',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'	  if(!acc_done && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'270',h:'114',c:'g'}
+,{cr:'c',t:'A',z:'	  if(!acc_done && rw)',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'270',h:'62',c:'g'}
+]},
+{anchor:'cvg1098',items:[{z:'	assign sda = sda_o ? 1\'bz : 1\'b0;',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'274',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'	assign sda = sda_o ? 1\'bz : 1\'b0;',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'274',h:'40',c:'g'}
+,{cr:'c',t:'E',z:'	assign sda = sda_o ? 1\'bz : 1\'b0;',hf:'__HDL_srcfile_7.htm',f:'../rtl/i2c_slave_model.v',l:'274',h:'69',c:'g'}
 ]}],
 dummyEnd:0
 };

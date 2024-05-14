@@ -33,6 +33,7 @@ class WRITE_TO_ALL_REG extends base_sequence;
         this.my_regmodel.reg_receive.write(status, 4);
         this.my_regmodel.reg_status.write(status, 5);
         `uvm_delay(1000ns)
+
     endtask
 endclass
 
@@ -55,6 +56,7 @@ class READ_DEFAULT_VALUE extends base_sequence;
         this.my_regmodel.reg_receive.read(status, data);
         this.my_regmodel.reg_address.read(status, data);
         `uvm_delay(500ns)
+
     endtask
 endclass
 
@@ -76,6 +78,7 @@ class ADDRESS_NACK extends base_sequence;
         this.my_regmodel.reg_transmit.write(status, 1);
         this.my_regmodel.reg_command.write(status, 8'b11111110);
         `uvm_delay(5000ns)
+
     endtask
 endclass
 
@@ -91,12 +94,13 @@ class TRANSMIT_1_DATA extends base_sequence;
         `uvm_info(get_name(), "=======================================================", UVM_MEDIUM)
         `uvm_info(get_name(), "==================== TRANSMIT 1 DATA ==================", UVM_MEDIUM)
         `uvm_info(get_name(), "=======================================================", UVM_MEDIUM)
-        this.my_regmodel.reg_command.write(status, 8'b11110110);
-        this.my_regmodel.reg_address.write(status, 8'b0010_0000);
-        this.my_regmodel.reg_transmit.write(status, 0);
-        this.my_regmodel.reg_transmit.write(status, 1);
-        this.my_regmodel.reg_command.write(status, 8'b11111110);
+        my_regmodel.reg_command.write(status, 8'b11110110);
+        my_regmodel.reg_address.write(status, 8'b0010_0000);
+        my_regmodel.reg_transmit.write(status, 0);
+        my_regmodel.reg_transmit.write(status, 1);
+        my_regmodel.reg_command.write(status, 8'b11111110);
         `uvm_delay(10000ns)
+
     endtask
 endclass
 
@@ -179,6 +183,22 @@ class WRITE_THEN_RESET extends base_sequence;
         this.my_regmodel.reg_command.write(status, 8'b11110110);
         this.my_regmodel.reg_address.write(status, 8'b0010_0000);
         this.my_regmodel.reg_transmit.write(status, 0);
+        this.my_regmodel.reg_command.write(status, 8'b11111110);
+
+        // Applying reset on adress
+        `uvm_delay(1000)
+        this.my_regmodel.reg_command.write(status, 8'b11110110);
+        `uvm_delay(1000)
+
+        // Retry to write
+        this.my_regmodel.reg_address.write(status, 8'b0010_0000);
+        this.my_regmodel.reg_transmit.write(status, 0);
+        this.my_regmodel.reg_command.write(status, 8'b11111110);
+
+        // Applying reset on data
+        `uvm_delay(2000)
+        this.my_regmodel.reg_command.write(status, 8'b11110110);
+        `uvm_delay(1000)
     endtask
 endclass
 
@@ -230,7 +250,7 @@ class WRITE_MANY_DATA extends base_sequence;
             this.my_regmodel.reg_transmit.write(status, this.random_data);
         end
         this.my_regmodel.reg_command.write(status, 8'b11111110);
-        `uvm_delay(20000ns)
+        `uvm_delay(16000ns)
 
         this.my_regmodel.reg_command.write(status, 8'b11110110);
         this.my_regmodel.reg_address.write(status, 8'b0010_0000);
@@ -242,7 +262,19 @@ class WRITE_MANY_DATA extends base_sequence;
             this.my_regmodel.reg_transmit.write(status, this.random_data);
         end
         this.my_regmodel.reg_command.write(status, 8'b11111110);
-        `uvm_delay(20000ns)
+        `uvm_delay(16000ns)
+
+        this.my_regmodel.reg_command.write(status, 8'b11110110);
+        this.my_regmodel.reg_address.write(status, 8'b0010_0000);
+        this.my_regmodel.reg_transmit.write(status, 0);
+        for (int i = 0; i < 7; i++) begin
+            if (!std::randomize(this.random_data)) begin
+                `uvm_error("TEST7", "Randomization failed")
+            end
+            this.my_regmodel.reg_transmit.write(status, this.random_data);
+        end
+        this.my_regmodel.reg_command.write(status, 8'b11111110);
+        `uvm_delay(16000ns)
     endtask
 endclass
 
@@ -263,15 +295,16 @@ class READ_1_DATA extends base_sequence;
         my_regmodel.reg_address.write(status, 8'b0010_0000);
         my_regmodel.reg_transmit.write(status, 0);
         my_regmodel.reg_transmit.write(status, 1);
-        my_regmodel.reg_command.write(status, 8'b11111110);
+        my_regmodel.reg_command.write(status, 8'b11111100);
         `uvm_delay(5000ns)
 
-        
-        my_regmodel.reg_command.write(status, 8'b11110110);
-        my_regmodel.reg_address.write(status, 8'b0010_0000);
+        my_regmodel.reg_address.write(status, 8'b0010_0001);
+        my_regmodel.reg_command.write(status, 8'b11111100);
         `uvm_delay(5000ns)
         my_regmodel.reg_receive.read(status, data);
-        `uvm_delay(500ns)
+        `uvm_delay(1000ns)
+
+        // PASS //
     endtask
 endclass
 
@@ -291,19 +324,20 @@ class READ_TO_FIFORX_EMPTY extends base_sequence;
         my_regmodel.reg_command.write(status, 8'b11110110);
         my_regmodel.reg_address.write(status, 8'b0010_0000);
         my_regmodel.reg_transmit.write(status, 0);
-        for (int i = 0; i < 9; i++) begin
+        for (int i = 0; i < 6; i++) begin
             if (!std::randomize(this.random_data)) begin
                 `uvm_error("TEST9", "Randomization failed")
             end
             this.my_regmodel.reg_transmit.write(status, this.random_data);
         end
         my_regmodel.reg_command.write(status, 8'b11111110);
-        `uvm_delay(20000ns)
+        `uvm_delay(16000ns)
 
         
         my_regmodel.reg_command.write(status, 8'b11110110);
-        my_regmodel.reg_address.write(status, 8'b0010_0000);
-        `uvm_delay(10000ns)
+        my_regmodel.reg_address.write(status, 8'b0010_0001);
+        my_regmodel.reg_command.write(status, 8'b11111110);
+        `uvm_delay(16000ns)
         my_regmodel.reg_receive.read(status, data);
         my_regmodel.reg_receive.read(status, data);
         my_regmodel.reg_receive.read(status, data);
@@ -312,6 +346,7 @@ class READ_TO_FIFORX_EMPTY extends base_sequence;
         my_regmodel.reg_receive.read(status, data);
         my_regmodel.reg_receive.read(status, data);
         my_regmodel.reg_receive.read(status, data); 
+        `uvm_delay(2000ns)
     endtask
 endclass
 
@@ -342,12 +377,18 @@ class READ_RESET_VALUE extends base_sequence;
 
     virtual task body();
         uvm_status_e status;    
+        uvm_reg_data_t data;
         `uvm_info(get_name(), "=======================================================", UVM_MEDIUM)
         `uvm_info(get_name(), "==================== READ RESET VALUE =================", UVM_MEDIUM)
         `uvm_info(get_name(), "=======================================================", UVM_MEDIUM)
-        this.my_regmodel.reg_command.write(status, 8'b11110110);
-        this.my_regmodel.reg_address.write(status, 8'b0010_0000);
-        this.my_regmodel.reg_transmit.write(status, 0);
+        this.my_regmodel.reg_command.write(status, 8'b00000000);
+        `uvm_delay(500ns)
+        this.my_regmodel.reg_command.read(status, data);
+        this.my_regmodel.reg_status.read(status, data);
+        this.my_regmodel.reg_transmit.read(status, data);
+        this.my_regmodel.reg_receive.read(status, data);
+        this.my_regmodel.reg_address.read(status, data);
+        `uvm_delay(500ns)
     endtask
 endclass
 
@@ -372,6 +413,7 @@ class RESET_STATE extends base_sequence;
         `uvm_delay(200ns)
 
         // reset in start state
+        `uvm_info(get_name(), $sformatf("Reset at: %t", $time), UVM_MEDIUM)
         this.my_regmodel.reg_command.write(status, 8'b0000_1110);
         this.my_regmodel.reg_command.write(status, 8'b11110110);
         this.my_regmodel.reg_address.write(status, 8'b0010_0000);
@@ -381,15 +423,17 @@ class RESET_STATE extends base_sequence;
         `uvm_delay(300ns)
 
         // Reset in write address state
-        this.my_regmodel.reg_command.write(status, 8'b0000_1110);
+        `uvm_info(get_name(), $sformatf("Reset at: %t", $time), UVM_MEDIUM)
+        this.my_regmodel.reg_command.write(status, 8'b0000_0110);
         this.my_regmodel.reg_command.write(status, 8'b11110110);
         this.my_regmodel.reg_address.write(status, 8'b0010_0000);
         this.my_regmodel.reg_transmit.write(status, 0);
         this.my_regmodel.reg_transmit.write(status, 1);
         this.my_regmodel.reg_command.write(status, 8'b11111110);
-        `uvm_delay(1650ns)
+        `uvm_delay(1540ns)
 
         // Reset in address ack state
+        `uvm_info(get_name(), $sformatf("Reset at: %t", $time), UVM_MEDIUM)
         this.my_regmodel.reg_command.write(status, 8'b0000_1110);
         this.my_regmodel.reg_command.write(status, 8'b11110110);
         this.my_regmodel.reg_address.write(status, 8'b0010_0000);
@@ -399,43 +443,43 @@ class RESET_STATE extends base_sequence;
         `uvm_delay(1800ns)
 
         // Reset in write data state
+        `uvm_info(get_name(), $sformatf("Reset at: %t", $time), UVM_MEDIUM)
         this.my_regmodel.reg_command.write(status, 8'b0000_1110);
         this.my_regmodel.reg_command.write(status, 8'b11110110);
         this.my_regmodel.reg_address.write(status, 8'b0010_0000);
         this.my_regmodel.reg_transmit.write(status, 0);
         this.my_regmodel.reg_transmit.write(status, 1);
         this.my_regmodel.reg_command.write(status, 8'b11111110);
-        `uvm_delay(3150ns)
+        `uvm_delay(2980ns)
 
         // Reset in data ack state
+        `uvm_info(get_name(), $sformatf("Reset at: %t", $time), UVM_MEDIUM)
         this.my_regmodel.reg_command.write(status, 8'b0000_1110);
         this.my_regmodel.reg_command.write(status, 8'b11110110);
         this.my_regmodel.reg_address.write(status, 8'b0010_0000);
         this.my_regmodel.reg_transmit.write(status, 0);
         this.my_regmodel.reg_transmit.write(status, 1);
         this.my_regmodel.reg_command.write(status, 8'b11111110);
-        `uvm_delay(5000ns)
+        `uvm_delay(7000ns)
 
-        this.my_regmodel.reg_command.write(status, 8'b11110110);
-        this.my_regmodel.reg_address.write(status, 8'b0010_0000);
-        `uvm_delay(3300ns)
+        // Start reading data
+        my_regmodel.reg_address.write(status, 8'b0010_0001);
+        my_regmodel.reg_command.write(status, 8'b11111100);
+        `uvm_delay(1880ns)
 
-        // Reset to read state
-        this.my_regmodel.reg_command.write(status, 8'b0000_1110);
-        this.my_regmodel.reg_command.write(status, 8'b11110110);
-        this.my_regmodel.reg_address.write(status, 8'b0010_0001);
-        this.my_regmodel.reg_command.write(status, 8'b11111100);
-        `uvm_delay(4700ns)
+        // Reset in read data state
+        `uvm_info(get_name(), $sformatf("Reset at: %t", $time), UVM_MEDIUM)
+        this.my_regmodel.reg_command.write(status, 8'b0000_0110);
+        my_regmodel.reg_address.write(status, 8'b0010_0001);
+        my_regmodel.reg_command.write(status, 8'b11111100);
+        `uvm_delay(3070ns)
 
-        // Reset to read state
-        this.my_regmodel.reg_command.write(status, 8'b0000_1110);
-        this.my_regmodel.reg_command.write(status, 8'b11110110);
-        this.my_regmodel.reg_address.write(status, 8'b0010_0001);
-        this.my_regmodel.reg_command.write(status, 8'b11111100);
-        `uvm_delay(5000ns)
-
-        this.my_regmodel.reg_receive.read(status, data);
-        `uvm_delay(1000ns)
+        // Reset in data ack state
+        `uvm_info(get_name(), $sformatf("Reset at: %t", $time), UVM_MEDIUM)
+        this.my_regmodel.reg_command.write(status, 8'b0000_0110);
+        my_regmodel.reg_address.write(status, 8'b0010_0001);
+        my_regmodel.reg_command.write(status, 8'b11111100);
+        `uvm_delay(10000ns)
     endtask
 endclass
 

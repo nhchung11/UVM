@@ -153,11 +153,11 @@
 <a name="143"><q-n>     143  </q-n></a>					idle: <q-m>// idle state</q-m>
 <a name="144"><q-n>     144  </q-n></a>					<q-w>if</q-w> (acc_done &amp;&amp; my_adr)
 <a name="145"><q-n>     145  </q-n></a>						<q-w>begin</q-w>
-<a name="146"><q-n>     146  </q-n></a>							check_data &lt;= 0;
-<a name="147"><q-n>     147  </q-n></a>							state &lt;= #1 slave_ack;
-<a name="148"><q-n>     148  </q-n></a>							rw &lt;= #1 sr[0];
-<a name="149"><q-n>     149  </q-n></a>							sda_o &lt;= #1 1'b0; <q-m>// generate i2c_ack</q-m>
-<a name="150"><q-n>     150  </q-n></a>
+<a name="146"><q-n>     146  </q-n></a>							state &lt;= #1 slave_ack;
+<a name="147"><q-n>     147  </q-n></a>							rw &lt;= #1 sr[0];
+<a name="148"><q-n>     148  </q-n></a>							sda_o &lt;= #1 1'b0; <q-m>// generate i2c_ack</q-m>
+<a name="149"><q-n>     149  </q-n></a>							check_data &lt;= 0;
+<a name="150"><q-n>     150  </q-n></a>							read_data  &lt;= 0;
 <a name="151"><q-n>     151  </q-n></a>							#2;
 <a name="152"><q-n>     152  </q-n></a>							<q-w>if</q-w>(debug &amp;&amp; rw)
 <a name="153"><q-n>     153  </q-n></a>								$display(<q-l>"DEBUG i2c_slave; command byte received (read) at %t"</q-l>, $<q-w>time</q-w>);

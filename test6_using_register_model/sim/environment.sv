@@ -83,8 +83,7 @@ class env extends uvm_env;
 
             begin: scoreboard_receive_prdata
                 forever @(posedge my_intf.read_data) begin
-                    if (my_intf.PADDR == 5)
-                        my_scoreboard.data_received.push_back(my_intf.PRDATA);
+                    my_scoreboard.data_read.push_back(my_intf.PRDATA);
                 end
             end
 
@@ -98,3 +97,4 @@ class env extends uvm_env;
     endtask
 endclass: env;
 `endif 
+

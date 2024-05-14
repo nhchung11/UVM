@@ -1,17 +1,17 @@
-# seq=WRITE_TO_ALL_REG
-# seq=READ_DEFAULT_VALUE
-# seq=ADDRESS_NACK
-# seq=TRANSMIT_1_DATA
-# seq=WRITE_FULL_TX_FIFO
-# seq=DATA_NACK
-# seq=WRITE_THEN_RESET
-# seq=WRITE_WITH_SR
-# seq=WRITE_MANY_DATA
-# seq=READ_1_DATA
-# seq=READ_TO_FIFORX_EMPTY
-# seq=WRITE_READ_COMB
-# seq=READ_RESET_VALUE
-seq=RESET_STATE
+# seq=WRITE_TO_ALL_REG              # PASSED
+# seq=READ_DEFAULT_VALUE            # PASSED
+# seq=ADDRESS_NACK                  # PASSED
+# seq=TRANSMIT_1_DATA               # PASSED
+# seq=WRITE_FULL_TX_FIFO            # PASSED
+# seq=DATA_NACK                     # PASSED
+# seq=WRITE_THEN_RESET              # PASSED        
+# seq=WRITE_WITH_SR                 # FAILED
+# seq=WRITE_MANY_DATA               # PASSED    
+# seq=READ_1_DATA                   # PASSED
+# seq=READ_TO_FIFORX_EMPTY          # PASSED
+# seq=WRITE_READ_COMB               # NOT DONE
+# seq=READ_RESET_VALUE              # PASSED
+seq=RESET_STATE     
 
 
 rm -rf work; 

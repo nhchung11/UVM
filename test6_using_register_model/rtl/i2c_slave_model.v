@@ -143,11 +143,11 @@ module i2c_slave_model
 					idle: // idle state
 					if (acc_done && my_adr)
 						begin
-							check_data <= 0;
 							state <= #1 slave_ack;
 							rw <= #1 sr[0];
 							sda_o <= #1 1'b0; // generate i2c_ack
-
+							check_data <= 0;
+							read_data  <= 0;
 							#2;
 							if(debug && rw)
 								$display("DEBUG i2c_slave; command byte received (read) at %t", $time);

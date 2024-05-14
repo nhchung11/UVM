@@ -2,7 +2,6 @@
 `define MONITOR
 
 `include "uvm_macros.svh"
-// `include "reg_sequence.sv"
 `include "packet.sv"    
 import uvm_pkg::*;
 

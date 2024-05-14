@@ -12,3 +12,5 @@ else
     echo "Pushing data to remote server!!!"
     git push -u origin master
 fi
+
+# find . -name "*.ucdb" -exec git rm {} \;          
