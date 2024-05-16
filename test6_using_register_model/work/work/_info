@@ -9,17 +9,17 @@ z2
 cModel Technology
 Z0 dC:/Users/PC/Documents/Chung_training/UVM/test6_using_register_model/work
 T_opt
-!s110 1715682615
-VHAo[Ac3iz9jOfUKAFz>?`0
+!s110 1715835896
+VD]:<ok`J`8e9`e[E`FB:j3
 04 7 4 work top_sim fast 0
-=1-18c04dc4ceb4-66433d36-3a1-3f48
+=1-18c04dc4ceb4-664593f7-375-1f54
 o-quiet -auto_acc_if_foreign -work work +acc
 Z1 tCvgOpt 0
 n@_opt
 OL;O;10.7c;67
 vapb_slave
 Z2 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
-Z3 !s110 1715682613
+Z3 !s110 1715835894
 !i10b 1
 !s100 ^G?b=EEY0WQgDXU[cE;0T2
 IMBL:`0_MenBA[_LTWe<0E3
@@ -35,7 +35,7 @@ Z5 OL;L;10.7c;67
 r1
 !s85 0
 31
-Z6 !s108 1715682613.000000
+Z6 !s108 1715835894.000000
 Z7 !s107 ../rtl/test_fifo.sv|../rtl/fifo.sv|../rtl/top.v|../rtl/i2c_testbench.v|../rtl/i2c_slave_model.v|../rtl/i2c.v|../rtl/apb_test_top.v|../rtl/apb_testbench.v|../rtl/apb_slave.v|
 Z8 !s90 -sv|+acc|-incr|-f|filelist_rtl.f|-l|vlog_rtl.log|+cover=sbceft|-assertdebug|
 !i113 0
@@ -280,17 +280,17 @@ R1
 Yintf
 R2
 Z16 DXx6 mtiUvm 7 uvm_pkg 0 22 3zPkj@YUcM=M^m3zCLh<H1
-Z17 DXx4 work 15 top_sim_sv_unit 0 22 ja0Q434R8@1z2Eknk9Mli0
+Z17 DXx4 work 15 top_sim_sv_unit 0 22 a]B^<``X_iE^[JVGomLFz1
 R4
 r1
 !s85 0
 !i10b 1
 !s100 0n=lkN=F1lFg=hKkA6RU^0
-IOM42JdhLK3:kYMWJ60b6]0
+IMIH0k3099>QY6=DS8ei_e3
 Z18 !s105 top_sim_sv_unit
 S1
 R0
-w1713934165
+w1715830966
 8../sim/interface.sv
 Z19 F../sim/interface.sv
 L0 4
@@ -298,10 +298,10 @@ R5
 31
 R6
 Z20 !s107 ../sim/interface.sv|../testcases/base_sequence.sv|../sim/register_model.sv|../sim/adapter.sv|../sim/subscriber.sv|../sim/scoreboard.sv|../sim/monitor.sv|../sim/driver.sv|../sim/agent.sv|../sim/packet.sv|../sim/environment.sv|../sim/test.sv|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|../sim/top_sim.sv|
-Z21 !s90 -timescale=1ns/1ns|-sv|+acc|-incr|-f|filelist_tb.f|-assertdebug|+define+SEQ_TEST=RESET_STATE|-l|vlog_tb.log|
+Z21 !s90 -timescale=1ns/1ns|-sv|+acc|-incr|-f|filelist_tb.f|-assertdebug|+define+SEQ_TEST=ADDRESS_NACK|-l|vlog_tb.log|
 !i113 0
 Z22 o-timescale=1ns/1ns -sv +acc +libext+.svh+.vh+.v+.sv -assertdebug -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z23 !s92 -timescale=1ns/1ns -sv +acc +libext+.svh+.vh+.v+.sv +incdir+../sim +incdir+../testcases -y ../sim -y ../testcases -assertdebug +define+SEQ_TEST=RESET_STATE -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z23 !s92 -timescale=1ns/1ns -sv +acc +libext+.svh+.vh+.v+.sv +incdir+../sim +incdir+../testcases -y ../sim -y ../testcases -assertdebug +define+SEQ_TEST=ADDRESS_NACK -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1
 vrptr_empty
 R2
@@ -390,7 +390,7 @@ r1
 !s85 0
 !i10b 1
 !s100 SH8JQ3njI_;E@Xo=WmfSA0
-INROY;M:0:EJSWJL]PP0Qn0
+I=^TmC9HS9o@5N1X^ijM^62
 R18
 S1
 R0
@@ -411,16 +411,16 @@ Xtop_sim_sv_unit
 !s115 intf
 R2
 R16
-Vja0Q434R8@1z2Eknk9Mli0
+Va]B^<``X_iE^[JVGomLFz1
 r1
 !s85 0
 !i10b 1
-!s100 N7R9QSz5cKPQb=E;oJZZ_0
-Ija0Q434R8@1z2Eknk9Mli0
+!s100 2E8boiB>9H>Jk0bM6?X`_2
+Ia]B^<``X_iE^[JVGomLFz1
 !i103 1
 S1
 R0
-w1715682611
+w1715835888
 R24
 R25
 FC:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh

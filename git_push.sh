@@ -1,16 +1,22 @@
-echo "Enter your message"
+echo "Enter your commit message:"
 read message
 
-find . -type f ! -name "*.ucdb" ! -name "*.qbd" ! -name "*.qpg" ! -name "*.qtl" -exec git add {} \;
+# Add all files to the staging area
+git add .
 
-git commit -m"${message}"
-if [ -n "$(git status - porcelain)" ];
+# Remove any .ucdb, .qbd, .qpg, and .qtl files
+find . -type f \( -name "*.ucdb" -o -name "*.qbd" -o -name "*.qpg" -o -name "*.qtl" \) -exec git rm --cached {} \;
+
+# Commit the changes
+git commit -m "${message}"
+
+# Check the status
+if [ -n "$(git status --porcelain)" ];
 then
-    echo "IT IS CLEAN"
-else
+    echo "Changes not staged for commit"
     git status
+else
+    echo "IT IS CLEAN"
     echo "Pushing data to remote server!!!"
     git push -u origin master
 fi
-
-# find . -name "*.ucdb" -exec git rm {} \;          

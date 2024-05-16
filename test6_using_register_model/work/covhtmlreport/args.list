@@ -2,12 +2,12 @@
 -htmldir
 covhtmlreport
 -source
--details
+-details=abcdefgs
 -assert
 -directive
 -cvg
 -code
-bcefst
+bcefs
 -threshL
 50
 -threshH

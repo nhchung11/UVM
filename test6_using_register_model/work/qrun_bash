@@ -1,6 +1,6 @@
 # seq=WRITE_TO_ALL_REG              # PASSED
 # seq=READ_DEFAULT_VALUE            # PASSED
-# seq=ADDRESS_NACK                  # PASSED
+seq=ADDRESS_NACK                  # PASSED
 # seq=TRANSMIT_1_DATA               # PASSED
 # seq=WRITE_FULL_TX_FIFO            # PASSED
 # seq=DATA_NACK                     # PASSED
@@ -9,9 +9,9 @@
 # seq=WRITE_MANY_DATA               # PASSED    
 # seq=READ_1_DATA                   # PASSED
 # seq=READ_TO_FIFORX_EMPTY          # PASSED
-# seq=WRITE_READ_COMB               # NOT DONE
+# seq=WRITE_READ_COMB               # PASSED
 # seq=READ_RESET_VALUE              # PASSED
-seq=RESET_STATE     
+# seq=RESET_STATE                   # PASSED   
 
 
 rm -rf work; 

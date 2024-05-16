@@ -12,15 +12,15 @@
 import uvm_pkg::*;
 class env extends uvm_env;
     `uvm_component_utils(env)
-    agent my_agent;
-    scoreboard my_scoreboard;
-    subscriber my_subscriber;
-    adapter my_adapter;
+    agent                       my_agent;
+    scoreboard                  my_scoreboard;
+    subscriber                  my_subscriber;
+    adapter                     my_adapter;
+    register_model              my_regmodel;
+    virtual intf                my_intf;
     uvm_reg_predictor #(packet) my_predictor;
-    register_model my_regmodel;
-    virtual intf my_intf;
 
-
+    // CONSTRUCTOR
     function new (string name, uvm_component parent);
         super.new(name, parent);
     endfunction: new
@@ -82,8 +82,11 @@ class env extends uvm_env;
             end
 
             begin: scoreboard_receive_prdata
-                forever @(posedge my_intf.read_data) begin
-                    my_scoreboard.data_read.push_back(my_intf.PRDATA);
+                forever @(posedge my_intf.PCLK) begin
+                    if (my_intf.PADDR == 5 && my_intf.PWRITE == 0 && my_intf.PSELx == 1 && my_intf.PENABLE == 1) begin
+                        `uvm_delay(10)
+                        my_scoreboard.data_read.push_back(my_intf.PRDATA);
+                    end
                 end
             end
 
@@ -91,6 +94,20 @@ class env extends uvm_env;
                 forever @(posedge my_intf.PCLK) begin
                     if (my_intf.PADDR == 3)
                         my_scoreboard.FIFO_status = my_intf.PRDATA;
+                end
+            end
+
+            begin : Count_Reset
+                forever @(*) begin
+                    if (my_intf.PADDR == 2 && (my_intf.PWDATA == 8'b11110110 || my_intf.PWDATA == 8'b0000_0110))
+                        my_scoreboard.count_reset++;
+                end
+            end
+
+            begin : Address_Check
+                forever @(posedge my_intf.PCLK) begin
+                    if (my_intf.PADDR == 6 && (my_intf.PWDATA == 8'b0010_0000 || my_intf.PWDATA == 8'b0010_0001))
+                        my_scoreboard.address_check = 1;
                 end
             end
         join

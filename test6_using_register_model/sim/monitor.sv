@@ -36,11 +36,10 @@ class monitor extends uvm_monitor;
         forever begin
             packet my_packet = new;
             @(posedge my_intf.PENABLE);
-            if (my_intf.PADDR == 4) begin
-                my_packet.PADDR = my_intf.PADDR;
-                my_packet.PWDATA = my_intf.PWDATA;
-                monitor_analysis_port.write(my_packet);
-            end
+            my_packet.PADDR = my_intf.PADDR;
+            my_packet.PWDATA = my_intf.PWDATA;
+            my_packet.PWRITE = my_intf.PWRITE;
+            monitor_analysis_port.write(my_packet);
         end
     endtask
 endclass: monitor

@@ -6,7 +6,6 @@ g1.json = NON_SCOPE
 gcons1.json = NON_SCOPE
 z1.json = NON_SCOPE
 sdb1.json = NON_SCOPE
-t1.json = NON_SCOPE
 s1.json = NON_SCOPE
 b1.json = NON_SCOPE
 ce1.json = NON_SCOPE
