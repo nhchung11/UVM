@@ -1,0 +1,2240 @@
+Coverage Report by file with details
+
+=================================================================================
+=== File: ../rtl/apb_slave.v
+=================================================================================
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           18        18         0    100.00
+
+================================Statement Details================================
+
+Statement Coverage for file ../rtl/apb_slave.v --
+
+    1                                                module apb_slave 
+    2                                                	#(parameter ADDRESSWIDTH= 4,
+    3                                                	parameter DATAWIDTH= 8)
+    4                                                
+    5                                                	(
+    6                                                	input PCLK,
+    7                                                	input PRESETn,
+    8                                                	input [DATAWIDTH-1:0]PADDR,
+    9                                                	input [DATAWIDTH-1:0] PWDATA,
+    10                                               	input PWRITE,
+    11                                               	input PSELx,
+    12                                               	input PENABLE,
+    13                                               	output reg [DATAWIDTH-1:0] PRDATA,
+    14                                               	output reg PREADY = 1,
+    15                                               
+    16                                               	//register
+    17                                               	output reg [7:0] reg_command, //write_reset_n, read_reset_n, i2c_enable
+    18                                               	output reg [7:0] reg_transmit, //i2c_data_in
+    19                                               	input reg [7:0] reg_status,  //read_empty, write_full
+    20                                               	input reg [7:0] reg_receive, //
+    21                                               	output reg [7:0] reg_address, // addresss i2c_slave
+    22                                               
+    23                                               	//output control fifo tx
+    24                                               	output reg write_enable_tx,
+    25                                               	output reg read_enable_rx,
+    26                                               	input delete_reg_command
+    27                                               	);
+    28                                               	//	reg_command(2)		reg_trasmit(4)	reg_status(3)	reg_address(6)		reg_receive(5)
+    29                                               	//7	write_reset_n_tx	data_to_fifo	tx_full		address i2c_slave	data_i2c_out
+    30                                               	//6	read_reset_n_tx				tx_empty
+    31                                               	//5	write_reset_n_rx			rx_full
+    32                                               	//4	read_reset_n_rx				rx_empty
+    33                                               	//3	i2c_reset				i2c_ready
+    34                                               	//2	i2c_enable
+    35                                               	//1	i2c_repeat_start
+    36                                               	//0
+    37              1                        683     	always @(posedge PCLK or negedge PRESETn) begin
+    38                                                		if(!PRESETn) begin
+    39              1                         26     			PRDATA <= 0;
+    40              1                         26     			reg_command <= 0;
+    41              1                         26     			reg_transmit <= 0;
+    42              1                         26     			reg_address <= 0;
+    43              1                         26     			write_enable_tx <= 0;
+    44              1                         26     			read_enable_rx <= 0;
+    45                                               		end
+    46                                               		else begin
+    47                                               			if (PENABLE & PWRITE & PSELx) begin
+    48                                               				case (PADDR)
+    49              1                         52     					2: reg_command <= PWDATA;
+    50                                               					4: begin
+    51                                               						if(!reg_status[7]) begin	
+    52              1                         72     							reg_transmit <= PWDATA;
+    53                                               						end
+    54                                               						
+    55                                               					end
+    56              1                         24     					6: reg_address <= PWDATA;
+    57                                               				endcase
+    58                                               			end
+    59                                               
+    60                                               			if (PWRITE & PADDR == 4) begin
+    61              1                        246     				write_enable_tx <= PENABLE;
+    62              1                        246     				reg_command[7:4] <= 4'b1111;
+    63                                               			end
+    64                                               			if(PENABLE & !PWRITE & PSELx) begin
+    65                                               				case (PADDR)
+    66              1                          2     					3: PRDATA <= reg_status;
+    67                                               					5: begin 
+    68                                               						if(!reg_status[4]) begin
+    69              1                          9     							PRDATA <= reg_receive;
+    70                                               						end
+    71                                               					end
+    72                                               				endcase
+    73                                               			end
+    74              1                         37     			if (!PWRITE & PADDR == 5) read_enable_rx <= PENABLE;
+    75                                               		end
+    76                                               	end
+    77              1                        251     	always @(posedge PCLK or negedge PRESETn) begin
+    78                                               		if(!PRESETn) begin
+    79              1                         26     			reg_command <= 0;
+    80                                               		end	
+    81                                                		if(delete_reg_command) begin		
+    82              1                         84     			reg_command <= 8'b11111000;
+    83                                               		end
+    84                                               	end
+    85                                               endmodule
+
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                        25        25         0    100.00
+
+================================Branch Details================================
+
+Branch Coverage for file ../rtl/apb_slave.v --
+
+------------------------------------IF Branch------------------------------------
+    38                                       683     Count coming in to IF
+    38              1                         26      		if(!PRESETn) begin
+    46              1                        657     		else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    47                                       657     Count coming in to IF
+    47              1                        160     			if (PENABLE & PWRITE & PSELx) begin
+                                             497     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    48                                       160     Count coming in to CASE
+    49              1                         52     					2: reg_command <= PWDATA;
+    50              1                         82     					4: begin
+    56              1                         24     					6: reg_address <= PWDATA;
+                                               2     All False Count
+Branch totals: 4 hits of 4 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    51                                        82     Count coming in to IF
+    51              1                         72     						if(!reg_status[7]) begin	
+                                              10     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    60                                       657     Count coming in to IF
+    60              1                        246     			if (PWRITE & PADDR == 4) begin
+                                             411     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    64                                       657     Count coming in to IF
+    64              1                         19     			if(PENABLE & !PWRITE & PSELx) begin
+                                             638     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    65                                        19     Count coming in to CASE
+    66              1                          2     					3: PRDATA <= reg_status;
+    67              1                         11     					5: begin 
+                                               6     All False Count
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    68                                        11     Count coming in to IF
+    68              1                          9     						if(!reg_status[4]) begin
+                                               2     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    74                                       657     Count coming in to IF
+    74              1                         37     			if (!PWRITE & PADDR == 5) read_enable_rx <= PENABLE;
+                                             620     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    78                                       251     Count coming in to IF
+    78              1                         26     		if(!PRESETn) begin
+                                             225     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    81                                       251     Count coming in to IF
+    81              1                         84      		if(delete_reg_command) begin		
+                                             167     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Condition Terms             10         8         2     80.00
+
+================================Condition Details================================
+
+Condition Coverage for file ../rtl/apb_slave.v --
+
+----------------Focused Condition View-------------------
+Line       47 Item    1  ((PENABLE & PWRITE) & PSELx)
+Condition totals: 2 of 3 input terms covered = 66.66%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+     PENABLE         Y
+      PWRITE         Y
+       PSELx         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:         12  PENABLE_0             (PSELx && PWRITE)             
+  Row   2:         12  PENABLE_1             (PSELx && PWRITE)             
+  Row   3:          4  PWRITE_0              (PSELx && PENABLE)            
+  Row   4:         12  PWRITE_1              (PSELx && PENABLE)            
+  Row   5:    ***0***  PSELx_0               (PENABLE & PWRITE)            
+  Row   6:         12  PSELx_1               (PENABLE & PWRITE)            
+
+----------------Focused Condition View-------------------
+Line       60 Item    1  (PWRITE & (PADDR == 4))
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       64 Item    1  ((~PWRITE & PENABLE) & PSELx)
+Condition totals: 2 of 3 input terms covered = 66.66%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+      PWRITE         Y
+     PENABLE         Y
+       PSELx         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          4  PWRITE_0              (PSELx && PENABLE)            
+  Row   2:         12  PWRITE_1              (PSELx && PENABLE)            
+  Row   3:          4  PENABLE_0             (PSELx && ~PWRITE)            
+  Row   4:          4  PENABLE_1             (PSELx && ~PWRITE)            
+  Row   5:    ***0***  PSELx_0               (~PWRITE & PENABLE)           
+  Row   6:          4  PSELx_1               (~PWRITE & PENABLE)           
+
+----------------Focused Condition View-------------------
+Line       74 Item    1  (~PWRITE & (PADDR == 5))
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                    146        96        50     65.75
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../rtl/apb_slave.v --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+          7                                PRESETn           0          13       50.00 
+          8                               PADDR[7]           0           0        0.00 
+          8                               PADDR[6]           0           0        0.00 
+          8                               PADDR[5]           0           0        0.00 
+          8                               PADDR[4]           0           0        0.00 
+          8                               PADDR[3]           0           0        0.00 
+         13                              PRDATA[7]           0           0        0.00 
+         13                              PRDATA[6]           0           2       50.00 
+         13                              PRDATA[5]           0           1       50.00 
+         13                              PRDATA[4]           0           3       50.00 
+         13                              PRDATA[3]           0           1       50.00 
+         13                              PRDATA[2]           0           1       50.00 
+         13                              PRDATA[1]           0           0        0.00 
+         14                                 PREADY           0           0        0.00 
+         17                         reg_command[0]           0           1       50.00 
+         19                          reg_status[2]           0           0        0.00 
+         19                          reg_status[1]           0           0        0.00 
+         19                          reg_status[0]           0           0        0.00 
+         20                         reg_receive[7]           0           0        0.00 
+         20                         reg_receive[6]           0           0        0.00 
+         20                         reg_receive[5]           0           0        0.00 
+         20                         reg_receive[2]           0           0        0.00 
+         20                         reg_receive[1]           0           0        0.00 
+         21                         reg_address[7]           0           1       50.00 
+         21                         reg_address[6]           0           1       50.00 
+         21                         reg_address[5]           0          10       50.00 
+         21                         reg_address[4]           0           0        0.00 
+         21                         reg_address[3]           0           0        0.00 
+         21                         reg_address[2]           0           0        0.00 
+         21                         reg_address[1]           0           1       50.00 
+         21                         reg_address[0]           0           4       50.00 
+
+Total Node Count     =         73 
+Toggled Node Count   =         42 
+Untoggled Node Count =         31 
+
+Toggle Coverage      =      65.75% (96 of 146 bins)
+
+=================================================================================
+=== File: ../rtl/fifo.sv
+=================================================================================
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           29        29         0    100.00
+
+================================Statement Details================================
+
+Statement Coverage for file ../rtl/fifo.sv --
+
+    1                                                module fifomem
+    2                                                #(
+    3                                                  parameter DATASIZE = 8, // Memory data word width
+    4                                                  parameter ADDRSIZE = 3  // Number of mem address bits
+    5                                                )
+    6                                                (
+    7                                                  input   write_enable, write_full, write_clk,
+    8                                                  input   [ADDRSIZE-1:0] waddr, raddr,
+    9                                                  input   [DATASIZE-1:0] write_data,
+    10                                                 output  [DATASIZE-1:0] read_data
+    11                                               );
+    12                                                 // RTL Verilog memory model
+    13                                                 localparam DEPTH = 1<<ADDRSIZE;//2*adDATASIZE
+    14                                               
+    15                                                 logic [DATASIZE-1:0] mem [0:DEPTH-1];
+    16                                               
+    17              1                        200       assign read_data = mem[raddr];
+    18                                               
+    19              1                        300       always_ff @(posedge write_clk)
+    20                                                   if (write_enable && !write_full) 
+    21              1                         97           	mem[waddr] <= write_data; 
+    22                                               endmodule
+    23                                               
+    24                                               
+    25                                               module rptr_empty
+    26                                               #(
+    27                                                 parameter ADDRSIZE = 3
+    28                                               )
+    29                                               (
+    30                                                 input   read_enable, read_clk, read_reset_n,
+    31                                                 input   [ADDRSIZE :0] rq2_wptr,
+    32                                                 output reg  read_empty,
+    33                                                 output  [ADDRSIZE-1:0] raddr,
+    34                                                 output reg [ADDRSIZE :0] rptr
+    35                                               );
+    36                                               
+    37                                                 reg [ADDRSIZE:0] rbin;
+    38                                                 wire [ADDRSIZE:0] rgraynext, rbinnext;
+    39                                               
+    40                                                 //-------------------
+    41                                                 // GRAYSTYLE2 pointer
+    42                                                 //-------------------
+    43              1                        278       always_ff @(posedge read_clk or negedge read_reset_n)
+    44                                                   if (!read_reset_n)
+    45              1                         78           {rbin, rptr} <= '0;
+    46                                                   else
+    47              1                        200           {rbin, rptr} <= {rbinnext, rgraynext};
+    48                                               
+    49                                                 // Memory read-address pointer (okay to use binary to address memory)
+    50              1                        123       assign raddr = rbin[ADDRSIZE-1:0];
+    51              1                        328       assign rbinnext = rbin + (read_enable & ~read_empty);
+    52              1                        242       assign rgraynext = (rbinnext>>1) ^ rbinnext;
+    53                                               
+    54                                                 //---------------------------------------------------------------
+    55                                                 // FIFO empty when the next rptr == synchronized wptr or on reset
+    56                                                 //---------------------------------------------------------------
+    57              1                        359       assign read_empty_val = (rgraynext == rq2_wptr);
+    58                                               
+    59              1                        220       always_ff @(posedge read_clk or negedge read_reset_n)
+    60                                                   if (!read_reset_n)
+    61              1                         78           read_empty <= 1'b1;
+    62                                                   else
+    63              1                        142           read_empty <= read_empty_val;
+    64                                               
+    65                                               endmodule
+    66                                               
+    67                                               module sync_r2w
+    68                                               #(
+    69                                                 parameter ADDRSIZE = 3
+    70                                               )
+    71                                               (
+    72                                                 input   write_clk, write_reset_n,
+    73                                                 input   [ADDRSIZE:0] rptr,
+    74                                                 output reg  [ADDRSIZE:0] wq2_rptr//readpointer with write side
+    75                                               );
+    76                                               
+    77                                                 reg [ADDRSIZE:0] wq1_rptr;
+    78                                               
+    79              1                        331       always_ff @(posedge write_clk or negedge write_reset_n)
+    80              1                         78         if (!write_reset_n) {wq2_rptr,wq1_rptr} <= 0;
+    81              1                        253         else {wq2_rptr,wq1_rptr} <= {wq1_rptr,rptr};
+    82                                               
+    83                                               endmodule
+    84                                               
+    85                                               module sync_w2r
+    86                                               #(
+    87                                                 parameter ADDRSIZE = 3
+    88                                               )
+    89                                               (
+    90                                                 input   read_clk, read_reset_n,
+    91                                                 input   [ADDRSIZE:0] wptr,
+    92                                                 output reg [ADDRSIZE:0] rq2_wptr
+    93                                               );
+    94                                               
+    95                                                 reg [ADDRSIZE:0] rq1_wptr;
+    96                                               
+    97              1                        309       always_ff @(posedge read_clk or negedge read_reset_n)
+    98                                                   if (!read_reset_n)
+    99              1                         78           {rq2_wptr,rq1_wptr} <= 0;
+    100                                                  else
+    101             1                        231           {rq2_wptr,rq1_wptr} <= {rq1_wptr,wptr};
+    102                                              
+    103                                              endmodule
+    104                                              
+    105                                              module wptr_full
+    106                                              #(
+    107                                                parameter ADDRSIZE = 3
+    108                                              )
+    109                                              (
+    110                                                input   write_enable, write_clk, write_reset_n,
+    111                                                input   [ADDRSIZE :0] wq2_rptr,
+    112                                                output reg  write_full,
+    113                                                output  [ADDRSIZE-1:0] waddr,
+    114                                                output reg [ADDRSIZE :0] wptr
+    115                                              );
+    116                                              
+    117                                                 reg [ADDRSIZE:0] wbin;
+    118                                                wire [ADDRSIZE:0] wgraynext, wbinnext;
+    119                                              
+    120                                                // GRAYSTYLE2 pointer
+    121             1                        315       always_ff @(posedge write_clk or negedge write_reset_n)
+    122                                                  if (!write_reset_n)
+    123             1                         78           {wbin, wptr} <= '0;
+    124                                                  else
+    125             1                        237           {wbin, wptr} <= {wbinnext, wgraynext};
+    126                                              
+    127                                                // Memory write-address pointer (okay to use binary to address memory)
+    128             1                        156       assign waddr = wbin[ADDRSIZE-1:0];
+    129             1                        369       assign wbinnext = wbin + (write_enable & ~write_full);
+    130             1                        298       assign wgraynext = (wbinnext>>1) ^ wbinnext;
+    131                                              
+    132                                                //------------------------------------------------------------------
+    133                                                // Simplified version of the three necessary full-tests:
+    134                                                // assign write_full_val=((wgnext[ADDRSIZE] !=wq2_rptr[ADDRSIZE] ) &&
+    135                                                // (wgnext[ADDRSIZE-1] !=wq2_rptr[ADDRSIZE-1]) &&
+    136                                                // (wgnext[ADDRSIZE-2:0]==wq2_rptr[ADDRSIZE-2:0]));
+    137                                                //------------------------------------------------------------------
+    138             1                        393       assign write_full_val = (wgraynext=={~wq2_rptr[ADDRSIZE:ADDRSIZE-1], wq2_rptr[ADDRSIZE-2:0]});
+    139                                              
+    140             1                        176       always_ff @(posedge write_clk or negedge write_reset_n)
+    141                                                  if (!write_reset_n)
+    142             1                         78           write_full <= 1'b0;
+    143                                                  else
+    144             1                         98           write_full <= write_full_val;
+    145                                              
+    146                                              endmodule
+    147                                              
+    148                                              module async_fifo
+    149                                              #(
+    150                                                parameter DATASIZE = 8,
+    151                                                parameter ADDRESSSIZE = 3
+    152                                               )
+    153                                              (
+    154                                                input   write_enable, write_clk, write_reset_n,//write_enable write enable signal
+    155                                                input   read_enable, read_clk, read_reset_n,//read_enable read enable signal
+    156                                                input   [DATASIZE-1:0] write_data,
+    157                                              
+    158                                                output  [DATASIZE-1:0] read_data,
+    159                                                output  write_full,
+    160                                                output  read_empty
+    161                                              );
+    162                                              
+    163                                                wire [ADDRESSSIZE-1:0] waddr, raddr;
+    164                                                wire [ADDRESSSIZE:0] wptr, rptr, wq2_rptr, rq2_wptr;
+    165                                              
+    166                                                sync_r2w sync_r2w (.*);
+    167                                                sync_w2r sync_w2r (.*);
+    168                                                fifomem #(DATASIZE, ADDRESSSIZE) fifomem (.*);
+    169                                                rptr_empty #(ADDRESSSIZE) rptr_empty (.*);
+    170                                                wptr_full #(ADDRESSSIZE) wptr_full (.*);
+    171                                              
+    172                                              endmodule
+
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                        14        14         0    100.00
+
+================================Branch Details================================
+
+Branch Coverage for file ../rtl/fifo.sv --
+
+------------------------------------IF Branch------------------------------------
+    20                                       300     Count coming in to IF
+    20              1                         97         if (write_enable && !write_full) 
+                                             203     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    44                                       278     Count coming in to IF
+    44              1                         78         if (!read_reset_n)
+    46              1                        200         else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    60                                       220     Count coming in to IF
+    60              1                         78         if (!read_reset_n)
+    62              1                        142         else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    80                                       331     Count coming in to IF
+    80              1                         78         if (!write_reset_n) {wq2_rptr,wq1_rptr} <= 0;
+    81              1                        253         else {wq2_rptr,wq1_rptr} <= {wq1_rptr,rptr};
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    98                                       309     Count coming in to IF
+    98              1                         78         if (!read_reset_n)
+    100             1                        231         else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    122                                      315     Count coming in to IF
+    122             1                         78         if (!write_reset_n)
+    124             1                        237         else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    141                                      176     Count coming in to IF
+    141             1                         78         if (!write_reset_n)
+    143             1                         98         else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Condition Terms              2         2         0    100.00
+
+================================Condition Details================================
+
+Condition Coverage for file ../rtl/fifo.sv --
+
+----------------Focused Condition View-------------------
+Line       20 Item    1  (write_enable && ~write_full)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+
+Expression Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Expression Terms             2         2         0    100.00
+
+================================Expression Details================================
+
+Expression Coverage for file ../rtl/fifo.sv --
+
+----------------Focused Expression View-----------------
+Line       57 Item    1  (rgraynext == rq2_wptr)
+Expression totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Expression View-----------------
+Line       138 Item    1  (wgraynext == {~wq2_rptr[3:2],wq2_rptr[1:0]})
+Expression totals: 1 of 1 input term covered = 100.00%
+
+
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                    310       310         0    100.00
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../rtl/fifo.sv --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+
+Total Node Count     =        155 
+Toggled Node Count   =        155 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (310 of 310 bins)
+
+=================================================================================
+=== File: ../rtl/i2c.v
+=================================================================================
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           72        69         3     95.83
+
+================================Statement Details================================
+
+Statement Coverage for file ../rtl/i2c.v --
+
+    1                                                module i2c_master(
+    2                                                	// i2c core signal
+    3                                                	input wire clk,
+    4                                                	input wire i2c_reset_n,
+    5                                                	input wire [6:0] addr,
+    6                                                	input wire [7:0] i2c_data_in,
+    7                                                	input wire i2c_enable,
+    8                                                	input wire rw,
+    9                                                	output reg [7:0] i2c_data_out,
+    10                                               	output wire i2c_ready,
+    11                                               	inout i2c_sda,
+    12                                               	inout wire i2c_scl,
+    13                                               	input i2c_repeat_start,
+    14                                               	input fifo_tx_empty,
+    15                                               	input fifo_rx_full,
+    16                                               	//control fifo
+    17                                               	output reg fifo_tx_rd_en,
+    18                                               	output reg fifo_rx_wr_en 
+    19                                               	);
+    20                                               
+    21                                               	localparam IDLE = 0;
+    22                                               	localparam START = 1;
+    23                                               	localparam ADDRESS = 2;
+    24                                               	localparam READ_ACK = 3;
+    25                                               	localparam WRITE_DATA = 4;
+    26                                               	localparam WRITE_ACK = 5;
+    27                                               	localparam READ_DATA = 6;
+    28                                               	localparam READ_ACK2 = 7;
+    29                                               	localparam STOP = 8;
+    30                                               	
+    31                                               	localparam DIVIDE_BY = 4;
+    32                                               
+    33                                               	reg [7:0] state;
+    34                                               	reg [7:0] saved_addr;
+    35                                               	reg [7:0] counter;
+    36                                               	reg [7:0] counter2 = 0;
+    37                                               	reg write_enable;
+    38                                               	reg sda_out;
+    39                                               	reg i2c_scl_enable = 0;
+    40                                               	reg i2c_clk = 1;
+    41                                               	reg status;
+    42                                               	reg count_done;
+    43                                               
+    44              1                        326     	assign i2c_ready = ((i2c_reset_n == 1) && (state == IDLE)) ? 1 : 0;
+    45              1                       2590     	assign i2c_scl = (i2c_scl_enable == 0 ) ? 1 : i2c_clk;
+    46              1                        417     	assign i2c_sda = (write_enable == 1) ? sda_out : 'bz;
+    47                                               	pullup(i2c_sda);
+    48                                               
+    49              1                       5059     	always @(posedge clk) begin
+    50                                               		if (counter2 == (DIVIDE_BY/2) - 1) begin
+    51              1                       2526     			i2c_clk <= ~i2c_clk;
+    52              1                       2526     			counter2 <= 0;
+    53                                               		end
+    54              1                       2533     		else counter2 <= counter2 + 1;
+    55                                               	end 
+    56                                               	
+    57              1                        327     	always @(negedge i2c_clk, negedge i2c_reset_n) begin
+    58                                               		if(!i2c_reset_n) begin
+    59              1                         46     			i2c_scl_enable <= 0;
+    60                                               		end else begin
+    61                                               			if ((state == IDLE) || (state == START) || (state == STOP)) begin
+    62              1                         70     				i2c_scl_enable <= 0;
+    63                                               			end else begin
+    64              1                        211     				i2c_scl_enable <= 1;
+    65                                               			end
+    66                                               		end
+    67                                               	
+    68                                               	end
+    69                                               
+    70              1                        788     	always @(posedge clk) begin
+    71                                               		case(state)
+    72                                               			READ_ACK: begin
+    73                                               					if (i2c_sda == 0) begin
+    74              1                         66     						fifo_tx_rd_en <= 1;
+    75              1                         66     						status <= 1;
+    76                                               					end
+    77                                               					if (status == 1) begin
+    78              1                         56     						fifo_tx_rd_en <= 0;
+    79                                               					end
+    80                                               				end
+    81              1                        263     			WRITE_DATA: status <= 0;
+    82                                               			READ_ACK2: begin
+    83                                               				if (i2c_sda == 0 && !fifo_tx_empty) begin
+    84              1                        139     						fifo_tx_rd_en <= 1;
+    85              1                        139     						status <= 1;
+    86                                               					end
+    87                                               					if (status == 1) begin
+    88              1                         98     						fifo_tx_rd_en <= 0;
+    89                                               					end
+    90                                               			end
+    91                                               		endcase
+    92                                               	end 
+    93                                               	
+    94              1                        961     	always @(posedge i2c_clk, negedge i2c_reset_n) begin
+    95                                               		if(!i2c_reset_n) begin
+    96              1                         63     			state <= IDLE;
+    97              1                         63     			fifo_tx_rd_en <= 0;
+    98              1                         63     			fifo_rx_wr_en <= 0;
+    99              1                         63     			count_done <= 0;
+    100                                              		end		
+    101                                              		else begin
+    102                                              			case(state)
+    103                                              				IDLE: begin
+    104                                              					if (i2c_enable || i2c_repeat_start) begin
+    105             1                         27     						state <= START;
+    106             1                         27     						saved_addr <= {addr, rw};
+    107                                              					end
+    108             1                         13     					else state <= IDLE;
+    109                                              				end
+    110                                              
+    111                                              				START: begin
+    112             1                         26     					counter <= 7;
+    113             1                         26     					state <= ADDRESS;
+    114                                              				end
+    115                                              
+    116                                              				ADDRESS: begin
+    117                                              					if (counter == 0) begin 
+    118             1                         23     						state <= READ_ACK;
+    119             1                        169     					end else counter <= counter - 1;
+    120                                              					
+    121                                              				end
+    122                                              
+    123                                              				READ_ACK: begin
+    124                                              					if (i2c_sda == 0) begin
+    125             1                         18     						counter <= 7;
+    126             1                         13     						if(saved_addr[0] == 0) state <= WRITE_DATA;
+    127             1                          5     						else state <= READ_DATA;
+    128             1                          4     					end else state <= STOP;
+    129                                              				end
+    130                                              
+    131                                              				WRITE_DATA: begin
+    132                                              					if(counter == 0) begin
+    133             1                         59     						state <= READ_ACK2;
+    134             1                        414     					end else counter <= counter - 1;
+    135                                              				end
+    136                                              				
+    137                                              				READ_ACK2: begin
+    138                                              					if (i2c_sda == 0 && i2c_repeat_start) begin
+    139             1                    ***0***     						state <= IDLE;
+    140                                              					end
+    141                                              					else if (i2c_sda == 0) begin
+    142             1                         58     							state <= WRITE_DATA;
+    143             1                         58     							counter <= 7;	
+    144             1                         20     							if(fifo_tx_empty) count_done <= 1;
+    145                                              							if(count_done) begin
+    146             1                         10     								count_done <= 0;
+    147             1                         10     								state <= STOP;
+    148                                              							end
+    149                                              						end
+    150                                              					else begin
+    151             1                    ***0***     						state <= STOP;
+    152                                              					end
+    153                                              				end
+    154                                              
+    155                                              				READ_DATA: begin
+    156             1                         65     					i2c_data_out[counter] <= i2c_sda;
+    157                                              					if (counter == 0) begin
+    158             1                          8     						state <= WRITE_ACK;
+    159             1                          8     						fifo_rx_wr_en <= 1;
+    160                                              					end
+    161             1                         57     					else counter <= counter - 1;
+    162                                              				end
+    163                                              				
+    164                                              				WRITE_ACK: begin
+    165             1                          7     					fifo_rx_wr_en <= 0;
+    166                                              					if (i2c_sda == 0 && i2c_repeat_start) begin
+    167             1                          1     						state <= IDLE;
+    168                                              					end
+    169                                              					else if (i2c_sda == 0) begin
+    170             1                          6     							state <= READ_DATA;
+    171             1                          6     							counter <= 7;	
+    172             1                          4     							if(fifo_rx_full) count_done <= 1;
+    173                                              							if(count_done) begin
+    174             1                          2     								count_done <= 0;
+    175             1                          2     								state <= STOP;
+    176                                              							end
+    177                                              						end
+    178                                              					else begin
+    179             1                    ***0***     						state <= STOP;
+    180                                              					end
+    181                                              				end
+    182                                              
+    183                                              				STOP: begin
+    184             1                         15     					state <= IDLE;
+    185                                              				end
+    186                                              			endcase
+    187                                              		end
+    188                                              	end
+    189                                              	
+    190             1                        941     	always @(negedge i2c_clk, negedge i2c_reset_n) begin
+    191                                              		if(!i2c_reset_n) begin
+    192             1                         46     			write_enable <= 1;
+    193             1                         46     			sda_out <= 1;
+    194                                              		end else begin
+    195                                              			case(state)
+    196                                              				
+    197                                              				START: begin
+    198             1                         27     					write_enable <= 1;
+    199             1                         27     					sda_out <= 0;
+    200                                              				end
+    201                                              				
+    202                                              				ADDRESS: begin
+    203             1                        195     					sda_out <= saved_addr[counter];
+    204                                              				end
+    205                                              				
+    206                                              				READ_ACK: begin
+    207             1                         23     					write_enable <= 0;
+    208                                              				end
+    209                                              				
+    210                                              				WRITE_DATA: begin 
+    211             1                        475     					write_enable <= 1;
+    212             1                        475     					sda_out <= i2c_data_in[counter];
+    213                                              				end
+    214                                              				READ_ACK2: begin
+    215             1                         59     					write_enable <= 0;				
+    216                                              				end
+    217                                              				
+    218                                              				WRITE_ACK: begin
+    219             1                          8     					write_enable <= 1;
+    220             1                          8     					sda_out <= 0;
+    221                                              				end
+    222                                              				
+    223                                              				READ_DATA: begin
+    224             1                         65     					write_enable <= 0;				
+    225                                              				end
+    226                                              				
+    227                                              				STOP: begin
+    228             1                         16     					write_enable <= 1;
+    229             1                         16     					sda_out <= 1;
+    230                                              				end
+    231                                              			endcase
+    232                                              		end
+    233                                              	end
+    234                                              	
+    235                                              endmodule
+
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                        73        69         4     94.52
+
+================================Branch Details================================
+
+Branch Coverage for file ../rtl/i2c.v --
+
+------------------------------------IF Branch------------------------------------
+    44                                       313     Count coming in to IF
+    44              1                         37     	assign i2c_ready = ((i2c_reset_n == 1) && (state == IDLE)) ? 1 : 0;
+    44              2                        276     	assign i2c_ready = ((i2c_reset_n == 1) && (state == IDLE)) ? 1 : 0;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    45                                      2590     Count coming in to IF
+    45              1                        929     	assign i2c_scl = (i2c_scl_enable == 0 ) ? 1 : i2c_clk;
+    45              2                       1661     	assign i2c_scl = (i2c_scl_enable == 0 ) ? 1 : i2c_clk;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    46                                       404     Count coming in to IF
+    46              1                        318     	assign i2c_sda = (write_enable == 1) ? sda_out : 'bz;
+    46              2                         86     	assign i2c_sda = (write_enable == 1) ? sda_out : 'bz;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    50                                      5059     Count coming in to IF
+    50              1                       2526     		if (counter2 == (DIVIDE_BY/2) - 1) begin
+    54              1                       2533     		else counter2 <= counter2 + 1;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    58                                       327     Count coming in to IF
+    58              1                         46     		if(!i2c_reset_n) begin
+    60              1                        281     		end else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    61                                       281     Count coming in to IF
+    61              1                         70     			if ((state == IDLE) || (state == START) || (state == STOP)) begin
+    63              1                        211     			end else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    71                                       788     Count coming in to CASE
+    72              1                         75     			READ_ACK: begin
+    81              1                        263     			WRITE_DATA: status <= 0;
+    82              1                        187     			READ_ACK2: begin
+                                             263     All False Count
+Branch totals: 4 hits of 4 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    73                                        75     Count coming in to IF
+    73              1                         66     					if (i2c_sda == 0) begin
+                                               9     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    77                                        75     Count coming in to IF
+    77              1                         56     					if (status == 1) begin
+                                              19     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    83                                       187     Count coming in to IF
+    83              1                        139     				if (i2c_sda == 0 && !fifo_tx_empty) begin
+                                              48     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    87                                       187     Count coming in to IF
+    87              1                         98     					if (status == 1) begin
+                                              89     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    95                                       961     Count coming in to IF
+    95              1                         63     		if(!i2c_reset_n) begin
+    101             1                        898     		else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    102                                      898     Count coming in to CASE
+    103             1                         40     				IDLE: begin
+    111             1                         26     				START: begin
+    116             1                        192     				ADDRESS: begin
+    123             1                         22     				READ_ACK: begin
+    131             1                        473     				WRITE_DATA: begin
+    137             1                         58     				READ_ACK2: begin
+    155             1                         65     				READ_DATA: begin
+    164             1                          7     				WRITE_ACK: begin
+    183             1                         15     				STOP: begin
+                                         ***0***     All False Count
+Branch totals: 9 hits of 10 branches = 90.00%
+
+------------------------------------IF Branch------------------------------------
+    104                                       40     Count coming in to IF
+    104             1                         27     					if (i2c_enable || i2c_repeat_start) begin
+    108             1                         13     					else state <= IDLE;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    117                                      192     Count coming in to IF
+    117             1                         23     					if (counter == 0) begin 
+    119             1                        169     					end else counter <= counter - 1;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    124                                       22     Count coming in to IF
+    124             1                         18     					if (i2c_sda == 0) begin
+    128             1                          4     					end else state <= STOP;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    126                                       18     Count coming in to IF
+    126             1                         13     						if(saved_addr[0] == 0) state <= WRITE_DATA;
+    127             1                          5     						else state <= READ_DATA;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    132                                      473     Count coming in to IF
+    132             1                         59     					if(counter == 0) begin
+    134             1                        414     					end else counter <= counter - 1;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    138                                       58     Count coming in to IF
+    138             1                    ***0***     					if (i2c_sda == 0 && i2c_repeat_start) begin
+    141             1                         58     					else if (i2c_sda == 0) begin
+    150             1                    ***0***     					else begin
+Branch totals: 1 hit of 3 branches = 33.33%
+
+------------------------------------IF Branch------------------------------------
+    144                                       58     Count coming in to IF
+    144             1                         20     							if(fifo_tx_empty) count_done <= 1;
+                                              38     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    145                                       58     Count coming in to IF
+    145             1                         10     							if(count_done) begin
+                                              48     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    157                                       65     Count coming in to IF
+    157             1                          8     					if (counter == 0) begin
+    161             1                         57     					else counter <= counter - 1;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    166                                        7     Count coming in to IF
+    166             1                          1     					if (i2c_sda == 0 && i2c_repeat_start) begin
+    169             1                          6     					else if (i2c_sda == 0) begin
+    178             1                    ***0***     					else begin
+Branch totals: 2 hits of 3 branches = 66.66%
+
+------------------------------------IF Branch------------------------------------
+    172                                        6     Count coming in to IF
+    172             1                          4     							if(fifo_rx_full) count_done <= 1;
+                                               2     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    173                                        6     Count coming in to IF
+    173             1                          2     							if(count_done) begin
+                                               4     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    191                                      941     Count coming in to IF
+    191             1                         46     		if(!i2c_reset_n) begin
+    194             1                        895     		end else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    195                                      895     Count coming in to CASE
+    197             1                         27     				START: begin
+    202             1                        195     				ADDRESS: begin
+    206             1                         23     				READ_ACK: begin
+    210             1                        475     				WRITE_DATA: begin 
+    214             1                         59     				READ_ACK2: begin
+    218             1                          8     				WRITE_ACK: begin
+    223             1                         65     				READ_DATA: begin
+    227             1                         16     				STOP: begin
+                                              27     All False Count
+Branch totals: 9 hits of 9 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Condition Terms             26        21         5     80.76
+
+================================Condition Details================================
+
+Condition Coverage for file ../rtl/i2c.v --
+
+----------------Focused Condition View-------------------
+Line       44 Item    1  ((i2c_reset_n == 1) && (state == 0))
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       45 Item    1  (i2c_scl_enable == 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       46 Item    1  (write_enable == 1)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       50 Item    1  (counter2 == ((4 / 2) - 1))
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       61 Item    1  (((state == 0) || (state == 1)) || (state == 8))
+Condition totals: 3 of 3 input terms covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       73 Item    1  (i2c_sda == 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       77 Item    1  (status == 1)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       83 Item    1  ((i2c_sda == 0) && ~fifo_tx_empty)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       87 Item    1  (status == 1)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       104 Item    1  (i2c_enable || i2c_repeat_start)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       117 Item    1  (counter == 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       124 Item    1  (i2c_sda == 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       126 Item    1  (saved_addr[0] == 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       132 Item    1  (counter == 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       138 Item    1  ((i2c_sda == 0) && i2c_repeat_start)
+Condition totals: 0 of 2 input terms covered = 0.00%
+
+        Input Term   Covered  Reason for no coverage   Hint
+       -----------  --------  -----------------------  --------------
+    (i2c_sda == 0)         N  No hits                  Hit '_0' and '_1'
+  i2c_repeat_start         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (i2c_sda == 0)_0      -                             
+  Row   2:    ***0***  (i2c_sda == 0)_1      i2c_repeat_start              
+  Row   3:          8  i2c_repeat_start_0    (i2c_sda == 0)                
+  Row   4:    ***0***  i2c_repeat_start_1    (i2c_sda == 0)                
+
+----------------Focused Condition View-------------------
+Line       141 Item    1  (i2c_sda == 0)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+      Input Term   Covered  Reason for no coverage   Hint
+     -----------  --------  -----------------------  --------------
+  (i2c_sda == 0)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (i2c_sda == 0)_0      -                             
+  Row   2:          8  (i2c_sda == 0)_1      -                             
+
+----------------Focused Condition View-------------------
+Line       157 Item    1  (counter == 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       166 Item    1  ((i2c_sda == 0) && i2c_repeat_start)
+Condition totals: 1 of 2 input terms covered = 50.00%
+
+        Input Term   Covered  Reason for no coverage   Hint
+       -----------  --------  -----------------------  --------------
+    (i2c_sda == 0)         N  '_0' not hit             Hit '_0'
+  i2c_repeat_start         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (i2c_sda == 0)_0      -                             
+  Row   2:          1  (i2c_sda == 0)_1      i2c_repeat_start              
+  Row   3:          2  i2c_repeat_start_0    (i2c_sda == 0)                
+  Row   4:          1  i2c_repeat_start_1    (i2c_sda == 0)                
+
+----------------Focused Condition View-------------------
+Line       169 Item    1  (i2c_sda == 0)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+      Input Term   Covered  Reason for no coverage   Hint
+     -----------  --------  -----------------------  --------------
+  (i2c_sda == 0)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (i2c_sda == 0)_0      -                             
+  Row   2:          2  (i2c_sda == 0)_1      -                             
+
+
+FSM Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FSMs                                                      100.00
+        States                       9         9         0    100.00
+        Transitions                 20        20         0    100.00
+
+================================FSM Details================================
+
+FSM Coverage for file ../rtl/i2c.v --
+
+FSM_ID: state
+    Current State Object : state
+    ----------------------
+    State Value MapInfo :
+    ---------------------
+Line          State Name               Value
+----          ----------               -----
+ 103                IDLE                   0
+ 111               START                   1
+ 116             ADDRESS                   2
+ 123            READ_ACK                   3
+ 183                STOP                   8
+ 155           READ_DATA                   6
+ 131          WRITE_DATA                   4
+ 137           READ_ACK2                   7
+ 164           WRITE_ACK                   5
+    Covered States :
+    ----------------
+                   State           Hit_count
+                   -----           ---------
+                    IDLE                  92
+                   START                  27
+                 ADDRESS                  26
+                READ_ACK                  23
+                    STOP                  16
+               READ_DATA                   9
+              WRITE_DATA                  61
+               READ_ACK2                  59
+               WRITE_ACK                   8
+    Covered Transitions :
+    ---------------------
+Line            Trans_ID           Hit_count          Transition          
+----            --------           ---------          ----------          
+ 105                   0                  27          IDLE -> START       
+ 113                   1                  26          START -> ADDRESS    
+  96                   2                   1          START -> IDLE       
+ 118                   3                  23          ADDRESS -> READ_ACK 
+  96                   4                   2          ADDRESS -> IDLE     
+ 128                   5                   4          READ_ACK -> STOP    
+ 127                   6                   5          READ_ACK -> READ_DATA
+ 126                   7                  13          READ_ACK -> WRITE_DATA
+  96                   8                   1          READ_ACK -> IDLE    
+ 184                   9                  15          STOP -> IDLE        
+ 158                  10                   8          READ_DATA -> WRITE_ACK
+  96                  11                   1          READ_DATA -> IDLE   
+ 133                  12                  59          WRITE_DATA -> READ_ACK2
+  96                  13                   2          WRITE_DATA -> IDLE  
+ 151                  14                  10          READ_ACK2 -> STOP   
+ 142                  15                  48          READ_ACK2 -> WRITE_DATA
+ 139                  16                   1          READ_ACK2 -> IDLE   
+ 179                  17                   2          WRITE_ACK -> STOP   
+ 170                  18                   4          WRITE_ACK -> READ_DATA
+ 167                  19                   2          WRITE_ACK -> IDLE   
+
+
+    Summary                     Active      Hits    Misses % Covered
+    -------                     ------      ----    ------ ---------
+        States                       9         9         0    100.00
+        Transitions                 20        20         0    100.00
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                    146        82        64     56.16
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../rtl/i2c.v --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+          5                                addr[6]           0           1       50.00 
+          5                                addr[5]           0           1       50.00 
+          5                                addr[4]           0          10       50.00 
+          5                                addr[3]           0           0        0.00 
+          5                                addr[2]           0           0        0.00 
+          5                                addr[1]           0           0        0.00 
+          5                                addr[0]           0           1       50.00 
+          8                                     rw           0           4       50.00 
+          9                        i2c_data_out[7]           0           1       50.00 
+          9                        i2c_data_out[6]           0           1       50.00 
+          9                        i2c_data_out[5]           1           0       50.00 
+          9                        i2c_data_out[2]           1           0       50.00 
+          9                        i2c_data_out[1]           0           0        0.00 
+         33                               state[7]           0           0        0.00 
+         33                               state[6]           0           0        0.00 
+         33                               state[5]           0           0        0.00 
+         33                               state[4]           0           0        0.00 
+         34                          saved_addr[7]           0           0        0.00 
+         34                          saved_addr[6]           0           0        0.00 
+         34                          saved_addr[5]           0           0        0.00 
+         34                          saved_addr[4]           0           0        0.00 
+         34                          saved_addr[3]           0           0        0.00 
+         34                          saved_addr[2]           0           0        0.00 
+         34                          saved_addr[1]           0           0        0.00 
+         34                          saved_addr[0]           0           3       50.00 
+         35                             counter[7]           0           0        0.00 
+         35                             counter[6]           0           0        0.00 
+         35                             counter[5]           0           0        0.00 
+         35                             counter[4]           0           0        0.00 
+         35                             counter[3]           0           0        0.00 
+         36                            counter2[7]           0           0        0.00 
+         36                            counter2[6]           0           0        0.00 
+         36                            counter2[5]           0           0        0.00 
+         36                            counter2[4]           0           0        0.00 
+         36                            counter2[3]           0           0        0.00 
+         36                            counter2[2]           0           0        0.00 
+         36                            counter2[1]           0           0        0.00 
+
+Total Node Count     =         73 
+Toggled Node Count   =         36 
+Untoggled Node Count =         37 
+
+Toggle Coverage      =      56.16% (82 of 146 bins)
+
+=================================================================================
+=== File: ../rtl/i2c_slave_model.v
+=================================================================================
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           81        79         2     97.53
+
+================================Statement Details================================
+
+Statement Coverage for file ../rtl/i2c_slave_model.v --
+
+    1                                                `timescale 1ns/1ns
+    2                                                
+    3                                                module i2c_slave_model 
+    4                                                	(
+    5                                                		inout scl, 
+    6                                                		inout sda, 
+    7                                                		output reg [7:0] 	saved_data,
+    8                                                		output reg 			check_data,
+    9                                                		output reg			read_data
+    10                                               	);
+    11                                               	
+    12                                               	//
+    13                                               	// parameters
+    14                                               	//
+    15                                               	parameter I2C_ADR = 7'b0010000;
+    16                                               
+    17                                               	//
+    18                                               	// input && outpus
+    19                                               	//
+    20                                               	// input scl;
+    21                                               	// inout sda;
+    22                                               
+    23                                               	//
+    24                                               	// Variable declaration
+    25                                               	//
+    26                                               	wire debug = 1'b1;
+    27                                               
+    28                                               	reg [7:0] mem [7:0]; // initiate memory
+    29                                               	reg [7:0] mem_adr;   // memory address
+    30                                               	reg [7:0] mem_do;    // memory data output
+    31                                               
+    32                                               	reg sta, d_sta;
+    33                                               	reg sto, d_sto;
+    34                                               
+    35                                               	reg [7:0] sr;        // 8bit shift register
+    36                                               	reg       rw;        // read/write direction
+    37                                               
+    38                                               	wire      my_adr;    // my address called ??
+    39                                               	wire      i2c_reset; // i2c-statemachine reset
+    40                                               	reg [2:0] bit_cnt;   // 3bit downcounter
+    41                                               	wire      acc_done;  // 8bits transfered
+    42                                               	reg       ld;        // load downcounter
+    43                                               
+    44                                               	reg       sda_o;     // sda-drive level
+    45                                               	wire      sda_dly;   // delayed version of sda
+    46                                               
+    47                                               	// statemachine declaration
+    48                                               	parameter idle        = 3'b000;
+    49                                               	parameter slave_ack   = 3'b001;
+    50                                               	parameter get_mem_adr = 3'b010;
+    51                                               	parameter gma_ack     = 3'b011;
+    52                                               	parameter data        = 3'b100;
+    53                                               	parameter data_ack    = 3'b101;
+    54                                               
+    55                                               	reg [2:0] state; // synopsys enum_state
+    56                                               
+    57                                               	//
+    58                                               	// module body
+    59                                               	//
+    60                                               
+    61                                               	initial
+    62                                               	begin
+    63              1                         13     	   sda_o = 1'b1;
+    64              1                         13     	   state = idle;
+    65                                               	end
+    66                                               
+    67                                               	// generate shift register
+    68              1                        744     	always @(posedge scl)
+    69              1                        744     	  sr <= #1 {sr[6:0],sda};
+    70                                               
+    71                                               	//detect my_address
+    72              1                        718     	assign my_adr = (sr[7:1] == I2C_ADR);
+    73                                               	// FIXME: This should not be a generic assign, but rather
+    74                                               	// qualified on address transfer phase and probably reset by stop
+    75                                               
+    76                                               	//generate bit-counter
+    77              1                        852     	always @(posedge scl)
+    78                                               	  if(ld)
+    79              1                         93     	    bit_cnt <= #1 3'b111;
+    80                                               	  else
+    81              1                        759     	    bit_cnt <= #1 bit_cnt - 3'h1;
+    82                                               
+    83                                               	//generate access done signal
+    84                                               	assign acc_done = !(|bit_cnt);
+    85                                               
+    86                                               	// generate delayed version of sda
+    87                                               	// this model assumes a hold time for sda after the falling edge of scl.
+    88                                               	// According to the Phillips i2c spec, there s/b a 0 ns hold time for sda
+    89                                               	// with regards to scl. If the data changes coincident with the clock, the
+    90                                               	// acknowledge is missed
+    91                                               	// Fix by Michael Sosnoski
+    92                                               	assign #1 sda_dly = sda;
+    93                                               
+    94                                               
+    95                                               	//detect start condition
+    96              1                        197     	always @(negedge sda)
+    97                                               		if(scl)
+    98                                               			begin
+    99              1                         24     				sta   <= #1 1'b1;
+    100             1                         24     				d_sta <= #1 1'b0;
+    101             1                         24     				sto   <= #1 1'b0;
+    102                                              
+    103                                              				if(debug)
+    104             1                         24     					$display("DEBUG i2c_slave; start condition detected at %t", $time);
+    105                                              			end
+    106                                              		else
+    107             1                        173     			sta <= #1 1'b0;
+    108                                              
+    109             1                         98     	always @(posedge scl)
+    110             1                         98     	  	d_sta <= #1 sta;
+    111                                              
+    112                                              	// detect stop condition
+    113             1                        220     	always @(posedge sda)
+    114                                              		if(scl)
+    115                                              			begin
+    116             1                         48     			sta <= #1 1'b0;
+    117             1                         48     			sto <= #1 1'b1;
+    118                                              
+    119                                              			if(debug)
+    120             1                         48     				$display("DEBUG i2c_slave; stop condition detected at %t", $time);
+    121                                              			end
+    122                                              		else
+    123             1                        172     			sto <= #1 1'b0;
+    124                                              
+    125                                              	//generate i2c_reset signal
+    126             1                         93     	assign i2c_reset = sta || sto;
+    127                                              
+    128                                              	// generate statemachine
+    129             1                        791     	always @(negedge scl or posedge sto)
+    130                                              		if (sto || (sta && !d_sta) )
+    131                                              			begin
+    132             1                         57     				state <= #1 idle; // reset statemachine
+    133             1                         57     				sda_o <= #1 1'b1;
+    134             1                         57     				ld    <= #1 1'b1;
+    135                                              			end
+    136                                              		else
+    137                                              			begin
+    138                                              				// initial settings
+    139             1                        734     				sda_o <= #1 1'b1;
+    140             1                        734     				ld    <= #1 1'b0;
+    141                                              
+    142                                              				case(state) // synopsys full_case parallel_case
+    143                                              					idle: // idle state
+    144                                              					if (acc_done && my_adr)
+    145                                              						begin
+    146             1                         19     							state <= #1 slave_ack;
+    147             1                         19     							rw <= #1 sr[0];
+    148             1                         19     							sda_o <= #1 1'b0; // generate i2c_ack
+    149             1                         19     							check_data <= 0;
+    150             1                         19     							read_data  <= 0;
+    151             1                         19     							#2;
+    152                                              							if(debug && rw)
+    153             1                          5     								$display("DEBUG i2c_slave; command byte received (read) at %t", $time);
+    154                                              							if(debug && !rw) begin
+    155             1                         14     								$display("DEBUG i2c_slave; command byte received (write) at %t", $time);
+    156                                              								// saved_data <= mem_adr;
+    157                                              							end
+    158                                              							if(rw)
+    159                                              							begin
+    160             1                          5     								mem_adr <= 0;
+    161             1                          5     								mem_do <= #1 mem[0];
+    162                                              
+    163                                              								if(debug)
+    164                                              									begin
+    165             1                          5     										#2 $display("DEBUG i2c_slave; data block read %x from address %x (1)", mem_do, mem_adr);
+    165             2                          5     
+    166             1                          5     										#2 $display("DEBUG i2c_slave; memcheck [0]=%x, [1]=%x, [2]=%x", mem[4'h0], mem[4'h1], mem[4'h2]);
+    166             2                          5     
+    167                                              										// saved_data <= mem_adr;
+    168                                              									end
+    169                                              							end
+    170                                              						end
+    171                                              
+    172                                              					slave_ack:
+    173                                              					begin
+    174                                              						if(rw)
+    175                                              							begin
+    176             1                          5     								state <= #1 data;
+    177             1                          5     								sda_o <= #1 mem_do[7];
+    178                                              							end
+    179                                              						else
+    180             1                         13     							state <= #1 get_mem_adr;
+    181                                              
+    182             1                         18     						ld    <= #1 1'b1;
+    183                                              					end
+    184                                              
+    185                                              					get_mem_adr: // wait for memory address
+    186                                              					if(acc_done)
+    187                                              						begin
+    188             1                         11     							state <= #1 gma_ack;
+    189             1                         11     							mem_adr <= #1 sr; // store memory address
+    190             1                         11     							saved_data <= sr;
+    191             1                         11     							sda_o <= #1 !(sr <= 15); // generate i2c_ack, for valid address
+    192             1                         11     							check_data <= 1;
+    193                                              							// if (check_data == 1)
+    194                                              							// 	check_data <= 0;
+    195                                              
+    196                                              							if(debug)
+    197             1                         11     							#1 $display("DEBUG i2c_slave; address received. adr=%x, ack=%b", sr, sda_o);
+    197             2                         11     
+    198                                              						end
+    199                                              
+    200                                              					gma_ack:
+    201                                              					begin
+    202             1                         10     						state <= #1 data;
+    203             1                         10     						ld    <= #1 1'b1;
+    204                                              					end
+    205                                              
+    206                                              					data: // receive or drive data
+    207                                              					begin
+    208                                              						if (acc_done) 
+    209             1                         60     							saved_data <= sr;
+    210             1                        448     							check_data <= 0;
+    211             1                        448     							read_data <= 0;
+    212                                              						
+    213                                              						if(rw)
+    214             1                         95     							sda_o <= #1 mem_do[7];
+    215                                              
+    216                                              						if(acc_done)
+    217                                              							begin
+    218             1                         60     								state <= #1 data_ack;
+    219             1                         60     								mem_adr <= #2 mem_adr + 8'h1;
+    220             1                         60     								sda_o <= #1 (rw && (mem_adr <= 15) ); // send ack on write, receive ack on read
+    221                                              
+    222                                              								if(rw)
+    223                                              								begin
+    224             1                         12     									#3 mem_do <= mem[mem_adr];
+    224             2                         12     
+    225                                              
+    226                                              									if(debug)
+    227             1                         12     										#5 $display("DEBUG i2c_slave; data block read %x from address %x (2)", mem_do, mem_adr);
+    227             2                         12     
+    228                                              								end
+    229                                              
+    230                                              								if(!rw)
+    231                                              								begin
+    232             1                         48     									mem[ mem_adr[3:0] ] <= #1 sr; // store data in memory
+    233                                              									// sda_o <= #1 !(mem_adr < 7);
+    234                                              									if(debug)
+    235             1                         48     										#2 $display("DEBUG i2c_slave; data block write %x to address %x", sr, mem_adr);
+    235             2                         48     
+    236                                              								end
+    237                                              							end
+    238                                              					end
+    239                                              
+    240                                              					data_ack:
+    241                                              					begin
+    242             1                         59     						ld <= #1 1'b1;
+    243                                              						if (!rw)
+    244             1                         48     							check_data <= 1;
+    245                                              						if(rw) begin
+    246             1                         11     							read_data <= 1;
+    247                                              							if(sr[0]) // read operation && master send NACK
+    248                                              							begin
+    249             1                    ***0***     								state <= #1 idle;
+    250             1                    ***0***     								sda_o <= #1 1'b1;
+    251                                              							end
+    252                                              							else
+    253                                              							begin
+    254             1                         11     								state <= #1 data;
+    255             1                         11     								sda_o <= #1 mem_do[7];
+    256                                              							end
+    257                                              						end
+    258                                              						else
+    259                                              							begin
+    260             1                         48     								state <= #1 data;
+    261             1                         48     								sda_o <= #1 1'b1;
+    262                                              							end
+    263                                              					end
+    264                                              
+    265                                              				endcase
+    266                                              			end
+    267                                              
+    268                                              	// read data from memory
+    269             1                        302     	always @(posedge scl)
+    270                                              	  if(!acc_done && rw)
+    271             1                        114     	    mem_do <= #1 {mem_do[6:0], 1'b1}; // insert 1'b1 for host ack generation
+    272                                              
+    273                                              	// generate tri-states
+    274             1                        268     	assign sda = sda_o ? 1'bz : 1'b0;
+    275                                              
+    276                                              endmodule
+    277                                              
+    278                                              
+
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                        58        51         7     87.93
+
+================================Branch Details================================
+
+Branch Coverage for file ../rtl/i2c_slave_model.v --
+
+------------------------------------IF Branch------------------------------------
+    78                                       852     Count coming in to IF
+    78              1                         93     	  if(ld)
+    80              1                        759     	  else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    97                                       197     Count coming in to IF
+    97              1                         24     		if(scl)
+    106             1                        173     		else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    103                                       24     Count coming in to IF
+    103             1                         24     				if(debug)
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    114                                      220     Count coming in to IF
+    114             1                         48     		if(scl)
+    122             1                        172     		else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    119                                       48     Count coming in to IF
+    119             1                         48     			if(debug)
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    130                                      791     Count coming in to IF
+    130             1                         57     		if (sto || (sta && !d_sta) )
+    136             1                        734     		else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    142                                      734     Count coming in to CASE
+    143             1                        165     					idle: // idle state
+    172             1                         18     					slave_ack:
+    185             1                         34     					get_mem_adr: // wait for memory address
+    200             1                         10     					gma_ack:
+    206             1                        448     					data: // receive or drive data
+    240             1                         59     					data_ack:
+Branch totals: 6 hits of 6 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    144                                      165     Count coming in to IF
+    144             1                         19     					if (acc_done && my_adr)
+                                             146     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    152                                       19     Count coming in to IF
+    152             1                          5     							if(debug && rw)
+                                              14     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    154                                       19     Count coming in to IF
+    154             1                         14     							if(debug && !rw) begin
+                                               5     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    158                                       19     Count coming in to IF
+    158             1                          5     							if(rw)
+                                              14     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    163                                        5     Count coming in to IF
+    163             1                          5     								if(debug)
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    174                                       18     Count coming in to IF
+    174             1                          5     						if(rw)
+    179             1                         13     						else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    186                                       34     Count coming in to IF
+    186             1                         11     					if(acc_done)
+                                              23     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    196                                       11     Count coming in to IF
+    196             1                         11     							if(debug)
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    208                                      448     Count coming in to IF
+    208             1                         60     						if (acc_done) 
+                                             388     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    213                                      448     Count coming in to IF
+    213             1                         95     						if(rw)
+                                             353     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    216                                      448     Count coming in to IF
+    216             1                         60     						if(acc_done)
+                                             388     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    222                                       60     Count coming in to IF
+    222             1                         12     								if(rw)
+                                              48     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    226                                       12     Count coming in to IF
+    226             1                         12     									if(debug)
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    230                                       60     Count coming in to IF
+    230             1                         48     								if(!rw)
+                                              12     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    234                                       48     Count coming in to IF
+    234             1                         48     									if(debug)
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    243                                       59     Count coming in to IF
+    243             1                         48     						if (!rw)
+                                              11     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    245                                       59     Count coming in to IF
+    245             1                         11     						if(rw) begin
+    258             1                         48     						else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    247                                       11     Count coming in to IF
+    247             1                    ***0***     							if(sr[0]) // read operation && master send NACK
+    252             1                         11     							else
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    270                                      302     Count coming in to IF
+    270             1                        114     	  if(!acc_done && rw)
+                                             188     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    274                                      226     Count coming in to IF
+    274             1                        103     	assign sda = sda_o ? 1'bz : 1'b0;
+    274             2                        123     	assign sda = sda_o ? 1'bz : 1'b0;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Condition Terms             11         9         2     81.81
+
+================================Condition Details================================
+
+Condition Coverage for file ../rtl/i2c_slave_model.v --
+
+----------------Focused Condition View-------------------
+Line       130 Item    1  (sto || (sta && ~d_sta))
+Condition totals: 3 of 3 input terms covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       144 Item    1  (acc_done && my_adr)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       152 Item    1  (debug && rw)
+Condition totals: 1 of 2 input terms covered = 50.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+       debug         N  '_0' not hit             Hit '_0'
+          rw         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  debug_0               -                             
+  Row   2:          3  debug_1               rw                            
+  Row   3:          9  rw_0                  debug                         
+  Row   4:          3  rw_1                  debug                         
+
+----------------Focused Condition View-------------------
+Line       154 Item    1  (debug && ~rw)
+Condition totals: 1 of 2 input terms covered = 50.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+       debug         N  '_0' not hit             Hit '_0'
+          rw         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  debug_0               -                             
+  Row   2:          9  debug_1               ~rw                           
+  Row   3:          9  rw_0                  debug                         
+  Row   4:          3  rw_1                  debug                         
+
+----------------Focused Condition View-------------------
+Line       270 Item    1  (~acc_done && rw)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+
+Expression Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Expression Terms             5         4         1     80.00
+
+================================Expression Details================================
+
+Expression Coverage for file ../rtl/i2c_slave_model.v --
+
+----------------Focused Expression View-----------------
+Line       72 Item    1  (sr[7:1] == 16)
+Expression totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Expression View-----------------
+Line       126 Item    1  (sta || sto)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+----------------Focused Expression View-----------------
+Line       220 Item    1  (rw && (mem_adr <= 15))
+Expression totals: 1 of 2 input terms covered = 50.00%
+
+       Input Term   Covered  Reason for no coverage   Hint
+      -----------  --------  -----------------------  --------------
+               rw         Y
+  (mem_adr <= 15)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          8  rw_0                  -                             
+  Row   2:          3  rw_1                  (mem_adr <= 15)               
+  Row   3:    ***0***  (mem_adr <= 15)_0     rw                            
+  Row   4:          3  (mem_adr <= 15)_1     rw                            
+
+----------------Focused Expression View-----------------
+Line       274 Item    1  (sda_o? 1'bZ: 1'b0)
+Expression totals: 0 of 0 input terms covered = 100.00% (all terms are excluded)
+
+
+FSM Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FSMs                                                      100.00
+        States                       6         6         0    100.00
+        Transitions                 12        12         0    100.00
+
+================================FSM Details================================
+
+FSM Coverage for file ../rtl/i2c_slave_model.v --
+
+FSM_ID: state
+    Current State Object : state
+    ----------------------
+    State Value MapInfo :
+    ---------------------
+Line          State Name               Value
+----          ----------               -----
+ 143                idle                   0
+ 172           slave_ack                   1
+ 185         get_mem_adr                   2
+ 206                data                   4
+ 200             gma_ack                   3
+ 240            data_ack                   5
+    Covered States :
+    ----------------
+                   State           Hit_count
+                   -----           ---------
+                    idle                  57
+               slave_ack                  19
+             get_mem_adr                  13
+                    data                  74
+                 gma_ack                  11
+                data_ack                  60
+    Covered Transitions :
+    ---------------------
+Line            Trans_ID           Hit_count          Transition          
+----            --------           ---------          ----------          
+ 146                   0                  19          idle -> slave_ack   
+ 180                   1                  13          slave_ack -> get_mem_adr
+ 176                   2                   5          slave_ack -> data   
+ 132                   3                   1          slave_ack -> idle   
+ 188                   4                  11          get_mem_adr -> gma_ack
+ 132                   5                   2          get_mem_adr -> idle 
+ 218                   6                  60          data -> data_ack    
+ 132                   7                  13          data -> idle        
+ 202                   8                  10          gma_ack -> data     
+ 132                   9                   1          gma_ack -> idle     
+ 260                  10                  59          data_ack -> data    
+ 249                  11                   1          data_ack -> idle    
+
+
+    Summary                     Active      Hits    Misses % Covered
+    -------                     ------      ----    ------ ---------
+        States                       6         6         0    100.00
+        Transitions                 12        12         0    100.00
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                    106        93        13     87.73
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../rtl/i2c_slave_model.v --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+         29                             mem_adr[7]           0           0        0.00 
+         29                             mem_adr[6]           0           0        0.00 
+         29                             mem_adr[5]           0           0        0.00 
+         29                             mem_adr[4]           0           0        0.00 
+         29                             mem_adr[3]           0           0        0.00 
+         33                                  d_sto           0           0        0.00 
+         36                                     rw           0           3       50.00 
+
+Total Node Count     =         53 
+Toggled Node Count   =         46 
+Untoggled Node Count =          7 
+
+Toggle Coverage      =      87.73% (93 of 106 bins)
+
+=================================================================================
+=== File: ../rtl/top.v
+=================================================================================
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                            5         5         0    100.00
+
+================================Statement Details================================
+
+Statement Coverage for file ../rtl/top.v --
+
+    1                                                module apb_to_i2c_top 
+    2                                                	#(parameter ADDRESSWIDTH= 4,
+    3                                                	parameter DATAWIDTH= 8)
+    4                                                
+    5                                                	(
+    6                                                	//apb block
+    7                                                	input PCLK,
+    8                                                	input PRESETn,
+    9                                                	input [DATAWIDTH-1:0] PADDR,
+    10                                               	input [DATAWIDTH-1:0] PWDATA,
+    11                                               	input PWRITE,
+    12                                               	input PSELx,
+    13                                               	input PENABLE,
+    14                                               	output  [DATAWIDTH-1:0] PRDATA,
+    15                                               	output  PREADY,
+    16                                               	
+    17                                               	//i2c block
+    18                                               	inout i2c_sda,
+    19                                               	inout i2c_scl,
+    20                                               	input clk
+    21                                               	
+    22                                               
+    23                                               	);
+    24                                               	
+    25                                               	//apb signal
+    26                                               	wire write_enable_tx;
+    27                                               	wire read_enable_rx;
+    28                                               	wire delete_reg_command;
+    29                                               
+    30                                               	//register apb
+    31                                               	wire [7:0] reg_command;
+    32                                               	wire [7:0] reg_status;
+    33                                               	wire [7:0] reg_transmit;
+    34                                               	wire [7:0] reg_receive;	
+    35                                               	wire [7:0] reg_address;
+    36                                               	
+    37                                               	//change 1 bit to 8 bit data out
+    38                                               	wire [7:0] combine_bit_data;
+    39                                               	
+    40                                               	//
+    41                                               	wire [7:0] data_fifo_to_i2c;
+    42                                               	wire [7:0] data_i2c_to_fifo;
+    43                                               	reg [7:0] data_fifo_to_i2c_tx;
+    44                                               	
+    45                                               	//i2c signal
+    46                                               	wire i2c_ready;
+    47                                               	wire [7:0] i2c_data_in;
+    48                                               	wire fifo_tx_rd_en;
+    49                                               	wire fifo_rx_wr_en;
+    50                                               	wire i2c_enable;
+    51                                               	wire fifo_tx_empty;
+    52                                               	
+    53                                               	//signal
+    54                                               	reg [7:0] pre_i2c_data_in;
+    55                                               	reg delete_i2c_enable;
+    56                                               	reg pre_i2c_enable;
+    57                                               	reg [2:0] status1 = 0;
+    58                                               	reg c = 0;
+    59                                               	reg pre_data_i2c_to_fifo;
+    60                                               
+    61                                               	// bit no use
+    62                                               	assign reg_command[1:0] = 2'b00;
+    63                                               	assign reg_status[2:0] = 3'b000;
+    64                                               	
+    65                                               	//connect module
+    66                                               	apb_slave apb_slave(
+    67                                               		.PCLK(PCLK),
+    68                                               		.PRESETn(PRESETn),
+    69                                               		.PADDR(PADDR),
+    70                                               		.PWDATA(PWDATA),
+    71                                               		.PWRITE(PWRITE),
+    72                                               		.PSELx(PSELx),
+    73                                               		.PENABLE(PENABLE),
+    74                                               		.PRDATA(PRDATA),
+    75                                               		.PREADY(PREADY),
+    76                                               	
+    77                                               		//register	
+    78                                               		.reg_command(reg_command),
+    79                                               		.reg_status(reg_status),
+    80                                               		.reg_transmit(reg_transmit),
+    81                                               		.reg_receive(reg_receive),
+    82                                               		.reg_address(reg_address),
+    83                                               
+    84                                               		.write_enable_tx(write_enable_tx),
+    85                                               		.read_enable_rx(read_enable_rx),
+    86                                               		.delete_reg_command(delete_reg_command)
+    87                                               	);
+    88                                               
+    89                                               	async_fifo tx_fifo(
+    90                                               		.write_enable(write_enable_tx), 
+    91                                               		.write_clk(PCLK), 
+    92                                               		.write_reset_n(reg_command[7]),
+    93                                               		.read_enable(fifo_tx_rd_en), 
+    94                                               		.read_clk(clk), 
+    95                                               		.read_reset_n(reg_command[6]),
+    96                                               		.write_data(reg_transmit),
+    97                                               		.read_data(data_fifo_to_i2c),
+    98                                               		.write_full(reg_status[7]),
+    99                                               		.read_empty(reg_status[6])
+    100                                              	);
+    101                                              
+    102                                              	async_fifo rx_fifo(
+    103                                              		.write_enable(fifo_rx_wr_en), 
+    104                                              		.write_clk(clk), 
+    105                                              		.write_reset_n(reg_command[5]),
+    106                                              		.read_enable(read_enable_rx), 
+    107                                              		.read_clk(PCLK), 
+    108                                              		.read_reset_n(reg_command[4]),
+    109                                              		.write_data(data_i2c_to_fifo),
+    110                                              		.read_data(reg_receive),
+    111                                              		.write_full(reg_status[5]),
+    112                                              		.read_empty(reg_status[4])
+    113                                              	);
+    114                                              
+    115                                              	i2c_master i2c_master(
+    116                                              		.clk(clk),
+    117                                              		.i2c_reset_n(reg_command[3]),
+    118                                              		.addr(reg_address[7:1]),
+    119                                              		.rw(reg_address[0]),
+    120                                              		.i2c_enable(i2c_enable),
+    121                                              		.i2c_data_in(i2c_data_in),
+    122                                              		.i2c_data_out(data_i2c_to_fifo),
+    123                                              		.i2c_sda(i2c_sda),
+    124                                              		.i2c_scl(i2c_scl),
+    125                                              		.i2c_ready(reg_status[3]),
+    126                                              		.fifo_tx_rd_en(fifo_tx_rd_en),
+    127                                              		.fifo_rx_wr_en(fifo_rx_wr_en),
+    128                                              		.i2c_repeat_start(reg_command[2]),
+    129                                              		.fifo_tx_empty(reg_status[6]),
+    130                                              		.fifo_rx_full(reg_status[5])
+    131                                              	);
+    132                                              
+    133                                              	// i2c_slave_model i2c_slave(
+    134                                              	// 	.sda(i2c_sda),
+    135                                              	// 	.scl(i2c_scl)
+    136                                              	// );
+    137                                              	
+    138                                              	// fifo_tx_rd_en -> read accept
+    139                                              	assign i2c_data_in = pre_i2c_data_in;
+    140             1                        168     	always@ (posedge clk) begin
+    141                                              		if (fifo_tx_rd_en)
+    142             1                         65     			pre_i2c_data_in <= data_fifo_to_i2c;
+    143                                              	end
+    144                                              
+    145                                              	assign delete_reg_command = fifo_tx_rd_en; 
+    146                                              	assign i2c_enable = pre_i2c_enable;
+    147             1                        185     	always@ (posedge clk) begin
+    148                                              		if(reg_command[2] == 1) begin
+    149                                              			if (reg_status[3]) begin
+    150             1                         49     				pre_i2c_enable <= reg_command[2];
+    151                                              				end
+    152                                              			else begin
+    153             1                         82     				pre_i2c_enable <= 0;
+    154                                              			end
+    155                                              		end
+    156                                              	end
+    157                                              	
+    158                                              endmodule
+
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         6         6         0    100.00
+
+================================Branch Details================================
+
+Branch Coverage for file ../rtl/top.v --
+
+------------------------------------IF Branch------------------------------------
+    141                                      168     Count coming in to IF
+    141             1                         65     		if (fifo_tx_rd_en)
+                                             103     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    148                                      185     Count coming in to IF
+    148             1                        131     		if(reg_command[2] == 1) begin
+                                              54     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    149                                      131     Count coming in to IF
+    149             1                         49     			if (reg_status[3]) begin
+    152             1                         82     			else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Condition Terms              1         1         0    100.00
+
+================================Condition Details================================
+
+Condition Coverage for file ../rtl/top.v --
+
+----------------Focused Condition View-------------------
+Line       148 Item    1  (reg_command[2] == 1)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                    264       165        99     62.50
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../rtl/top.v --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+          8                                PRESETn           0          13       50.00 
+          9                               PADDR[7]           0           0        0.00 
+          9                               PADDR[6]           0           0        0.00 
+          9                               PADDR[5]           0           0        0.00 
+          9                               PADDR[4]           0           0        0.00 
+          9                               PADDR[3]           0           0        0.00 
+         14                              PRDATA[7]           0           0        0.00 
+         14                              PRDATA[6]           0           2       50.00 
+         14                              PRDATA[5]           0           1       50.00 
+         14                              PRDATA[4]           0           3       50.00 
+         14                              PRDATA[3]           0           1       50.00 
+         14                              PRDATA[2]           0           1       50.00 
+         14                              PRDATA[1]           0           0        0.00 
+         15                                 PREADY           0           0        0.00 
+         31                         reg_command[1]           0           0        0.00 
+         31                         reg_command[0]           0           0        0.00 
+         32                          reg_status[2]           0           0        0.00 
+         32                          reg_status[1]           0           0        0.00 
+         32                          reg_status[0]           0           0        0.00 
+         34                         reg_receive[7]           0           0        0.00 
+         34                         reg_receive[6]           0           0        0.00 
+         34                         reg_receive[5]           0           0        0.00 
+         34                         reg_receive[2]           0           0        0.00 
+         34                         reg_receive[1]           0           0        0.00 
+         35                         reg_address[7]           0           1       50.00 
+         35                         reg_address[6]           0           1       50.00 
+         35                         reg_address[5]           0          10       50.00 
+         35                         reg_address[4]           0           0        0.00 
+         35                         reg_address[3]           0           0        0.00 
+         35                         reg_address[2]           0           0        0.00 
+         35                         reg_address[1]           0           1       50.00 
+         35                         reg_address[0]           0           4       50.00 
+         38                    combine_bit_data[7]           0           0        0.00 
+         38                    combine_bit_data[6]           0           0        0.00 
+         38                    combine_bit_data[5]           0           0        0.00 
+         38                    combine_bit_data[4]           0           0        0.00 
+         38                    combine_bit_data[3]           0           0        0.00 
+         38                    combine_bit_data[2]           0           0        0.00 
+         38                    combine_bit_data[1]           0           0        0.00 
+         38                    combine_bit_data[0]           0           0        0.00 
+         42                    data_i2c_to_fifo[7]           0           1       50.00 
+         42                    data_i2c_to_fifo[6]           0           1       50.00 
+         42                    data_i2c_to_fifo[5]           1           0       50.00 
+         42                    data_i2c_to_fifo[2]           1           0       50.00 
+         42                    data_i2c_to_fifo[1]           0           0        0.00 
+         43                 data_fifo_to_i2c_tx[7]           0           0        0.00 
+         43                 data_fifo_to_i2c_tx[6]           0           0        0.00 
+         43                 data_fifo_to_i2c_tx[5]           0           0        0.00 
+         43                 data_fifo_to_i2c_tx[4]           0           0        0.00 
+         43                 data_fifo_to_i2c_tx[3]           0           0        0.00 
+         43                 data_fifo_to_i2c_tx[2]           0           0        0.00 
+         43                 data_fifo_to_i2c_tx[1]           0           0        0.00 
+         43                 data_fifo_to_i2c_tx[0]           0           0        0.00 
+         46                              i2c_ready           0           0        0.00 
+         51                          fifo_tx_empty           0           0        0.00 
+         55                      delete_i2c_enable           0           0        0.00 
+         59                   pre_data_i2c_to_fifo           0           0        0.00 
+
+Total Node Count     =        132 
+Toggled Node Count   =         75 
+Untoggled Node Count =         57 
+
+Toggle Coverage      =      62.50% (165 of 264 bins)
+
+COVERGROUP COVERAGE:
+-----------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal    Status               
+                                                                                              
+-----------------------------------------------------------------------------------------------
+ TYPE /top_sim_sv_unit/subscriber/cov                 100.00%        100    Covered              
+    covered/total bins:                                    17         17                      
+    missing/total bins:                                     0         17                      
+    % Hit:                                            100.00%        100                      
+    Coverpoint cov::reg_addr                          100.00%        100    Covered              
+        covered/total bins:                                 5          5                      
+        missing/total bins:                                 0          5                      
+        % Hit:                                        100.00%        100                      
+        bin bin2                                           54          1    Covered              
+        bin bin4                                           84          1    Covered              
+        bin bin6                                           26          1    Covered              
+        bin bin3                                            3          1    Covered              
+        bin bin5                                           12          1    Covered              
+    Coverpoint cov::rw                                100.00%        100    Covered              
+        covered/total bins:                                 2          2                      
+        missing/total bins:                                 0          2                      
+        % Hit:                                        100.00%        100                      
+        bin write                                         160          1    Covered              
+        bin read                                           19          1    Covered              
+    Cross cov::rw_reg                                 100.00%        100    Covered              
+        covered/total bins:                                10         10                      
+        missing/total bins:                                 0         10                      
+        % Hit:                                        100.00%        100                      
+        bin <bin2,write>                                   52          1    Covered              
+        bin <bin4,write>                                   82          1    Covered              
+        bin <bin6,write>                                   24          1    Covered              
+        bin <bin3,read>                                     2          1    Covered              
+        bin <bin5,read>                                    11          1    Covered              
+        bin read_status                                     1          1    Covered              
+        bin read_receive                                    1          1    Covered              
+        bin write_command                                   2          1    Covered              
+        bin write_address                                   2          1    Covered              
+        bin write_transmit                                  2          1    Covered              
+
+TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 1
+
+Total Coverage By File (code coverage only, filtered view): 89.29%
+

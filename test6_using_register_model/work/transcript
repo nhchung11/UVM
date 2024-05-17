@@ -1,0 +1,291 @@
+# vsim -voptargs="+acc" -sva -assertdebug -coverage top_sim -c -do "set WildcardFilter None;add wave -r top_sim/*; coverage save -onexit RESET_STATE.ucdb; run -all; quit;" 
+# Start time: 17:49:48 on May 17,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "i2c_slave_model(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "i2c_master(fast)".
+# ** Warning: ../sim/scoreboard.sv(137): (vopt-2240) Treating stand-alone use of function 'pop_back' as an implicit VOID cast.
+# ** Warning: ../testcases/base_sequence.sv(221): (vopt-2961) Argument #1 for std::randomize() function is non-LRM compliant.
+# ** Warning: ../testcases/base_sequence.sv(247): (vopt-2961) Argument #1 for std::randomize() function is non-LRM compliant.
+# ** Warning: ../testcases/base_sequence.sv(259): (vopt-2961) Argument #1 for std::randomize() function is non-LRM compliant.
+# ** Warning: ../testcases/base_sequence.sv(271): (vopt-2961) Argument #1 for std::randomize() function is non-LRM compliant.
+# ** Warning: ../testcases/base_sequence.sv(328): (vopt-2961) Argument #1 for std::randomize() function is non-LRM compliant.
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.top_sim_sv_unit(fast)
+# Loading work.top_sim(fast)
+# Loading work.intf(fast)
+# Loading work.apb_to_i2c_top(fast)
+# Loading work.apb_slave(fast)
+# Loading work.async_fifo(fast)
+# Loading work.sync_r2w(fast)
+# Loading work.sync_w2r(fast)
+# Loading work.fifomem(fast)
+# Loading work.rptr_empty(fast)
+# Loading work.wptr_full(fast)
+# Loading work.i2c_master(fast)
+# Loading work.i2c_slave_model(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.intf(fast)
+# Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
+# set WildcardFilter None
+# None
+# add wave -r top_sim/*
+#  coverage save -onexit RESET_STATE.ucdb
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test test...
+# UVM_INFO ../sim/test.sv(25) @ 0: uvm_test_top [uvm_test_top] 
+# --------------------------------------------------------------------------------------------------------
+# UVM_INFO ../sim/test.sv(26) @ 0: uvm_test_top [uvm_test_top] TEST BUILD PHASE
+# UVM_INFO ../sim/environment.sv(34) @ 0: uvm_test_top.my_env [my_env] ENVIRONMENT BUILD PHASE
+# include_coverage not located
+#   did you mean recording_detail?
+# UVM_INFO ../sim/agent.sv(25) @ 0: uvm_test_top.my_env.my_agent [my_agent] AGENT BUILD PHASE
+# UVM_INFO ../sim/driver.sv(22) @ 0: uvm_test_top.my_env.my_agent.my_driver [my_driver] DRIVER BUILD PHASE
+# UVM_INFO ../sim/monitor.sv(20) @ 0: uvm_test_top.my_env.my_agent.my_monitor [my_monitor] MONITOR BUILD PHASE
+# UVM_INFO ../sim/scoreboard.sv(36) @ 0: uvm_test_top.my_env.my_scoreboard [my_scoreboard] SCOREBOARD BUILD PHASE
+# UVM_INFO ../sim/subscriber.sv(51) @ 0: uvm_test_top.my_env.my_subscriber [my_subscriber] SUBSCRIBER BUILD PHASE
+# UVM_INFO ../sim/agent.sv(34) @ 0: uvm_test_top.my_env.my_agent [my_agent] AGENT CONNECT PHASE
+# UVM_INFO ../sim/environment.sv(57) @ 0: uvm_test_top.my_env [my_env] ENVIRONMENT CONNECT PHASE
+# UVM_INFO ../sim/environment.sv(77) @ 0: uvm_test_top.my_env [my_env] 
+# --------------------------------------------------------------------------------------------------------
+# UVM_INFO ../sim/environment.sv(78) @ 0: uvm_test_top.my_env [my_env] ENVIRONMENT RUN PHASE
+# UVM_INFO ../sim/monitor.sv(35) @ 0: uvm_test_top.my_env.my_agent.my_monitor [my_monitor] MONITOR RUN PHASE
+# UVM_INFO ../sim/driver.sv(36) @ 0: uvm_test_top.my_env.my_agent.my_driver [my_driver] DRIVER RUN PHASE
+# UVM_INFO ../testcases/base_sequence.sv(405) @ 0: uvm_test_top.my_env.my_agent.my_sequencer@@seq [seq] =======================================================
+# UVM_INFO ../testcases/base_sequence.sv(406) @ 0: uvm_test_top.my_env.my_agent.my_sequencer@@seq [seq] ============ RESET TO COMPLETE FSM TRANSACTION ========
+# UVM_INFO ../testcases/base_sequence.sv(407) @ 0: uvm_test_top.my_env.my_agent.my_sequencer@@seq [seq] =======================================================
+# UVM_INFO ../sim/adapter.sv(19) @ 0: reporter [my_adapter] Write 246 to register 2
+# DEBUG i2c_slave; stop condition detected at                    0
+# UVM_INFO ../sim/scoreboard.sv(127) @ 220: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Reset applied at                  220
+# UVM_INFO ../sim/scoreboard.sv(138) @ 220: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Pop back 1 at                  220
+# UVM_INFO ../sim/subscriber.sv(56) @ 220: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 230: reporter [my_adapter] Write 32 to register 6
+# UVM_INFO ../sim/scoreboard.sv(138) @ 250: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Pop back 1 at                  250
+# UVM_INFO ../sim/subscriber.sv(56) @ 250: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 260: reporter [my_adapter] Write 0 to register 4
+# UVM_INFO ../sim/scoreboard.sv(138) @ 280: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Pop back 1 at                  280
+# UVM_INFO ../sim/subscriber.sv(56) @ 280: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 290: reporter [my_adapter] Write 1 to register 4
+# UVM_INFO ../sim/scoreboard.sv(138) @ 310: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Pop back 1 at                  310
+# UVM_INFO ../sim/subscriber.sv(56) @ 310: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 320: reporter [my_adapter] Write 254 to register 2
+# UVM_INFO ../sim/subscriber.sv(56) @ 340: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# DEBUG i2c_slave; start condition detected at                  520
+# UVM_INFO ../testcases/base_sequence.sv(416) @ 550: uvm_test_top.my_env.my_agent.my_sequencer@@seq [seq] Reset at:                  550
+# UVM_INFO ../sim/adapter.sv(19) @ 550: reporter [my_adapter] Write 246 to register 2
+# UVM_INFO ../sim/scoreboard.sv(127) @ 560: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Reset applied at                  560
+# UVM_INFO ../sim/scoreboard.sv(138) @ 560: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Pop back 1 at                  560
+# UVM_INFO ../sim/subscriber.sv(56) @ 560: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 570: reporter [my_adapter] Write 32 to register 6
+# DEBUG i2c_slave; stop condition detected at                  570
+# UVM_INFO ../sim/scoreboard.sv(138) @ 590: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Pop back 1 at                  590
+# UVM_INFO ../sim/subscriber.sv(56) @ 590: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 600: reporter [my_adapter] Write 0 to register 4
+# UVM_INFO ../sim/scoreboard.sv(138) @ 620: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Pop back 1 at                  620
+# UVM_INFO ../sim/subscriber.sv(56) @ 620: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 630: reporter [my_adapter] Write 1 to register 4
+# UVM_INFO ../sim/scoreboard.sv(138) @ 650: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Pop back 1 at                  650
+# UVM_INFO ../sim/subscriber.sv(56) @ 650: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 660: reporter [my_adapter] Write 254 to register 2
+# UVM_INFO ../sim/subscriber.sv(56) @ 680: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# DEBUG i2c_slave; start condition detected at                  840
+# UVM_INFO ../testcases/base_sequence.sv(425) @ 990: uvm_test_top.my_env.my_agent.my_sequencer@@seq [seq] Reset at:                  990
+# UVM_INFO ../sim/adapter.sv(19) @ 990: reporter [my_adapter] Write 246 to register 2
+# UVM_INFO ../sim/scoreboard.sv(127) @ 1000: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Reset applied at                 1000
+# UVM_INFO ../sim/scoreboard.sv(138) @ 1000: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Pop back 1 at                 1000
+# UVM_INFO ../sim/subscriber.sv(56) @ 1000: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 1010: reporter [my_adapter] Write 32 to register 6
+# DEBUG i2c_slave; stop condition detected at                 1010
+# UVM_INFO ../sim/scoreboard.sv(138) @ 1030: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Pop back 1 at                 1030
+# UVM_INFO ../sim/subscriber.sv(56) @ 1030: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 1040: reporter [my_adapter] Write 0 to register 4
+# UVM_INFO ../sim/scoreboard.sv(138) @ 1060: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Pop back 1 at                 1060
+# UVM_INFO ../sim/subscriber.sv(56) @ 1060: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 1070: reporter [my_adapter] Write 1 to register 4
+# UVM_INFO ../sim/scoreboard.sv(138) @ 1090: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Pop back 1 at                 1090
+# UVM_INFO ../sim/subscriber.sv(56) @ 1090: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 1100: reporter [my_adapter] Write 254 to register 2
+# UVM_INFO ../sim/subscriber.sv(56) @ 1120: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# DEBUG i2c_slave; start condition detected at                 1320
+# UVM_INFO ../testcases/base_sequence.sv(434) @ 2670: uvm_test_top.my_env.my_agent.my_sequencer@@seq [seq] Reset at:                 2670
+# DEBUG i2c_slave; command byte received (write) at                 2762
+# UVM_INFO ../sim/adapter.sv(19) @ 2770: reporter [my_adapter] Write 246 to register 2
+# UVM_INFO ../sim/scoreboard.sv(127) @ 2780: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Reset applied at                 2780
+# UVM_INFO ../sim/subscriber.sv(56) @ 2780: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 2790: reporter [my_adapter] Write 32 to register 6
+# DEBUG i2c_slave; stop condition detected at                 2790
+# DEBUG i2c_slave; stop condition detected at                 2792
+# UVM_INFO ../sim/subscriber.sv(56) @ 2810: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 2820: reporter [my_adapter] Write 0 to register 4
+# UVM_INFO ../sim/subscriber.sv(56) @ 2840: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 2850: reporter [my_adapter] Write 1 to register 4
+# UVM_INFO ../sim/subscriber.sv(56) @ 2870: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 2880: reporter [my_adapter] Write 254 to register 2
+# UVM_INFO ../sim/subscriber.sv(56) @ 2900: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# DEBUG i2c_slave; start condition detected at                 3080
+# DEBUG i2c_slave; command byte received (write) at                 4522
+# UVM_INFO ../testcases/base_sequence.sv(444) @ 4710: uvm_test_top.my_env.my_agent.my_sequencer@@seq [seq] Reset at:                 4710
+# UVM_INFO ../sim/adapter.sv(19) @ 4710: reporter [my_adapter] Write 246 to register 2
+# UVM_INFO ../sim/scoreboard.sv(127) @ 4720: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Reset applied at                 4720
+# UVM_INFO ../sim/subscriber.sv(56) @ 4720: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 4730: reporter [my_adapter] Write 32 to register 6
+# DEBUG i2c_slave; stop condition detected at                 4730
+# UVM_INFO ../sim/subscriber.sv(56) @ 4750: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 4760: reporter [my_adapter] Write 0 to register 4
+# UVM_INFO ../sim/subscriber.sv(56) @ 4780: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 4790: reporter [my_adapter] Write 1 to register 4
+# UVM_INFO ../sim/subscriber.sv(56) @ 4810: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 4820: reporter [my_adapter] Write 254 to register 2
+# UVM_INFO ../sim/subscriber.sv(56) @ 4840: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# DEBUG i2c_slave; start condition detected at                 5000
+# DEBUG i2c_slave; command byte received (write) at                 6442
+# UVM_INFO ../testcases/base_sequence.sv(453) @ 7830: uvm_test_top.my_env.my_agent.my_sequencer@@seq [seq] Reset at:                 7830
+# UVM_INFO ../sim/adapter.sv(19) @ 7830: reporter [my_adapter] Write 246 to register 2
+# UVM_INFO ../sim/scoreboard.sv(127) @ 7840: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Reset applied at                 7840
+# UVM_INFO ../sim/subscriber.sv(56) @ 7840: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 7850: reporter [my_adapter] Write 32 to register 6
+# UVM_INFO ../sim/subscriber.sv(56) @ 7870: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 7880: reporter [my_adapter] Write 0 to register 4
+# UVM_INFO ../sim/subscriber.sv(56) @ 7900: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 7910: reporter [my_adapter] Write 1 to register 4
+# UVM_INFO ../sim/subscriber.sv(56) @ 7930: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 7940: reporter [my_adapter] Write 254 to register 2
+# UVM_INFO ../sim/subscriber.sv(56) @ 7960: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# DEBUG i2c_slave; start condition detected at                 8200
+# DEBUG i2c_slave; command byte received (write) at                 9642
+# DEBUG i2c_slave; address received. adr=00, ack=1
+# DEBUG i2c_slave; data block write 01 to address 00
+# DEBUG i2c_slave; data block write 00 to address 01
+# UVM_INFO ../sim/adapter.sv(19) @ 14970: reporter [my_adapter] Write 33 to register 6
+# UVM_INFO ../sim/subscriber.sv(56) @ 14980: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 14990: reporter [my_adapter] Write 252 to register 2
+# UVM_INFO ../sim/subscriber.sv(56) @ 15010: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# DEBUG i2c_slave; data block write 01 to address 02
+# DEBUG i2c_slave; data block write 00 to address 03
+# UVM_INFO ../testcases/base_sequence.sv(467) @ 16900: uvm_test_top.my_env.my_agent.my_sequencer@@seq [seq] Reset at:                16900
+# UVM_INFO ../sim/adapter.sv(19) @ 16900: reporter [my_adapter] Write 6 to register 2
+# UVM_INFO ../sim/scoreboard.sv(127) @ 16910: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Reset applied at                16910
+# UVM_INFO ../sim/subscriber.sv(56) @ 16910: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 16920: reporter [my_adapter] Write 33 to register 6
+# DEBUG i2c_slave; stop condition detected at                16920
+# DEBUG i2c_slave; stop condition detected at                16922
+# UVM_INFO ../sim/subscriber.sv(56) @ 16940: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 16950: reporter [my_adapter] Write 252 to register 2
+# UVM_INFO ../sim/subscriber.sv(56) @ 16970: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# DEBUG i2c_slave; start condition detected at                17160
+# DEBUG i2c_slave; command byte received (read) at                18602
+# DEBUG i2c_slave; data block read 01 from address 00 (1)
+# DEBUG i2c_slave; memcheck [0]=01, [1]=00, [2]=01
+# DEBUG i2c_slave; data block read 00 from address 01 (2)
+# UVM_INFO ../testcases/base_sequence.sv(474) @ 20050: uvm_test_top.my_env.my_agent.my_sequencer@@seq [seq] Reset at:                20050
+# UVM_INFO ../sim/adapter.sv(19) @ 20050: reporter [my_adapter] Write 6 to register 2
+# UVM_INFO ../sim/scoreboard.sv(127) @ 20060: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Reset applied at                20060
+# UVM_INFO ../sim/subscriber.sv(56) @ 20060: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 20070: reporter [my_adapter] Write 33 to register 6
+# DEBUG i2c_slave; stop condition detected at                20070
+# UVM_INFO ../sim/subscriber.sv(56) @ 20090: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# UVM_INFO ../sim/adapter.sv(19) @ 20100: reporter [my_adapter] Write 252 to register 2
+# UVM_INFO ../sim/subscriber.sv(56) @ 20120: uvm_test_top.my_env.my_subscriber [my_subscriber] sample
+# DEBUG i2c_slave; start condition detected at                20360
+# DEBUG i2c_slave; command byte received (read) at                21802
+# DEBUG i2c_slave; data block read 01 from address 00 (1)
+# DEBUG i2c_slave; memcheck [0]=01, [1]=00, [2]=01
+# DEBUG i2c_slave; data block read 00 from address 01 (2)
+# DEBUG i2c_slave; data block read 01 from address 02 (2)
+# DEBUG i2c_slave; data block read 00 from address 03 (2)
+# DEBUG i2c_slave; start condition detected at                28680
+# DEBUG i2c_slave; command byte received (read) at                30122
+# DEBUG i2c_slave; data block read 01 from address 00 (1)
+# DEBUG i2c_slave; memcheck [0]=01, [1]=00, [2]=01
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 30130: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_WARNING @ 30130: uvm_test_top.my_env.my_scoreboard [UVM_DEPRECATED] build()/build_phase() has been called explicitly, outside of the phasing system. This usage of build is deprecated and may lead to unexpected behavior.
+# UVM_INFO ../sim/scoreboard.sv(44) @ 30130: uvm_test_top.my_env.my_scoreboard [my_scoreboard] 
+# --------------------------------------------------------------------------------------------------------
+# UVM_INFO ../sim/scoreboard.sv(45) @ 30130: uvm_test_top.my_env.my_scoreboard [my_scoreboard] SCOREBOARD EXTRACT PHASE
+# UVM_INFO ../sim/scoreboard.sv(48) @ 30130: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Size of data DUT received queue: 4
+# UVM_INFO ../sim/scoreboard.sv(50) @ 30130: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 0
+# UVM_INFO ../sim/scoreboard.sv(50) @ 30130: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 1
+# UVM_INFO ../sim/scoreboard.sv(50) @ 30130: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 0
+# UVM_INFO ../sim/scoreboard.sv(50) @ 30130: uvm_test_top.my_env.my_scoreboard [my_scoreboard] DUT received: 1
+# UVM_INFO ../sim/scoreboard.sv(52) @ 30130: uvm_test_top.my_env.my_scoreboard [my_scoreboard] 
+# 
+# UVM_INFO ../sim/scoreboard.sv(55) @ 30130: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Size of APB write data queue: 6
+# UVM_INFO ../sim/scoreboard.sv(57) @ 30130: uvm_test_top.my_env.my_scoreboard [my_scoreboard] APB write: 0
+# UVM_INFO ../sim/scoreboard.sv(57) @ 30130: uvm_test_top.my_env.my_scoreboard [my_scoreboard] APB write: 1
+# UVM_INFO ../sim/scoreboard.sv(57) @ 30130: uvm_test_top.my_env.my_scoreboard [my_scoreboard] APB write: 0
+# UVM_INFO ../sim/scoreboard.sv(57) @ 30130: uvm_test_top.my_env.my_scoreboard [my_scoreboard] APB write: 1
+# UVM_INFO ../sim/scoreboard.sv(57) @ 30130: uvm_test_top.my_env.my_scoreboard [my_scoreboard] APB write: 0
+# UVM_INFO ../sim/scoreboard.sv(57) @ 30130: uvm_test_top.my_env.my_scoreboard [my_scoreboard] APB write: 1
+# UVM_INFO ../sim/scoreboard.sv(59) @ 30130: uvm_test_top.my_env.my_scoreboard [my_scoreboard] 
+# 
+# UVM_INFO ../sim/scoreboard.sv(68) @ 30130: uvm_test_top.my_env.my_scoreboard [my_scoreboard] 
+# 
+# UVM_INFO ../sim/scoreboard.sv(71) @ 30130: uvm_test_top.my_env.my_scoreboard [my_scoreboard] FIFO status: 0 (hex)
+# UVM_INFO ../sim/scoreboard.sv(72) @ 30130: uvm_test_top.my_env.my_scoreboard [my_scoreboard] Number of Reset applied: 0
+# UVM_WARNING @ 30130: uvm_test_top.my_env.my_scoreboard [UVM_DEPRECATED] build()/build_phase() has been called explicitly, outside of the phasing system. This usage of build is deprecated and may lead to unexpected behavior.
+# UVM_INFO ../sim/scoreboard.sv(78) @ 30130: uvm_test_top.my_env.my_scoreboard [my_scoreboard] 
+# --------------------------------------------------------------------------------------------------------
+# UVM_INFO ../sim/scoreboard.sv(79) @ 30130: uvm_test_top.my_env.my_scoreboard [my_scoreboard] SCOREBOARD CHECK PHASE
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  145
+# UVM_WARNING :    2
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVM_DEPRECATED]     2
+# [my_adapter]    38
+# [my_agent]     2
+# [my_driver]     2
+# [my_env]     4
+# [my_monitor]     2
+# [my_scoreboard]    42
+# [my_subscriber]    39
+# [seq]    10
+# [uvm_test_top]     2
+# ** Note: $finish    : C:/questasim64_10.7c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 30130 ns  Iteration: 59  Instance: /top_sim
+# Saving coverage database on exit...
+# End time: 17:49:52 on May 17,2024, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 6

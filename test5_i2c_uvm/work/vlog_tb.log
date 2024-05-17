@@ -1,0 +1,18 @@
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+Start time: 16:47:57 on May 16,2024
+vlog -timescale=1ns/1ns -sv "+acc" "+incdir+." -incr -f filelist_tb.f -assertdebug -l vlog_tb.log 
+** Note: (vlog-2286) ../sim/top_sim.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling interface intf
+-- Compiling package top_sim_sv_unit
+-- Compiling module assertion_cov
+-- Compiling module top_sim
+-- Scanning library directory '../sim'
+
+Referenced (but uncompiled) modules or primitives:
+	apb_to_i2c_top
+	i2c_slave_model
+
+Top level modules:
+	top_sim
+End time: 16:47:57 on May 16,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
