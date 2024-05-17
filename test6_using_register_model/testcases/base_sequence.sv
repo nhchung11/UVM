@@ -414,7 +414,6 @@ class RESET_STATE extends base_sequence;
 
         // reset in start state
         `uvm_info(get_name(), $sformatf("Reset at: %t", $time), UVM_MEDIUM)
-        this.my_regmodel.reg_command.write(status, 8'b0000_1110);
         this.my_regmodel.reg_command.write(status, 8'b11110110);
         this.my_regmodel.reg_address.write(status, 8'b0010_0000);
         this.my_regmodel.reg_transmit.write(status, 0);
@@ -424,7 +423,6 @@ class RESET_STATE extends base_sequence;
 
         // Reset in write address state
         `uvm_info(get_name(), $sformatf("Reset at: %t", $time), UVM_MEDIUM)
-        this.my_regmodel.reg_command.write(status, 8'b0000_0110);
         this.my_regmodel.reg_command.write(status, 8'b11110110);
         this.my_regmodel.reg_address.write(status, 8'b0010_0000);
         this.my_regmodel.reg_transmit.write(status, 0);
@@ -434,7 +432,7 @@ class RESET_STATE extends base_sequence;
 
         // Reset in address ack state
         `uvm_info(get_name(), $sformatf("Reset at: %t", $time), UVM_MEDIUM)
-        this.my_regmodel.reg_command.write(status, 8'b0000_1110);
+        `uvm_delay(100ns)
         this.my_regmodel.reg_command.write(status, 8'b11110110);
         this.my_regmodel.reg_address.write(status, 8'b0010_0000);
         this.my_regmodel.reg_transmit.write(status, 0);
@@ -444,7 +442,6 @@ class RESET_STATE extends base_sequence;
 
         // Reset in write data state
         `uvm_info(get_name(), $sformatf("Reset at: %t", $time), UVM_MEDIUM)
-        this.my_regmodel.reg_command.write(status, 8'b0000_1110);
         this.my_regmodel.reg_command.write(status, 8'b11110110);
         this.my_regmodel.reg_address.write(status, 8'b0010_0000);
         this.my_regmodel.reg_transmit.write(status, 0);
@@ -454,7 +451,6 @@ class RESET_STATE extends base_sequence;
 
         // Reset in data ack state
         `uvm_info(get_name(), $sformatf("Reset at: %t", $time), UVM_MEDIUM)
-        this.my_regmodel.reg_command.write(status, 8'b0000_1110);
         this.my_regmodel.reg_command.write(status, 8'b11110110);
         this.my_regmodel.reg_address.write(status, 8'b0010_0000);
         this.my_regmodel.reg_transmit.write(status, 0);

@@ -6,7 +6,8 @@ module i2c_slave_model
 		inout sda, 
 		output reg [7:0] 	saved_data,
 		output reg 			check_data,
-		output reg			read_data
+		output reg			read_data,
+		output reg 			right_address
 	);
 	
 	//
@@ -91,6 +92,12 @@ module i2c_slave_model
 	// Fix by Michael Sosnoski
 	assign #1 sda_dly = sda;
 
+	always @(*) begin
+		if (state == 1)
+			right_address = 1;
+		else
+			right_address = 0;
+	end
 
 	//detect start condition
 	always @(negedge sda)
@@ -148,6 +155,7 @@ module i2c_slave_model
 							sda_o <= #1 1'b0; // generate i2c_ack
 							check_data <= 0;
 							read_data  <= 0;
+							// right_address <= 0;
 							#2;
 							if(debug && rw)
 								$display("DEBUG i2c_slave; command byte received (read) at %t", $time);
@@ -171,6 +179,7 @@ module i2c_slave_model
 
 					slave_ack:
 					begin
+						// right_address <= 1;
 						if(rw)
 							begin
 								state <= #1 data;
@@ -178,13 +187,13 @@ module i2c_slave_model
 							end
 						else
 							state <= #1 get_mem_adr;
-
 						ld    <= #1 1'b1;
 					end
 
 					get_mem_adr: // wait for memory address
 					if(acc_done)
 						begin
+							// right_address <= 0;
 							state <= #1 gma_ack;
 							mem_adr <= #1 sr; // store memory address
 							saved_data <= sr;

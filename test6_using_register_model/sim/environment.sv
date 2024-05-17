@@ -20,6 +20,9 @@ class env extends uvm_env;
     virtual intf                my_intf;
     uvm_reg_predictor #(packet) my_predictor;
 
+    parameter time_to_write_1_byte  = 1280;
+    parameter time_to_ack           = 160;
+
     // CONSTRUCTOR
     function new (string name, uvm_component parent);
         super.new(name, parent);
@@ -75,13 +78,13 @@ class env extends uvm_env;
         `uvm_info(get_name(), "ENVIRONMENT RUN PHASE", UVM_MEDIUM)
         super.run_phase(phase);
         fork
-            begin : dut_receive_data
+            begin : DATA_TO_DUT
                 forever @(posedge my_intf.check_data) begin
                     my_scoreboard.data_DUT_received.push_back(my_intf.saved_data);
                 end
             end
 
-            begin: scoreboard_receive_prdata
+            begin: RECEIVE_PRDATA
                 forever @(posedge my_intf.PCLK) begin
                     if (my_intf.PADDR == 5 && my_intf.PWRITE == 0 && my_intf.PSELx == 1 && my_intf.PENABLE == 1) begin
                         `uvm_delay(10)
@@ -90,28 +93,14 @@ class env extends uvm_env;
                 end
             end
 
-            begin : FIFO_status
+            begin : READ_FIFO_STATUS
                 forever @(posedge my_intf.PCLK) begin
                     if (my_intf.PADDR == 3)
                         my_scoreboard.FIFO_status = my_intf.PRDATA;
                 end
             end
-
-            begin : Count_Reset
-                forever @(*) begin
-                    if (my_intf.PADDR == 2 && (my_intf.PWDATA == 8'b11110110 || my_intf.PWDATA == 8'b0000_0110))
-                        my_scoreboard.count_reset++;
-                end
-            end
-
-            begin : Address_Check
-                forever @(posedge my_intf.PCLK) begin
-                    if (my_intf.PADDR == 6 && (my_intf.PWDATA == 8'b0010_0000 || my_intf.PWDATA == 8'b0010_0001))
-                        my_scoreboard.address_check = 1;
-                end
-            end
         join
     endtask
-endclass: env;
+endclass: env
 `endif 
 

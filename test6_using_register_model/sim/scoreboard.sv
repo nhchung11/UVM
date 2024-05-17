@@ -3,23 +3,32 @@
 `include "packet.sv"
 
 import uvm_pkg::*;
-class scoreboard extends uvm_component;
+class scoreboard extends uvm_scoreboard;
     byte    data_write [$];
     byte    data_DUT_received [$];
     byte    data_read [$];
     byte    FIFO_status;
     byte    count_reset;
     logic   address_check;
+    logic   reset_check;
+    integer current_rst_time;
+    integer prev_rst_time;
+    integer rst_time_diff;
+    
 
     `uvm_component_utils(scoreboard)
-    virtual intf my_intf;
 
     uvm_analysis_imp #(packet, scoreboard) scoreboard_analysis_imp;
 
     // CONSTUCTOR
     function new(string name = "scoreboard", uvm_component parent);
         super.new(name, parent);
-        count_reset = 0;
+        count_reset         = 0;
+        address_check       = 0;
+        reset_check         = 0;
+        current_rst_time    = 0;
+        prev_rst_time       = 0;
+        rst_time_diff       = 0;
     endfunction: new
 
     // BUILD PHASE
@@ -27,9 +36,6 @@ class scoreboard extends uvm_component;
         `uvm_info(get_name(), "SCOREBOARD BUILD PHASE", UVM_MEDIUM)
         super.build_phase(phase);
         scoreboard_analysis_imp = new("scoreboard_analysis_imp", this); 
-
-        if(!uvm_config_db #(virtual intf)::get(this, "*", "my_intf", my_intf))
-            `uvm_fatal("NOVIF", "Virtual interface not set")
     endfunction
 
     // EXTRACT PHASE
@@ -84,8 +90,8 @@ class scoreboard extends uvm_component;
             else begin
                 `uvm_info(get_name(), "*  INFO  *Data queue size match", UVM_MEDIUM)
                 foreach (data_write[i]) begin
-                    if (data_write[i] != data_DUT_received[i] && count_reset == 1) 
-                        `uvm_info(get_name(), $sformatf("Data mismatch at index %0d", i), UVM_MEDIUM)
+                    if (data_write[i] != data_DUT_received[i]) 
+                        `uvm_error(get_name(), $sformatf("*  ERROR  *Data mismatch at index %0d", i))
                 end
             end
         end
@@ -96,8 +102,42 @@ class scoreboard extends uvm_component;
 
     // WRITE METHOD
     virtual function void write(packet my_packet);
-        if (my_packet.PADDR == 4)
+        //  PUSH DATA TO QUEUE
+        if (my_packet.PADDR == 4) begin
             data_write.push_back(my_packet.PWDATA);
+        end
+
+        // CHECK I2C SLAVE ADDRESS VALID
+        if (my_packet.PADDR == 6) begin
+            if(my_packet.PWDATA == 8'b0010_0000 || my_packet.PWDATA == 8'b0010_0001) begin
+                address_check = 1;
+            end
+            else begin
+                address_check = 0;
+            end
+        end
+
+        // CHECK RESETn
+        if (my_packet.PADDR == 2) begin
+            if (my_packet.PWDATA == 8'b11110110 || my_packet.PWDATA == 8'b0000_0110) begin
+                reset_check = 1;
+                prev_rst_time = current_rst_time;
+                current_rst_time = $time;
+                rst_time_diff = current_rst_time - prev_rst_time;
+                `uvm_info(get_name(), $sformatf("Reset applied at %t", $time), UVM_MEDIUM)
+            end
+            else begin
+                reset_check = 0;
+            end
+        end
+
+        // IF RESETn IS APPLIED, POP DATA FROM QUEUE
+        if (reset_check) begin
+            if (rst_time_diff < 1280) begin
+                data_write.pop_back();
+                `uvm_info(get_name(), $sformatf("Pop back 1 at %t", $time), UVM_MEDIUM)
+            end
+        end
     endfunction
 endclass: scoreboard
 `endif

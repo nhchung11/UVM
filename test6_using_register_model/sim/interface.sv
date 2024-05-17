@@ -19,6 +19,7 @@ interface intf(input logic PCLK, clk);
     wire            scl;
     logic           check_data;
     logic           read_data;
+    logic           right_address;
     logic [7:0]     saved_data;
 endinterface
 `endif 
