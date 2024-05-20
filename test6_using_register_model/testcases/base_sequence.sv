@@ -405,7 +405,7 @@ class RESET_STATE extends base_sequence;
         `uvm_info(get_name(), "=======================================================", UVM_MEDIUM)
         `uvm_info(get_name(), "============ RESET TO COMPLETE FSM TRANSACTION ========", UVM_MEDIUM)
         `uvm_info(get_name(), "=======================================================", UVM_MEDIUM)
-        this.my_regmodel.reg_command.write(status, 8'b11110110);
+        this.my_regmodel.reg_command.write(status, 8'b0000_0110);
         this.my_regmodel.reg_address.write(status, 8'b0010_0000);
         this.my_regmodel.reg_transmit.write(status, 0);
         this.my_regmodel.reg_transmit.write(status, 1);
@@ -414,7 +414,7 @@ class RESET_STATE extends base_sequence;
 
         // reset in start state
         `uvm_info(get_name(), $sformatf("Reset at: %t", $time), UVM_MEDIUM)
-        this.my_regmodel.reg_command.write(status, 8'b11110110);
+        this.my_regmodel.reg_command.write(status, 8'b0000_0110);
         this.my_regmodel.reg_address.write(status, 8'b0010_0000);
         this.my_regmodel.reg_transmit.write(status, 0);
         this.my_regmodel.reg_transmit.write(status, 1);
@@ -423,7 +423,7 @@ class RESET_STATE extends base_sequence;
 
         // Reset in write address state
         `uvm_info(get_name(), $sformatf("Reset at: %t", $time), UVM_MEDIUM)
-        this.my_regmodel.reg_command.write(status, 8'b11110110);
+        this.my_regmodel.reg_command.write(status, 8'b0000_0110);
         this.my_regmodel.reg_address.write(status, 8'b0010_0000);
         this.my_regmodel.reg_transmit.write(status, 0);
         this.my_regmodel.reg_transmit.write(status, 1);
@@ -433,7 +433,7 @@ class RESET_STATE extends base_sequence;
         // Reset in address ack state
         `uvm_info(get_name(), $sformatf("Reset at: %t", $time), UVM_MEDIUM)
         `uvm_delay(100ns)
-        this.my_regmodel.reg_command.write(status, 8'b11110110);
+        this.my_regmodel.reg_command.write(status, 8'b0000_0110);
         this.my_regmodel.reg_address.write(status, 8'b0010_0000);
         this.my_regmodel.reg_transmit.write(status, 0);
         this.my_regmodel.reg_transmit.write(status, 1);
@@ -442,16 +442,16 @@ class RESET_STATE extends base_sequence;
 
         // Reset in write data state
         `uvm_info(get_name(), $sformatf("Reset at: %t", $time), UVM_MEDIUM)
-        this.my_regmodel.reg_command.write(status, 8'b11110110);
+        this.my_regmodel.reg_command.write(status, 8'b0000_0110);
         this.my_regmodel.reg_address.write(status, 8'b0010_0000);
         this.my_regmodel.reg_transmit.write(status, 0);
         this.my_regmodel.reg_transmit.write(status, 1);
         this.my_regmodel.reg_command.write(status, 8'b11111110);
-        `uvm_delay(2980ns)
+        `uvm_delay(3080ns)
 
         // Reset in data ack state
         `uvm_info(get_name(), $sformatf("Reset at: %t", $time), UVM_MEDIUM)
-        this.my_regmodel.reg_command.write(status, 8'b11110110);
+        this.my_regmodel.reg_command.write(status, 8'b0000_0110);
         this.my_regmodel.reg_address.write(status, 8'b0010_0000);
         this.my_regmodel.reg_transmit.write(status, 0);
         this.my_regmodel.reg_transmit.write(status, 1);
@@ -459,8 +459,6 @@ class RESET_STATE extends base_sequence;
         `uvm_delay(7000ns)
 
         // Start reading data
-        my_regmodel.reg_address.write(status, 8'b0010_0001);
-        my_regmodel.reg_command.write(status, 8'b11111100);
         `uvm_delay(1880ns)
 
         // Reset in read data state
